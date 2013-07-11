@@ -1,0 +1,476 @@
+body{
+    margin:0;
+    padding:0;
+    line-height:16px;
+}
+
+h1,h2,h3,h4,h5, p, ul {
+    margin:0;
+    padding:0;
+}
+
+h1,h2,h3,h4,h5,p,ul, a{
+    font-family: 'Oxygen', sans-serif;
+}
+
+ul{
+    list-style: none;
+}
+
+p{
+    line-height: 20px;
+}
+
+.clearFloats{
+    clear:both;
+}
+
+div#mainContentContainer{
+    width:100%;
+    height:100%;
+}
+
+div#backgroundMainMenu{
+    width:inherit;
+    background-color: #000;
+    padding-bottom:20px;
+    border-bottom:1px solid #333;
+}
+
+div#header{
+    width:inherit;
+    height: 410px;
+    padding-bottom:40px;
+    background-image: url("../imgs/pattern_3.png");
+    background-repeat:repeat;
+    border-bottom:2px solid #666;
+}
+
+div#mainMenuContainer{
+    margin-top:30px;
+    padding-right:50px;
+    text-align: right;
+}
+
+ul.mainMenu, ul.mainMenu li{
+    display:inline-block;
+}
+
+ul.mainMenu li{
+    margin-right:30px;
+}
+
+ul.mainMenu li a{
+    font-size:16px;
+    color:#666;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+ul.mainMenu li a:hover{
+    color:#69d6e6;
+    /*border-bottom:2px solid #69d6e6;*/
+}
+
+ul.mainMenu a.activeLink{
+    color:#69d6e6;
+    font-weight: bold;
+    font-size: 16px;
+    /*border-bottom:2px solid #69d6e6;*/
+    text-decoration: none;
+}
+
+ul.dropDownList{
+  width: 300px;
+  /*display:block;*/
+  text-align: left;
+  padding-top: 10px;
+  display:inline-block;
+}
+
+ul.dropDownList li {
+    padding:3px 3px;
+}
+
+img#logoSC2VidcastsLarge{
+    margin-top: 90px;
+}
+
+div#containerLogo{
+   padding-top:20px;
+   margin-left:20px;
+}
+
+div#containerLogo img, div#logoTitles{
+    float:left;
+}
+
+div#logoTitles{
+    /*padding-top:5px;*/
+    margin-left:15px;
+}
+
+h4.miniTitleStarcraft2{
+    color:#69d6e6;
+    font-size: 16px;
+    /*margin-bottom:-2px;*/
+}
+
+h5.miniSubtitleVGN{
+    color:#fff;
+    font-size: 12px;
+}
+
+div#welcomeMessage{
+    width:980px;
+    margin-left: auto;
+    margin-right:auto;
+    padding-top:60px;
+}
+
+h1.mainTextWelcomeMessage{
+    font-size:100px;
+    color:#fff;
+    text-align:center;
+    line-height:100px;
+    margin-bottom: 20px;
+}
+
+h3.mottoArchive{
+    display:inline-block;
+    line-height: 30px;
+    font-size:20px;
+    color:#fff;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+h2.welcomeToArchive{
+    color:#69d6e6;
+    text-align: center;
+}
+
+a#dropDownTriggerProiect:hover{
+   color: #69d6e6; 
+}
+
+.droppDownMainContainer{
+    position:relative;
+    height:100%;
+}
+
+.droppDownMainContainer a#dropDownTriggerProiect:hover{
+    border:none;
+}
+
+div.menuContainer{
+    width:300px;
+    /*height:300px;*/
+    position:absolute;
+    background-color:#000;
+    z-index: 999;
+    display:none;
+    border-radius: 15px;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom:20px;
+}
+
+h1.dropDownTitle{
+    color:#69d6e6;
+    text-align: left;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 10px;
+}
+
+div.containerDeveloper{
+    margin-bottom:10px;
+}
+
+div.containerPicDeveloper, div.containerTextDeveloper{
+    float:left;
+}
+
+div.containerPicDeveloper{
+    width:100px;
+}
+
+div.containerTextDeveloper{
+    width:450px;
+    margin-left: 15px;
+}
+
+div.containerPicDeveloper img{
+   position:relative;
+   top:15px;
+}
+
+
+/*home page description*/
+.containerHomePageBottom{
+    width:980px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:20px;
+}
+
+.span4 h2{
+    margin-bottom:10px;
+    font-size:40px;
+}
+
+.span4 p{
+    font-size: 16px;
+    line-height: 24px;
+}
+
+/*search options*/
+div.sidebarContainer{
+    height:100%;
+    /*margin-top:10px;
+    margin-left: 10px;*/
+    background-color:#F0F0F0;
+    /*background-color:#000;*/
+    padding-bottom: 30px;
+}
+
+div.searchOptionsContainer{
+    padding-top:20px;
+    /*padding-bottom: 10px;*/
+    /*margin-left: 35px;*/
+    /*background-color:#000; */
+}
+
+div.searchOptionsContainer h4{
+    color: #69d6e6;
+    margin-left: 35px;
+}
+
+div.terranContainerImage{
+    /*margin-top: 20px;*/
+    font-size: 20px;
+    /*font-weight: bold;*/
+    /*margin-left: 35px;*/
+    /*background-color:#000;*/
+    padding-top:20px;
+    padding-bottom:20px;
+}
+
+div.containerScurtaDescriereTerran{
+    margin-left:35px;
+    margin-right: 35px;
+}
+
+div.containerScurtaDescriereTerran h3{
+   color:#666; 
+}
+
+div.containerScurtaDescriereTerran p{
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    color:#666;
+}
+
+
+div.containerLogoRasa{
+    margin-bottom:10px;
+}
+
+div.containerLogoRasa ul, div.containerLogoRasa ul li{
+   display:inline-block; 
+}
+
+div.containerLogoRasa ul li{
+    margin-right: 10px;
+}
+
+h4.races{
+    margin-top:0px;
+}
+
+div.sectionDescription{
+    width:80%;
+    padding-top:30px;
+}
+
+div.sectionDescription h1{
+    font-size:50px;
+    line-height: 50px;
+    float:left;
+}
+
+form.formSimpleJucator{
+    position:relative;
+    top:12px;
+    left: 25px;
+}
+
+div.sectionDescription p{
+    padding-top:15px;
+    padding-bottom: 30px;
+}
+
+div.playerContainerSmall{
+    margin-top:20px;
+    margin-bottom: 20px;
+    margin-left: 0;
+}
+
+div.playerContainerSmall h4{
+    margin-bottom:10px;
+    font-size: 20px;
+}
+
+div.playerContainerSmall ul{
+    display:block;
+    margin-bottom: 15px;
+}
+
+div.containerEntities{
+    padding-left: 20px;
+}
+
+/*footer*/
+div.footerContainer{
+    width:100%;
+    height:100%;
+    background-color:#fff;
+    padding-top:30px;
+    padding-bottom:30px;
+    margin-top: 30px;
+    border-top:1px solid #ccc;
+    /*color:#000;*/
+}
+
+div.footerContainer h1{
+    font-size:20px;
+    margin-left:35px;
+    margin-bottom: 20px;
+}
+
+div.footerContainer h3{
+    font-size:16px;
+}
+
+div.footerContainer p{
+    font-size:12px;
+}
+
+div.footerContent{
+    width:200px;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+div.footerContent i, div.footerContent h3{
+    float:left;
+}
+
+div.copyrightContent{
+    margin-top: 30px;
+    text-align: center;
+    background: #fff;
+    padding-left: 35px;
+}
+
+i.iconFooter{
+    position:relative;
+    top:12px;
+    right:5px;
+}
+
+.playerDescriptionText{
+    line-height: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+div.latestPlayersAddedContainer{
+    padding-left: 20px;
+}
+
+h3.playerNameTitle, h3.teamName{
+    margin-bottom:10px;
+}
+
+h4.teamCountry{
+    margin-bottom: 15px;
+}
+
+h4.teamDescriptionTitle{
+    margin-bottom: 5px;
+}
+
+p.teamDescription{
+    margin-bottom:25px;
+}
+
+h3.vidcastsJucatorTitle{
+    margin-top:15px;
+}
+
+/*admin area styles*/
+
+.mainContentContainer{
+    /*margin-top:30px;*/
+}
+
+.reportsOperationsArea{
+    padding-left:30px;
+}
+
+.CRUDMainMenu{
+    padding-left:10px;
+}
+
+p.lastParagraphInformatiiAdmin{
+    margin-bottom: 10px;
+}
+
+li.username{
+    position:relative;
+    top:10px;
+}
+
+div.mainContainerLoginForm{
+    width:980px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+}
+
+form.loginForm{
+    width:470px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1.successTitle{
+    margin-left:20px;
+    margin-bottom: 30px;
+}
+
+div.containerComponentiEchipa{
+    padding-top: 25px;
+}
+
+div.currentValuesEntity{
+    padding-left: 20px;
+}
+
+ul.instructiuniCreateEntityList li{
+    margin-bottom: 10px;
+}
+
+div.containerTableReport{
+    padding-left:30px;
+    padding-right:30px;
+}
+
+h4.indicatorOperatiiCRUDJucatori{
+    margin-left:20px;
+    margin-bottom:10px;
+}
