@@ -62,7 +62,7 @@
                             <p>În cadrul acestei secţiuni vei găsi cei mai buni jucători de Starcraft2 din România, jucând cu rasa <strong>TERRAN</strong>, pentru ligile Masters şi Grand Masters.</p>
                         </div>
                         <br class="clearFloats"/>
-                        <a href='<?php echo base_url(); ?>index.php/main/terran_players' class='btn btn-primary'>Afiseaza</a>
+                        <a href='<?php echo base_url(); ?>index.php/main/terran_players_ro' class='btn btn-primary'>Afiseaza</a>
                     </div>
 
                     <!--<hr class="divider races"/>-->
@@ -79,7 +79,7 @@
                             <p>În cadrul acestei secţiuni vei găsi cei mai buni jucători de Starcraft2 din România, jucând cu rasa <strong>ZERG</strong>, pentru ligile Masters şi Grand Masters.</p>
                         </div>
                         <br class="clearFloats"/>
-                        <a href='<?php echo base_url(); ?>index.php/main/zerg_players' class='btn btn-primary'>Afiseaza</a>
+                        <a href='<?php echo base_url(); ?>index.php/main/zerg_players_ro' class='btn btn-primary'>Afiseaza</a>
                     </div>
 
                     <!--hr class="divider"/>-->
@@ -96,7 +96,7 @@
                             <p>În cadrul acestei secţiuni vei găsi cei mai buni jucători de Starcraft2 din România, jucând cu rasa <strong>PROTOSS</strong>, pentru ligile Masters şi Grand Masters.</p>
                         </div>
                         <br class="clearFloats"/>
-                        <a href='<?php echo base_url(); ?>index.php/main/protoss_players' class='btn btn-primary'>Afiseaza</a>
+                        <a href='<?php echo base_url(); ?>index.php/main/protoss_players_ro' class='btn btn-primary'>Afiseaza</a>
                     </div>
 
                     <!--<hr class="divider"/>-->
