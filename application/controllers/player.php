@@ -69,6 +69,14 @@ class Player extends CI_Controller{
 		$this->image_path_thumb=$image_path_thumb;
 	}
 
+    public function setPlayerTeamID($player_team_id){
+        $this->player_team_id_id=$player_team_id;
+    }
+
+    public function getPlayerTeamID(){
+        return $this->player_team_id_id;
+    }
+
 	public function prepare_player(){
 		$data['teams']=$this->crud_model_team->extractTeamName();
 		$data['page_title']="PLAYER";
@@ -207,7 +215,10 @@ class Player extends CI_Controller{
 
 		//initialize player_id variable used in updating a player in the database
 		$this->player_id=$this->crud_model_player->extractPlayerID($player_id);
-		$this->player_team_id_id=$this->crud_model_player->extractPlayerTeamID($player_id);
+
+        //$this->setPlayerTeamID($this->crud_model_player->extractPlayerTeamID($player_id));
+
+		//$this->player_team_id_id=$this->crud_model_player->extractPlayerTeamID($player_id);
 
 		//prepare upload config
 		$config['upload_path'] = './uploads/players';
@@ -242,8 +253,12 @@ class Player extends CI_Controller{
 
 		if($_POST['update_player']=='please_select'){
 			$this->setPlayerTeam($this->input->post('player_team'));
+            $this->parameters_crud['player_team']=$this->getPlayerTeam();
+            $this->setPlayerTeamID($this->crud_model_team->extractTeamID($this->input->post('player_team')));
 		}else{
-			$this->setPlayerTeam($this->input->post('update_player'));
+            $this->setPlayerTeam($this->input->post('update_player'));
+            $this->parameters_crud['player_team']=$this->getPlayerTeam();
+            $this->setPlayerTeamID($this->crud_model_team->extractTeamID($this->input->post('update_player')));
 		}
 
 		//assign return value for getImagePathThumb to a variable and pass that variable to the updatePlayer() method
@@ -251,7 +266,7 @@ class Player extends CI_Controller{
 
 		//load crud_model and the method that does the updating
 		//1st parameter - player_id, 2nd parameter - player team id, 3rd parameter - array containing name, nickname etc, 4th parameter - the image to be uploaded
-		$this->crud_model_player->updatePlayer($this->player_id, $this->player_team_id_id, $this->parameters_crud, $team_logo);
+		$this->crud_model_player->updatePlayer($this->player_id, $this->getPlayerTeamID(), $this->parameters_crud, $team_logo);
 
 		redirect('index.php/player/read_player');
 	}
@@ -333,25 +348,6 @@ class Player extends CI_Controller{
 		}
 		$this->load->view('footer_admin_area');
 	}
-
-    public function loadUpdateEntityDetailsRO($data){
-        //load the view with the form with the creation of a title
-        $this->load->view('header_admin_area');
-        switch($data['entity_type']){
-            case 1:
-                $this->load->view('prepare_update_player_ro', $data);
-                break;
-            case 2:
-                $this->load->view('prepare_update_team_ro', $data);
-                break;
-            case 3:
-                $this->load->view('prepare_update_title_ro', $data);
-                break;
-            case 4:
-                $this->load->view('prepare_update_video_ro', $data);
-        }
-        $this->load->view('footer_admin_area');
-    }
 
 	public function create_thumbs($image_path){
 		$config['image_library'] = 'gd2';
