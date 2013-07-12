@@ -69,6 +69,14 @@ class Player_Ro extends CI_Controller{
         $this->image_path_thumb=$image_path_thumb;
     }
 
+    public function setPlayerTeamID($player_team_id){
+        $this->player_team_id_id=$player_team_id;
+    }
+
+    public function getPlayerTeamID(){
+        return $this->player_team_id_id;
+    }
+
     public function prepare_player_ro(){
         $data['teams']=$this->crud_model_team->extractTeamName();
         $data['page_title']="PLAYER";
@@ -209,32 +217,9 @@ class Player_Ro extends CI_Controller{
         $this->player_id=$this->crud_model_player->extractPlayerIDRO($player_id);
         $this->player_team_id_id=$this->crud_model_player->extractPlayerTeamIDRO($player_id);
 
-        //prepare upload config
-        $config['upload_path'] = './uploads/players/romani/';
-        $config['allowed_types'] = 'gif|jpg|png';
-        $config['max_size']	= '5000';
-        $config['max_width'] = '1920';
-        $config['max_height'] = '1500';
-        $config['remove_spaces'] = TRUE;
-
-        $this->load->library('upload', $config);
-
-        //if the upload field is empty, populate it with the current image in the database for the team that is being updated
-        if(empty($_FILES['player_image']['name'])){
-            $this->setImagePathThumb($this->input->post('player_image_current'));
-        }else{
-            $this->upload->do_upload('player_image');
-            $data_info_inserted['upload_data']=$this->upload->data();
-
-            //get the full path of the image being uploaded - will be used in creating a thumbnail
-            $this->image_path=$data_info_inserted['upload_data']['full_path'];
-            //the create_thumbs function will automatically append a _thumb.jpg|png|gif to the image in question
-            $this->create_thumbs($this->image_path);
-            //get the raw name of the image, without the .jpg,.png extension - append the _thumb to the file name - this filename will be inserted in the database
-            $this->setImagePathThumb($data_info_inserted['upload_data']['raw_name'].'_thumb'.$data_info_inserted['upload_data']['file_ext']);
-        }
-
-        $this->upload->initialize($config);
+        //uses the update_upload_config() function to prepare upload parameters. Also checks to see if the field for a new picture is empty or not
+        //If it is empty, nothing will be uploaded, else, it will upload the new picture that is set in the upload field by the user
+        $this->update_upload_config_ro();
 
         if(empty($_POST['player_keywords'])){
             $this->parameters_crud['player_keywords']=$this->input->post('player_keywords_actual');
@@ -242,8 +227,13 @@ class Player_Ro extends CI_Controller{
 
         if($_POST['update_player']=='please_select'){
             $this->setPlayerTeam($this->input->post('player_team'));
+            $this->parameters_crud['player_team']=$this->getPlayerTeam();
+            //the team id is needed when updating a player - a team id is extracted by passing the team name to the model method extractTeanID($team_name)
+            $this->setPlayerTeamID($this->crud_model_team->extractTeamID($this->input->post('player_team')));
         }else{
             $this->setPlayerTeam($this->input->post('update_player'));
+            $this->parameters_crud['player_team']=$this->getPlayerTeam();
+            $this->setPlayerTeamID($this->crud_model_team->extractTeamID($this->input->post('update_player')));
         }
 
         //assign return value for getImagePathThumb to a variable and pass that variable to the updatePlayer() method
@@ -251,7 +241,7 @@ class Player_Ro extends CI_Controller{
 
         //load crud_model and the method that does the updating
         //1st parameter - player_id, 2nd parameter - player team id, 3rd parameter - array containing name, nickname etc, 4th parameter - the image to be uploaded
-        $this->crud_model_player->updatePlayerRO($this->player_id, $this->player_team_id_id, $this->parameters_crud, $team_logo);
+        $this->crud_model_player->updatePlayerRO($this->player_id, $this->getPlayerTeamID(), $this->parameters_crud, $team_logo);
 
         redirect('index.php/player_ro/read_player_ro');
     }
@@ -339,5 +329,34 @@ class Player_Ro extends CI_Controller{
     public function setSessionData(){  //helper function for retrieving username based on who is logged in
         $session_data = $this->session->userdata('logged_in');
         return $session_data['username'];
+    }
+
+    public function update_upload_config_ro(){
+        //prepare upload config
+        $config['upload_path'] = './uploads/players/romani/';
+        $config['allowed_types'] = 'gif|jpg|png';
+        $config['max_size']	= '5000';
+        $config['max_width'] = '1920';
+        $config['max_height'] = '1500';
+        $config['remove_spaces'] = TRUE;
+
+        $this->load->library('upload', $config);
+
+        //if the upload field is empty, populate it with the current image in the database for the team that is being updated
+        if(empty($_FILES['player_image']['name'])){
+            $this->setImagePathThumb($this->input->post('player_image_current'));
+        }else{
+            $this->upload->do_upload('player_image');
+            $data_info_inserted['upload_data']=$this->upload->data();
+
+            //get the full path of the image being uploaded - will be used in creating a thumbnail
+            $this->image_path=$data_info_inserted['upload_data']['full_path'];
+            //the create_thumbs function will automatically append a _thumb.jpg|png|gif to the image in question
+            $this->create_thumbs($this->image_path);
+            //get the raw name of the image, without the .jpg,.png extension - append the _thumb to the file name - this filename will be inserted in the database
+            $this->setImagePathThumb($data_info_inserted['upload_data']['raw_name'].'_thumb'.$data_info_inserted['upload_data']['file_ext']);
+        }
+
+        $this->upload->initialize($config);
     }
 }
