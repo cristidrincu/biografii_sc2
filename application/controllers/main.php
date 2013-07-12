@@ -234,7 +234,7 @@ class Main extends CI_Controller{
 
         $dataPlayer['data_player']=$this->m_all_entities->getPlayerRO($nickname);
         $dataPlayer['data_titles']=$this->m_all_entities->getPlayerTitlesRO($player_id);
-        $dataPlayer['data_videos']=$this->m_all_entities->getPlayerVideos($player_id);
+        $dataPlayer['data_videos']=$this->m_all_entities->getPlayerVideosRO($player_id);
 
         $this->setEntityKeywords($this->m_all_entities->getPlayerKeywordsRO($player_id));
 
