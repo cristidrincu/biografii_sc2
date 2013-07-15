@@ -49,70 +49,13 @@
             </div><!--ends backgroundMainMenu-->
             
             <div class="row-fluid">
-                <div class="span3 sidebarMenu">
-                    <div class="sidebarContainer">
-                        <div class="terranContainerImage">
-                               
-                              <div class="containerScurtaDescriereTerran">
-                                   <div class="containerLogoRasa">
-                                       <ul>
-                                           <li><img src="<?php echo base_url(); ?>imgs/logo_terran_thumb.png" alt="Terran"/></li>
-                                           <li><h3>Terran</h3></li>
-                                       </ul>                                       
-                                   </div>
-                                   <div class="containerTextDescriereRasa">
-                                       <p>Am introdus in cadrul sectiunii Terrane jucatori cu renume mondial, gen Kas, MVP, Marine King Prime si altii. Vei putea citi biografiile celor mai puternici terrani Koreeni, insa si a celor care vin incet din urma, asa cum este spaniolul Lucifron!</p>
-                                   </div>
-                                   <br class="clearFloats"/>
-                                   <a href='<?php echo base_url(); ?>index.php/main/terran_players' class='btn btn-primary'>Afiseaza</a>
-                               </div>
-                               
-                               <!--<hr class="divider races"/>-->
-                    </div><!--ends terranContainerImage-->
-                    <div class="terranContainerImage">                               
-                               <div class="containerScurtaDescriereTerran">
-                                   <div class="containerLogoRasa">
-                                       <ul>
-                                           <li><img src="<?php echo base_url(); ?>imgs/zerg_logo_png_thumb.png" alt="Zerg"/></li>
-                                           <li><h3>Zerg</h3></li>
-                                       </ul>                                       
-                                   </div>
-                                   <div class="containerTextDescriereRasa">
-                                       <p>Nume precum Nestea, Zenio, Life si multi altii isi au biografiile in cadrul acestei sectiuni. Afla totul despre ei, de la inceputul carierie de PRO GAMER si pana in acest moment, cat si motivul pentru care au ales sa joace acesta rasa.</p>
-                                   </div>
-                                   <br class="clearFloats"/>
-                                   <a href='<?php echo base_url(); ?>index.php/main/zerg_players' class='btn btn-primary'>Afiseaza</a>
-                               </div>    
-                               
-                               <!--hr class="divider"/>-->
-                    </div><!--ends terranContainerImage-->
-                    <div class="terranContainerImage">
-                               <div class="containerScurtaDescriereTerran">
-                                   <div class="containerLogoRasa">
-                                       <ul>
-                                           <li><img src="<?php echo base_url(); ?>imgs/protoss_logo_thumb.png" alt="Protoss"/></li>
-                                           <li><h3>Protoss</h3></li>
-                                       </ul>                                       
-                                   </div>
-                                   <div class="containerTextDescriereRasa">
-                                       <p>Huk, Parting, Socke - nume sonore in cadrul adunarii protosiene, cu rezultate remarcabile, te asteapta sa le citesti biografiile si sa le afli rezultatele obtinute in cadrul concursurilor internationale la care au participat. O sectiune in care DigitalWaves a muncit la greu. Prietenii stiu de ce!</p>
-                                   </div>
-                                   <br class="clearFloats"/>
-                                   <a href='<?php echo base_url(); ?>index.php/main/protoss_players' class='btn btn-primary'>Afiseaza</a>
-                               </div>
-                               
-                               <!--<hr class="divider"/>-->
-                    </div><!--ends terranContainerImage-->   
-                    </div>
-                    
-                </div>
-                <div class="span9">
+                <div class="span12">
                     <div class="sectionDescription containerEntities">
-                        <h1>REZULTATE CAUTARE</h1>
+                        <h1>REZULTATE CĂUTARE</h1>
                         <?php
                           $form_attributes = array('class'=>'form-search formSimpleJucator');
                           $input_field_attributes=array('name'=>'search_field_team','class'=>'span12 search-query');
-                          $submit_btn_attributes=array('name'=>'submitBtn','class' => 'btn', 'type'=>'submit','content'=>'Cauta echipa');
+                          $submit_btn_attributes=array('name'=>'submitBtn','class' => 'btn', 'type'=>'submit','content'=>'Caută echipa');
                         ?>
                             <div class="input-append">
                                 <?php 
@@ -123,7 +66,7 @@
                                 ?>
                             </div>
                         <br class="clearFloats"/>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit pulvinar risus, in vestibulum ligula pulvinar a. Praesent felis mi, ultrices at pellentesque eu, aliquet id neque. Nulla nec turpis nunc, a dignissim sapien. Nullam nec ligula in nisl cursus posuere quis sit amet dui. Nulla sapien libero, ultricies vel commodo nec, condimentum a turpis. Duis felis sapien, euismod et aliquet eget, luctus id neque.</p>
+                        <p>Fiecare din echipele existente au asociaţi şi jucătorii din cadrul lor. Pentru unele echipe veţi găsi toţi jucătorii, pentru altele doar cei mai importanţi, însă vor exista echipe cărora nu am apucat să le asociem nici un jucător. Va mulţumim pentru înţelegere!</p>
                     </div><!--ends sectionDescription--> 
                     <div class="latestPlayersAddedContainer">
                           <?php foreach($search_results_team_name as $result): ?>
@@ -133,7 +76,7 @@
                                   <li><p>Țara de origine: <?php echo $result->team_country; ?></p></li>
                                   <li><p>Numar jucatori: <?php echo $result->number_of_players; ?></p></li>
                                 </ul>
-                                <?php echo anchor("index.php/main/getTeamDetails/$result->ID","Afla mai multe despre echipa",array('class'=>'btn btn-success')); ?>
+                                <?php echo anchor("index.php/main/getTeamDetails/$result->ID","Află mai multe despre echipa",array('class'=>'btn btn-success')); ?>
                             </div>
                           <?php endforeach; ?>      
                     </div><!--ends latestPlayersAddedContainer-->

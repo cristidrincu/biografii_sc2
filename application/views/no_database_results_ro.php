@@ -64,7 +64,7 @@
                             <p>În cadrul acestei secţiuni vei găsi cei mai buni jucători de Starcraft2 din România, jucând cu rasa <strong>TERRAN</strong>, pentru ligile Masters şi Grand Masters.</p>
                         </div>
                         <br class="clearFloats"/>
-                        <a href='<?php echo base_url(); ?>index.php/main/terran_players_ro' class='btn btn-primary'>Afiseaza</a>
+                        <a href='<?php echo base_url(); ?>index.php/main/terran_players_ro' class='btn btn-primary'>Afişează</a>
                     </div>
 
                     <!--<hr class="divider races"/>-->
@@ -81,7 +81,7 @@
                             <p>În cadrul acestei secţiuni vei găsi cei mai buni jucători de Starcraft2 din România, jucând cu rasa <strong>ZERG</strong>, pentru ligile Masters şi Grand Masters.</p>
                         </div>
                         <br class="clearFloats"/>
-                        <a href='<?php echo base_url(); ?>index.php/main/zerg_players_ro' class='btn btn-primary'>Afiseaza</a>
+                        <a href='<?php echo base_url(); ?>index.php/main/zerg_players_ro' class='btn btn-primary'>Afişează</a>
                     </div>
 
                     <!--hr class="divider"/>-->
@@ -98,7 +98,7 @@
                             <p>În cadrul acestei secţiuni vei găsi cei mai buni jucători de Starcraft2 din România, jucând cu rasa <strong>PROTOSS</strong>, pentru ligile Masters şi Grand Masters.</p>
                         </div>
                         <br class="clearFloats"/>
-                        <a href='<?php echo base_url(); ?>index.php/main/protoss_players_ro' class='btn btn-primary'>Afiseaza</a>
+                        <a href='<?php echo base_url(); ?>index.php/main/protoss_players_ro' class='btn btn-primary'>Afişează</a>
                     </div>
 
                     <!--<hr class="divider"/>-->
@@ -108,11 +108,11 @@
         </div>
         <div class="span9">
             <div class="sectionDescription containerEntities">
-                <h1>NU EXISTA REZULTATE</h1>
+                <h1>NU EXISTĂ REZULTATE</h1>
                 <?php
                 $form_attributes = array('class'=>'form-search formSimpleJucator');
                 $input_field_attributes=array('name'=>'search_field','class'=>'span12 search-query');
-                $submit_btn_attributes=array('name'=>'submitBtn','class' => 'btn', 'type'=>'submit','content'=>'Cauta jucator');
+                $submit_btn_attributes=array('name'=>'submitBtn','class' => 'btn', 'type'=>'submit','content'=>'Caută jucător');
                 ?>
                 <div class="input-append">
                     <?php
@@ -123,7 +123,7 @@
                     ?>
                 </div>
                 <br class="clearFloats"/>
-                <p>Ne pare rau, insa nu exista rezultate pentru cautarea Dvs!</p>
+                <p>Ne pare rău, însă nu există rezultate pentru căutarea Dvs!</p>
             </div><!--ends sectionDescription-->
         </div><!--ends span8-->
     </div>
