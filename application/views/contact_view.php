@@ -19,10 +19,10 @@
                     <ul class="mainMenu">
                         <li><a href="<?php echo base_url();?>index.php/main/index" target="_self">Acasă</a></li>
                         <li><a href="<?php echo base_url();?>index.php/main/players" target="_self">Jucători internaţionali</a></li>
-                        <li><a class="activeLink" href="<?php echo base_url();?>index.php/jucatori_romani/players" target="_self">Jucători români</a></li>
+                        <li><a href="<?php echo base_url();?>index.php/jucatori_romani/players" target="_self">Jucători români</a></li>
                         <li><a href="<?php echo base_url();?>index.php/main/teams" target="_self">Echipe</a></li>
                         <li><a href="<?php echo base_url();?>index.php/contribute/ajuta" target="_self">Contribuie</a></li>
-                        <li><a href="<?php echo base_url();?>index.php/contact" target="_self">Contact</a></li>
+                        <li><a class="activeLink" href="<?php echo base_url();?>index.php/main/contact" target="_self">Contact</a></li>
                     </ul>
                 </div><!--ends mainMenuContainer-->
                 <!--ELEMENTS FOR DROPDOWNS-->
@@ -90,66 +90,58 @@
         </div>
         <div class="span9">
             <div class="sectionDescription containerEntities">
-                <h1><?php echo (strtoupper($data_player[0]->race)); ?></h1>
                 <?php
-                $form_attributes = array('class'=>'form-search formSimpleJucator');
-                $input_field_attributes=array('name'=>'search_field','class'=>'span12 search-query');
-                $submit_btn_attributes=array('name'=>'submitBtn','class' => 'btn', 'type'=>'submit','content'=>'Cauta jucator');
+                $form_attributes = array('class'=>'form-horizontal');
+                $subject_field_attributes=array('name'=>'subject', 'class'=>'span4', 'required'=>'required');
+                $email_field_attributes=array('name'=>'email','class'=>'span4','required'=>'required');
+                $name_field_attributes=array('name'=>'name_sender', 'class'=>'span4','required'=>'required');
+                $message_field_attributes=array('name'=>'message_sender', 'class'=>'span4', 'required'=>'required');
+                $honey_trap_field_attributes=array('name'=>'honey_trap_bots', 'class'=>'span4','type'=>'hidden');
+                $submit_btn_attributes=array('name'=>'submitBtn','class' => 'btn', 'type'=>'submit','content'=>'Trimite mesaj');
+
+                echo form_open('index.php/contact/send_email', $form_attributes);
                 ?>
-                <div class="input-append">
-                    <?php
-                    echo form_open('index.php/search/results', $form_attributes);
-                    echo form_input($input_field_attributes);
-                    echo form_button($submit_btn_attributes);
-                    echo form_close();
-                    ?>
-                </div>
-                <br class="clearFloats"/>
-                <div class='alert alert-info'>
-                    In momentul in care doresti sa cauti un jucator, te rugam sa introduci nickname-ul sau - Nightend sau DeathAngel de exemplu. Cautarea se face dupa nickname si NU dupa numele de familie etc!
-                </div>
-                <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit pulvinar risus, in vestibulum ligula pulvinar a. Praesent felis mi, ultrices at pellentesque eu, aliquet id neque. Nulla nec turpis nunc, a dignissim sapien. Nullam nec ligula in nisl cursus posuere quis sit amet dui. Nulla sapien libero, ultricies vel commodo nec, condimentum a turpis. Duis felis sapien, euismod et aliquet eget, luctus id neque.</p>-->
             </div><!--ends sectionDescription-->
             <div class="latestPlayersAddedContainer">
-                <?php foreach($data_player as $player): ?>
-                <div class="span4">
-                    <img style='margin-bottom:10px;' src="<?=IMG_URL_PLAYER_ROMAN.$player->player_image;?>" />
-                    <h3>Titluri obtinute: </h3>
-                    <ul>
-                        <?php foreach($data_titles as $title): ?>
-                            <li><?php echo ($title->title_name ." || ".$title->title_date); ?></li>
-                        <?php endforeach; ?>
-                    </ul>
-                    <h3 class="vidcastsJucatorTitle">Vidcasts jucator</h3>
-                    <ul>
-                        <?php if(count($data_videos)==0): ?>
-                            <p>Nu exista clipuri pentru acest jucator!</p>
-                        <?php else:?>
-                            <?php foreach($data_videos as $video): ?>
-                                <li>
-                                    <a href="<?php echo $video->video_link?>" target="_blank"><?php echo $video->video_title; ?></a>
-                                </li>
+                <h1 class="teaserFormularContact">Ai întrebări? Sau vrei să ne laşi o sugestie?</h1>
+                <p class="textInfoFormularContact">Deşi am încercat să testăm, citim, corectăm informaţiile introduse în acest site, se poate să fi avut şi scăpări. Drept urmare, dacă găseşti vreo greşeală sau pur şi simplu doreşti să ne feliciţi pentru muncă depusă, te rugăm să foloseşti formularul de mai jos. Îţi mulţumim!</p>
+                <div class="control-group">
+                    <label class="control-label" for="emailSubject">Subiect</label>
+                    <div class="controls">
+                        <?php echo form_input($subject_field_attributes); ?>
+                    </div>
+                </div><!--ends subject control group-->
+                <div class="control-group">
+                    <label class="control-label" for="senderName">Nume</label>
+                    <div class="controls">
+                        <?php echo form_input($name_field_attributes); ?>
+                    </div>
+                </div><!--ends nume control group-->
+                <div class="control-group">
+                    <label class="control-label" for="senderEmail">Adresa email</label>
+                    <div class="controls">
+                        <?php echo form_input($email_field_attributes); ?>
+                    </div>
+                </div><!--ends email control group-->
+                <div class="control-group">
+                    <label class="control-label" for="senderMessage">Mesaj:</label>
+                    <div class="controls">
+                        <?php echo form_textarea($message_field_attributes); ?>
+                    </div>
+                </div><!--ends email control group-->
+                <div class="control-group">
 
-                            <?php endforeach; ?>
-                        <?php endif; ?>
-                </div><!--ends player image container-->
-                <div class="span7 offset1">
-                    <h3 class='playerNameTitle'><?php echo $player->name; ?> - <?php echo $player->nickname; ?></h3>
-                        <ul>
-                            <li><p>Nickname: <?php echo $player->nickname; ?></p></li>
-                            <li><p>Data nașterii: <?php echo $player->DOB; ?></p></li>
-                            <li><p>Țara de origine: <?php echo $player->country; ?></p></li>
-                            <li><p>Rasa: <?php echo $player->race; ?></p></li>
-                            <li><p>Echipa: <?php echo $player->team;?></p></li>
-                            <li><p>Castiguri: <?php echo $player->winnings; ?> $</p></li>
-                        </ul>
-                        <p class='playerDescriptionText'><?php echo nl2br($player->description, true); ?></p>
-                        <?php endforeach; ?>
-
-                        </ul>
-                </div>
+                    <div class="controls">
+                        <?php echo form_input($honey_trap_field_attributes); ?>
+                    </div>
+                </div><!--ends email control group-->
+                <div class="control-group">
+                    <div class="controls">
+                        <?php echo form_button($submit_btn_attributes); ?>
+                    </div>
+                </div><!--ends email control group-->
             </div><!--ends latestPlayersAddedContainer-->
-        </div><!--ends span8-->
+        </div><!--ends span10-->
     </div>
 </div><!--ends mainContentContainer-->
-        
+

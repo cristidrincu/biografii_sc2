@@ -474,3 +474,43 @@ h4.indicatorOperatiiCRUDJucatori{
     margin-left:20px;
     margin-bottom:10px;
 }
+
+h1.teaserFormularContact{
+    margin-bottom: 20px;
+}
+
+h1.sucessMessageEmail,h1.errorMessageEmail, a.sendEmailAgain, p.gratitudeTextEmail, h4.gratitudeTextEmailH4{
+    position:relative;
+}
+
+h1.sucessMessageEmail, h1.errorMessageEmail{
+    top:100px;
+    text-align:center;
+}
+
+h1.errorMessageEmail{
+    color:red;
+}
+
+a.sendEmailAgain{
+    top:140px;
+    margin-left: 15px;
+}
+
+div.containerLinksEmail{
+    text-align: center;
+}
+
+h4.gratitudeTextEmailH4{
+    top:110px;
+}
+
+p.gratitudeTextEmail{
+    top:130px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+p.textInfoFormularContact{
+    margin-bottom: 15px;
+}

@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" name="Default" comment="" />
+    <list default="true" id="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/contact.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/contact_view.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/contact_view_failure.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/contact_view_success.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/detalii_echipa.php" afterPath="$PROJECT_DIR$/application/views/detalii_echipa.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/echipe.php" afterPath="$PROJECT_DIR$/application/views/echipe.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/home.php" afterPath="$PROJECT_DIR$/application/views/home.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/jucatori.php" afterPath="$PROJECT_DIR$/application/views/jucatori.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/jucatori_ro.php" afterPath="$PROJECT_DIR$/application/views/jucatori_ro.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/player_full_details.php" afterPath="$PROJECT_DIR$/application/views/player_full_details.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/player_full_details_ro.php" afterPath="$PROJECT_DIR$/application/views/player_full_details_ro.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/protoss_jucatori.php" afterPath="$PROJECT_DIR$/application/views/protoss_jucatori.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/protoss_jucatori_ro.php" afterPath="$PROJECT_DIR$/application/views/protoss_jucatori_ro.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/search_results.php" afterPath="$PROJECT_DIR$/application/views/search_results.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/search_results_team.php" afterPath="$PROJECT_DIR$/application/views/search_results_team.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles.css" afterPath="$PROJECT_DIR$/css/styles.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/terran_jucatori.php" afterPath="$PROJECT_DIR$/application/views/terran_jucatori.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/terran_jucatori_ro.php" afterPath="$PROJECT_DIR$/application/views/terran_jucatori_ro.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/zerg_jucatori.php" afterPath="$PROJECT_DIR$/application/views/zerg_jucatori.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/zerg_jucatori_ro.php" afterPath="$PROJECT_DIR$/application/views/zerg_jucatori_ro.php" />
+    </list>
     <ignored path="biografii_sc2.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/crud_model_player.php" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1373287293921" ignored="false" />
@@ -197,7 +220,7 @@
     <file path="$APPLICATION_HOME_DIR$/plugins/Spring/lib/spring.jar!/resources/schemas/spring-tool-2.5.xsd" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1371806202458" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/plugins/Spring/lib/spring.jar!/resources/schemas/spring-lang-3.0.xsd" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1371806202458" ignored="false" />
     <file path="$PROJECT_DIR$/../angular_learning/index.html" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1371806539808" ignored="false" />
-    <file path="/index.html" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1371806533844" ignored="false" />
+    <file path="/index.html" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1373877407635" ignored="false" />
     <file path="$PROJECT_DIR$/../angular_learning/hello.html" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1371807028460" ignored="false" />
     <file path="/hello.html" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1371807023756" ignored="false" />
     <file path="$PROJECT_DIR$/../angular_learning/js/controllers.js" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1371806763076" ignored="false" />
@@ -214,13 +237,13 @@
     <file path="/hide_show.html" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1371820466720" ignored="false" />
     <file path="/home.php" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1373283119891" ignored="false" />
     <file path="/create_entity_success.php" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1372150460985" ignored="false" />
-    <file path="/styles.css" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1373447996788" ignored="false" />
+    <file path="/styles.css" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1373892251493" ignored="false" />
     <file path="/video.php" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1372153972985" ignored="false" />
     <file path="/header.php" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1372331646966" ignored="false" />
     <file path="/create_player.php" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1372158418479" ignored="false" />
-    <file path="/player.php" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1373456211002" ignored="false" />
+    <file path="/player.php" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1373633410764" ignored="false" />
     <file path="/m_all_entities.php" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1373472305880" ignored="false" />
-    <file path="/main.php" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1373450497228" ignored="false" />
+    <file path="/main.php" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1373637916917" ignored="false" />
     <file path="/prepare_update_player.php" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1372172395891" ignored="false" />
     <file path="/a.dummy" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1372166731119" ignored="false" />
     <file path="/search.php" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1373456011122" ignored="false" />
@@ -240,7 +263,7 @@
     <file path="/jucatori_ro.php" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1373450727678" ignored="false" />
     <file path="/create_player_ro.php" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1373288056820" ignored="false" />
     <file path="/welcome_screen_user.php" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1373452878401" ignored="false" />
-    <file path="/player_full_details_ro.php" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1373472430524" ignored="false" />
+    <file path="/player_full_details_ro.php" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1373637327217" ignored="false" />
     <file path="/terran_jucatori_ro.php" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1373451273103" ignored="false" />
     <file path="/no_database_results_ro.php" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1373297397340" ignored="false" />
     <file path="/no_database_results.php" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1373297419242" ignored="false" />
@@ -268,9 +291,9 @@
     <file path="$PROJECT_DIR$/../BattleOfTheRaces/js/rezumatEditii.js" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1373375077493" ignored="false" />
     <file path="/rezumatEditia3.xhtml.html" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1373375507140" ignored="false" />
     <file path="/protoss_jucatori_ro.php" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1373451230665" ignored="false" />
-    <file path="/zerg_jucatori_ro.php" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1373451259981" ignored="false" />
+    <file path="/zerg_jucatori_ro.php" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1373642070437" ignored="false" />
     <file path="/m_search_entities.php" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1373458233326" ignored="false" />
-    <file path="/player_ro.php" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1373457351231" ignored="false" />
+    <file path="/player_ro.php" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1373634252183" ignored="false" />
     <file path="/search_ro.php" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1373458856796" ignored="false" />
     <file path="/create_title.php" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1373463761152" ignored="false" />
     <file path="/create_video.php" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1373463744758" ignored="false" />
@@ -278,6 +301,18 @@
     <file path="/crud_model_title.php" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1373471793297" ignored="false" />
     <file path="/video_ro.php" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1373536506672" ignored="false" />
     <file path="/crud_model_video.php" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1373536532998" ignored="false" />
+    <file path="/Dummy.txt" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1373644852563" ignored="false" />
+    <file path="/contact.php" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1373891985895" ignored="false" />
+    <file path="$PROJECT_DIR$/../JqueryNinja/Chapter2/index.xhtml.html" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1373877093878" ignored="false" />
+    <file path="$PROJECT_DIR$/../JqueryNinja/Chapter2/index.xhtml" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1373877581676" ignored="false" />
+    <file path="/index.xhtml" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1373877580857" ignored="false" />
+    <file path="$PROJECT_DIR$/../JqueryNinja/Chapter2/chapter_2.js" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1373877205763" ignored="false" />
+    <file path="/chapter_2.js" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1373877267387" ignored="false" />
+    <file path="$PROJECT_DIR$/../JqueryNinja/Chapter2/js/chapter_2.js" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1373877276062" ignored="false" />
+    <file path="$PROJECT_DIR$/../JqueryNinja/index.html" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1373877407635" ignored="false" />
+    <file path="/contact_view.php" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1373891766142" ignored="false" />
+    <file path="/contact_view_success.php" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1373889798908" ignored="false" />
+    <file path="/contact_view_failure.php" changelist="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" time="1373892427819" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -338,46 +373,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/main.php">
+      <file leaf-file-name="contact.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/controllers/contact.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="229" column="75" selection-start="10131" selection-end="10131" vertical-scroll-proportion="-5.9">
+            <state line="48" column="22" selection-start="1779" selection-end="1779" vertical-scroll-proportion="1.0144928">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="video_ro.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/video_ro.php">
+      <file leaf-file-name="contact_view.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/contact_view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="213" column="53" selection-start="7841" selection-end="7841" vertical-scroll-proportion="-7.4">
+            <state line="98" column="75" selection-start="5956" selection-end="5971" vertical-scroll-proportion="-8.375">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="prepare_update_video_ro.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/views/prepare_update_video_ro.php">
+      <file leaf-file-name="contact_view_success.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/contact_view_success.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="39" selection-start="501" selection-end="501" vertical-scroll-proportion="0.23659305">
+            <state line="98" column="31" selection-start="5275" selection-end="6095" vertical-scroll-proportion="-22.75">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="crud_model_player.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/crud_model_player.php">
+      <file leaf-file-name="contact_view_failure.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/contact_view_failure.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="45" selection-start="1729" selection-end="1754" vertical-scroll-proportion="-6.36">
+            <state line="91" column="49" selection-start="5344" selection-end="5344" vertical-scroll-proportion="-19.625">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="crud_model_video.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/crud_model_video.php">
+      <file leaf-file-name="styles.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="116" column="33" selection-start="3611" selection-end="3624" vertical-scroll-proportion="-9.5">
+            <state line="496" column="16" selection-start="7514" selection-end="7514" vertical-scroll-proportion="-14.5">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jucatori.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/jucatori.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="81" column="64" selection-start="6142" selection-end="6142" vertical-scroll-proportion="-16.875">
               <folding />
             </state>
           </provider>
@@ -390,25 +434,33 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/application/views/search_results_backend_ro.php" />
-        <option value="$PROJECT_DIR$/application/views/create_title_ro.php" />
-        <option value="$PROJECT_DIR$/application/views/create_entity_success_ro.php" />
-        <option value="$PROJECT_DIR$/application/views/entity_details_admin_ro.php" />
-        <option value="$PROJECT_DIR$/application/views/prepare_update_title_ro.php" />
-        <option value="$PROJECT_DIR$/application/models/crud_model_title.php" />
-        <option value="$PROJECT_DIR$/application/controllers/title_ro.php" />
-        <option value="$PROJECT_DIR$/application/controllers/main.php" />
-        <option value="$PROJECT_DIR$/application/models/m_all_entities.php" />
         <option value="$PROJECT_DIR$/application/views/player_full_details_ro.php" />
-        <option value="$PROJECT_DIR$/application/views/prepare_update_player_ro.php" />
-        <option value="$PROJECT_DIR$/application/controllers/player_ro.php" />
-        <option value="$PROJECT_DIR$/application/models/crud_model_video.php" />
-        <option value="$PROJECT_DIR$/application/controllers/video_ro.php" />
-        <option value="$PROJECT_DIR$/application/views/prepare_update_video_ro.php" />
-        <option value="$PROJECT_DIR$/application/views/create_player_ro.php" />
+        <option value="$PROJECT_DIR$/application/views/terran_jucatori.php" />
+        <option value="$PROJECT_DIR$/application/views/zerg_jucatori.php" />
+        <option value="$PROJECT_DIR$/application/views/zerg_jucatori_ro.php" />
+        <option value="$PROJECT_DIR$/application/views/terran_jucatori_ro.php" />
+        <option value="$PROJECT_DIR$/application/views/protoss_jucatori.php" />
+        <option value="$PROJECT_DIR$/application/views/protoss_jucatori_ro.php" />
+        <option value="$PROJECT_DIR$/application/views/detalii_echipa.php" />
+        <option value="$PROJECT_DIR$/application/views/echipe.php" />
+        <option value="$PROJECT_DIR$/application/views/jucatori.php" />
+        <option value="$PROJECT_DIR$/application/views/jucatori_ro.php" />
+        <option value="$PROJECT_DIR$/application/views/contact_view_success.php" />
+        <option value="$PROJECT_DIR$/application/views/contact_view.php" />
+        <option value="$PROJECT_DIR$/application/views/contact_view_failure.php" />
+        <option value="$PROJECT_DIR$/css/styles.css" />
+        <option value="$PROJECT_DIR$/application/controllers/contact.php" />
       </list>
     </option>
   </component>
@@ -418,14 +470,14 @@
     <option name="width" value="1440" />
     <option name="height" value="806" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="2" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
@@ -462,6 +514,70 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="biografii_sc2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="biografii_sc2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="biografii_sc2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="biografii_sc2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="biografii_sc2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="biografii_sc2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="biografii_sc2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="biografii_sc2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -470,19 +586,23 @@
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="FullScreen" value="false" />
-    <property name="MemberChooser.showClasses" value="true" />
-    <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="recentsLimit" value="5" />
     <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
+    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="PHP Script.zerg_jucatori_ro.php">
+    <configuration default="false" name="zerg_jucatori_ro.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/application/views/zerg_jucatori_ro.php">
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
@@ -581,7 +701,14 @@
       <patterns />
       <method />
     </configuration>
-    <list size="0" />
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="PHP Script.zerg_jucatori_ro.php" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="PHP Script.zerg_jucatori_ro.php" />
+      </list>
+    </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
       <Port>5050</Port>
@@ -594,6 +721,23 @@
       <created>1371465127245</created>
       <updated>1371465127245</updated>
     </task>
+    <task id="LOCAL-00001" summary="Fixed issue when updating a player's team would result in no change">
+      <created>1373633226767</created>
+      <updated>1373633226767</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Fixed issue when updating a player's team would result in no change for romanian players as well">
+      <created>1373635437526</created>
+      <updated>1373635437526</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Fixed issue when inserting a new video for romanian players would cause a 404 error - page not found">
+      <created>1373641860705</created>
+      <updated>1373641860705</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Fixed issue with linking to romanian players from a zerg detailed romanian player">
+      <created>1373644859894</created>
+      <updated>1373644859894</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -608,10 +752,11 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32944608" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -668,7 +813,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed issue with linking to romanian players from a zerg detailed romanian player" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -682,119 +827,123 @@
     <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
+    <MESSAGE value="Fixed issue when updating a player's team would result in no change" />
+    <MESSAGE value="Fixed issue when updating a player's team would result in no change for romanian players as well" />
+    <MESSAGE value="Fixed issue when inserting a new video for romanian players would cause a 404 error - page not found" />
+    <MESSAGE value="Fixed issue with linking to romanian players from a zerg detailed romanian player" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/views/player_full_details_ro.php">
+    <entry file="file://$PROJECT_DIR$/application/views/zerg_jucatori_ro.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="108" column="63" selection-start="6301" selection-end="6301" vertical-scroll-proportion="0.6270903">
+        <state line="39" column="71" selection-start="2795" selection-end="2795" vertical-scroll-proportion="0.6763285">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/prepare_update_player.php">
+    <entry file="file://$PROJECT_DIR$/application/views/zerg_jucatori.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="8131" vertical-scroll-proportion="0.0">
+        <state line="39" column="75" selection-start="3090" selection-end="3090" vertical-scroll-proportion="0.7487923">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/prepare_update_player_ro.php">
+    <entry file="file://$PROJECT_DIR$/application/views/protoss_jucatori_ro.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="63" selection-start="4325" selection-end="4325" vertical-scroll-proportion="0.5735786">
+        <state line="22" column="38" selection-start="1749" selection-end="1749" vertical-scroll-proportion="0.28985506">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/crud_model_title.php">
+    <entry file="file://$PROJECT_DIR$/application/views/terran_jucatori.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="36" selection-start="229" selection-end="245" vertical-scroll-proportion="0.3277311">
+        <state line="39" column="75" selection-start="3091" selection-end="3091" vertical-scroll-proportion="0.7487923">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/create_title_ro.php">
+    <entry file="file://$PROJECT_DIR$/application/views/detalii_echipa.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="152" column="46" selection-start="8623" selection-end="8623" vertical-scroll-proportion="2.3977456">
+        <state line="38" column="77" selection-start="2956" selection-end="2956" vertical-scroll-proportion="0.7004831">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/title_ro.php">
+    <entry file="file://$PROJECT_DIR$/application/views/echipe.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="111" column="46" selection-start="4258" selection-end="4258" vertical-scroll-proportion="-0.19663866">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/prepare_update_title_ro.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="32" selection-start="942" selection-end="942" vertical-scroll-proportion="0.4731861">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/crud_model_player.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="45" selection-start="1729" selection-end="1754" vertical-scroll-proportion="-6.36">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/video.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="23" selection-start="0" selection-end="7081" vertical-scroll-proportion="0.2173913">
+        <state line="41" column="75" selection-start="3100" selection-end="3100" vertical-scroll-proportion="0.7246377">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="229" column="75" selection-start="10131" selection-end="10131" vertical-scroll-proportion="-5.9">
+        <state line="33" column="73" selection-start="1225" selection-end="1290" vertical-scroll-proportion="0.62801933">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/crud_model_video.php">
+    <entry file="file://$PROJECT_DIR$/application/controllers/player.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="116" column="33" selection-start="3611" selection-end="3624" vertical-scroll-proportion="-9.5">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/video_ro.php">
+    <entry file="file://$PROJECT_DIR$/application/views/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="213" column="53" selection-start="7841" selection-end="7841" vertical-scroll-proportion="-7.4">
+        <state line="9" column="56" selection-start="644" selection-end="644" vertical-scroll-proportion="0.2173913">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/prepare_update_video.php">
+    <entry file="file://$PROJECT_DIR$/application/views/create_player.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="2370" vertical-scroll-proportion="-0.0">
+        <state line="160" column="71" selection-start="10041" selection-end="10041" vertical-scroll-proportion="0.62801933">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/create_player_ro.php">
+    <entry file="file://$PROJECT_DIR$/application/views/jucatori.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="152" column="56" selection-start="9610" selection-end="9610" vertical-scroll-proportion="0.50167227">
+        <state line="81" column="64" selection-start="6142" selection-end="6142" vertical-scroll-proportion="-16.875">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/player_ro.php">
+    <entry file="file://$PROJECT_DIR$/application/views/contact_view_success.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="43" selection-start="3406" selection-end="3406" vertical-scroll-proportion="0.63529414">
+        <state line="98" column="31" selection-start="5275" selection-end="6095" vertical-scroll-proportion="-22.75">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/prepare_update_video_ro.php">
+    <entry file="file://$PROJECT_DIR$/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="39" selection-start="501" selection-end="501" vertical-scroll-proportion="0.23659305">
+        <state line="496" column="16" selection-start="7514" selection-end="7514" vertical-scroll-proportion="-14.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/contact_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="98" column="75" selection-start="5956" selection-end="5971" vertical-scroll-proportion="-8.375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/contact_view_failure.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="91" column="49" selection-start="5344" selection-end="5344" vertical-scroll-proportion="-19.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/contact.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="22" selection-start="1779" selection-end="1779" vertical-scroll-proportion="1.0144928">
           <folding />
         </state>
       </provider>

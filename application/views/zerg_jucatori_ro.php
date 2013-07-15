@@ -37,7 +37,7 @@
                         <li><a class="activeLink" href="<?php echo base_url();?>index.php/jucatori_romani/players" target="_self">Jucători români</a></li>
                         <li><a href="<?php echo base_url();?>index.php/main/teams" target="_self">Echipe</a></li>
                         <li><a href="<?php echo base_url();?>index.php/contribute/ajuta" target="_self">Contribuie</a></li>
-                        <li><a href="<?php echo base_url();?>index.php/main/contact" target="_self">Contact</a></li>
+                        <li><a href="<?php echo base_url();?>index.php/contact" target="_self">Contact</a></li>
                         <!--<li><a href="#" target="_self">Contact</a></li>-->
                     </ul>
                 </div><!--ends mainMenuContainer-->
