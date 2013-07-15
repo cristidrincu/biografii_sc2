@@ -51,11 +51,11 @@ class Search_Ro extends CI_Controller{
         $dataKeywords['data_keywords']=$this->getDefaultKeywords();
         $data['search_results_nickname']=$this->m_search_entities->searchPlayerFirstNameRO($this->input->post('search_field'));
         if(empty($_POST['search_field'])){
-            redirect('index.php/search/loadNoResultsPage_ro');
+            redirect('index.php/search/loadNoResultsPage');
         }else if(count($data['search_results_nickname'])==0){
-            redirect('index.php/search/loadNoResultsPage_ro');
+            redirect('index.php/search_ro/loadNoResultsPage');
         }else{
-            redirect('index.php/search/loadResultsPage_ro/'.$this->input->post('search_field'));
+            redirect('index.php/search_ro/loadResultsPage/'.$this->input->post('search_field'));
         }
     }
 
@@ -70,7 +70,7 @@ class Search_Ro extends CI_Controller{
 
     public function loadResultsPage($nickname){
         $dataKeywords['data_keywords']=$this->getDefaultKeywords();
-        $data['search_results_nickname']=$this->m_search_entities->searchPlayerFirstName($nickname);
+        $data['search_results_nickname']=$this->m_search_entities->searchPlayerFirstNameRO($nickname);
         $this->load->view('header', $dataKeywords);
         $this->load->view('search_results_ro', $data);
         $this->load->view('footer');

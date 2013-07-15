@@ -68,6 +68,14 @@ class Search extends CI_Controller{
         $this->load->view('footer');
     }
 
+    public function loadNoResultsPageTeam(){
+        $dataKeywords['data_keywords']=$this->getDefaultKeywords();
+
+        $this->load->view('header', $dataKeywords);
+        $this->load->view('no_database_results_team');
+        $this->load->view('footer');
+    }
+
     public function loadResultsPage($nickname){
         $dataKeywords['data_keywords']=$this->getDefaultKeywords();
         $data['search_results_nickname']=$this->m_search_entities->searchPlayerFirstName($nickname);
@@ -96,7 +104,7 @@ class Search extends CI_Controller{
 			redirect('index.php/search/loadNoResultsPage');
 		}else{
 			if(count($data['search_results_team_name'])==0){
-                redirect('index.php/search/loadNoResultsPage');
+                redirect('index.php/search/loadNoResultsPageTeam');
 			}else{
                 redirect('index.php/search/loadResultsPageTeam/'.$this->input->post('search_field_team'));
 			}
