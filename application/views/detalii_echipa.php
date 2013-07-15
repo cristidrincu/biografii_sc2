@@ -53,7 +53,7 @@
                         <?php
                           $form_attributes = array('class'=>'form-search formSimpleJucator');
                           $input_field_attributes=array('name'=>'search_field_team','class'=>'span12 search-query');
-                          $submit_btn_attributes=array('name'=>'submitBtn','class' => 'btn', 'type'=>'submit','content'=>'Cauta echipa');
+                          $submit_btn_attributes=array('name'=>'submitBtn','class' => 'btn', 'type'=>'submit','content'=>'Caută echipa');
                         ?>
                             <div class="input-append">
                                 <?php 
@@ -64,7 +64,7 @@
                                 ?>
                             </div>
                         <br class="clearFloats"/>
-                        <p>Fiecare din echipele existente au asociati si jucatorii din cadrul lor. Pentru unele echipe veti gasi toti jucatorii, pentru altele doar cei mai importanti, insa vor exista echipe carora nu am apucat sa le asociem nici un jucator. Va multumim pentru intelegere!</p>
+                        <p>Fiecare din echipele existente au asociaţi şi jucătorii din cadrul lor. Pentru unele echipe veţi găsi toţi jucătorii, pentru altele doar cei mai importanţi, însă vor există echipe cărora nu am apucat să le asociem nici un jucător. Va mulţumim pentru înţelegere!</p>
                     </div><!--ends sectionDescription--> 
                     <div class="latestPlayersAddedContainer">
                       <!--<?php $team_logo_url; ?>-->
@@ -91,7 +91,7 @@
                                     <li><p>Nickname: <?php echo $player->nickname; ?></p></li>
                                     <li><p>Rasa: <?php echo $player->race; ?></p></li>
                                 </ul>
-                                <?php echo anchor("index.php/main/getPlayerDetails/$player->player_ID/$player->race/$player->nickname", "Citeste mai mult!", array("class"=>"btn btn-success")); ?>
+                                <?php echo anchor("index.php/main/getPlayerDetails/$player->player_ID/$player->race/$player->nickname", "Citeşte mai mult!", array("class"=>"btn btn-success")); ?>
                               </div>
                           <?php endforeach; ?>   
                     </div>

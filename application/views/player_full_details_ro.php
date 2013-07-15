@@ -46,7 +46,7 @@
                             <p>În cadrul acestei secţiuni vei găsi cei mai buni jucători de Starcraft2 din România, jucând cu rasa <strong>TERRAN</strong>, pentru ligile Masters şi Grand Masters.</p>
                         </div>
                         <br class="clearFloats"/>
-                        <a href='<?php echo base_url(); ?>index.php/main/terran_players_ro' class='btn btn-primary'>Afiseaza</a>
+                        <a href='<?php echo base_url(); ?>index.php/main/terran_players_ro' class='btn btn-primary'>Afişează</a>
                     </div>
 
                     <!--<hr class="divider races"/>-->
@@ -63,7 +63,7 @@
                             <p>În cadrul acestei secţiuni vei găsi cei mai buni jucători de Starcraft2 din România, jucând cu rasa <strong>ZERG</strong>, pentru ligile Masters şi Grand Masters.</p>
                         </div>
                         <br class="clearFloats"/>
-                        <a href='<?php echo base_url(); ?>index.php/main/zerg_players_ro' class='btn btn-primary'>Afiseaza</a>
+                        <a href='<?php echo base_url(); ?>index.php/main/zerg_players_ro' class='btn btn-primary'>Afişează</a>
                     </div>
 
                     <!--hr class="divider"/>-->
@@ -80,7 +80,7 @@
                             <p>În cadrul acestei secţiuni vei găsi cei mai buni jucători de Starcraft2 din România, jucând cu rasa <strong>PROTOSS</strong>, pentru ligile Masters şi Grand Masters.</p>
                         </div>
                         <br class="clearFloats"/>
-                        <a href='<?php echo base_url(); ?>index.php/main/protoss_players_ro' class='btn btn-primary'>Afiseaza</a>
+                        <a href='<?php echo base_url(); ?>index.php/main/protoss_players_ro' class='btn btn-primary'>Afişează</a>
                     </div>
 
                     <!--<hr class="divider"/>-->
@@ -94,7 +94,7 @@
                 <?php
                 $form_attributes = array('class'=>'form-search formSimpleJucator');
                 $input_field_attributes=array('name'=>'search_field','class'=>'span12 search-query');
-                $submit_btn_attributes=array('name'=>'submitBtn','class' => 'btn', 'type'=>'submit','content'=>'Cauta jucator');
+                $submit_btn_attributes=array('name'=>'submitBtn','class' => 'btn', 'type'=>'submit','content'=>'Caută jucător');
                 ?>
                 <div class="input-append">
                     <?php
@@ -106,7 +106,7 @@
                 </div>
                 <br class="clearFloats"/>
                 <div class='alert alert-info'>
-                    In momentul in care doresti sa cauti un jucator, te rugam sa introduci nickname-ul sau - Nightend sau DeathAngel de exemplu. Cautarea se face dupa nickname si NU dupa numele de familie etc!
+                    În momentul în care doreşti să cauţi un jucător, te rugăm să introduci nickname-ul sau - Nightend sau DeathAngel de exemplu. Căutarea se face după nickname şi NU după numele de familie etc!
                 </div>
                 <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit pulvinar risus, in vestibulum ligula pulvinar a. Praesent felis mi, ultrices at pellentesque eu, aliquet id neque. Nulla nec turpis nunc, a dignissim sapien. Nullam nec ligula in nisl cursus posuere quis sit amet dui. Nulla sapien libero, ultricies vel commodo nec, condimentum a turpis. Duis felis sapien, euismod et aliquet eget, luctus id neque.</p>-->
             </div><!--ends sectionDescription-->

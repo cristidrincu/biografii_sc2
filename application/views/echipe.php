@@ -55,7 +55,7 @@
                         <?php
                           $form_attributes = array('class'=>'form-search formSimpleJucator');
                           $input_field_attributes=array('name'=>'search_field_team','class'=>'span12 search-query');
-                          $submit_btn_attributes=array('name'=>'submitBtn','class' => 'btn', 'type'=>'submit','content'=>'Cauta echipa');
+                          $submit_btn_attributes=array('name'=>'submitBtn','class' => 'btn', 'type'=>'submit','content'=>'Caută echipa');
                         ?>
                             <div class="input-append">
                                 <?php 
@@ -66,7 +66,7 @@
                                 ?>
                             </div>
                         <br class="clearFloats"/>
-                        <p>Fiecare din echipele existente au asociati si jucatorii din cadrul lor. Pentru unele echipe veti gasi toti jucatorii, pentru altele doar cei mai importanti, insa vor exista echipe carora nu am apucat sa le asociem nici un jucator. Va multumim pentru intelegere!</p>
+                        <p>Fiecare din echipele existente au asociaţi şi jucătorii din cadrul lor. Pentru unele echipe veţi găsi toţi jucătorii, pentru altele doar cei mai importanţi, însă vor exista echipe cărora nu am apucat să le asociem nici un jucător. Va mulţumim pentru înţelegere!</p>
                     </div><!--ends sectionDescription-->
                 </div><!--ends span12--> 
               </div><!--ends row fluid top-->
@@ -75,10 +75,10 @@
                     <div class="span3 playerContainerSmall">
                         <h4><?php echo $team->team_name; ?></h4>
                         <ul>
-                          <li><p>Numar jucatori: <?php echo $team->number_of_players; ?></p></li>
+                          <li><p>Număr jucători: <?php echo $team->number_of_players; ?></p></li>
                           <li><p>Țara de origine: <?php echo $team->team_country; ?></p></li>
                         </ul>
-                        <?php echo anchor("index.php/main/getTeamDetails/".$team->ID,"Afla mai multe despre echipa",array('class'=>'btn btn-success')); ?>
+                        <?php echo anchor("index.php/main/getTeamDetails/".$team->ID,"Află mai multe despre echipa",array('class'=>'btn btn-success')); ?>
                     </div>
                   <?php endforeach; ?>     
               </div>  

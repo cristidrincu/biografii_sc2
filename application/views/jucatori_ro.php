@@ -43,7 +43,7 @@
                             <p>În cadrul acestei secţiuni vei găsi cei mai buni jucători de Starcraft2 din România, jucând cu rasa <strong>TERRAN</strong>, pentru ligile Masters şi Grand Masters.</p>
                         </div>
                         <br class="clearFloats"/>
-                        <a href='<?php echo base_url();  ?>index.php/main/terran_players_ro' class='btn btn-primary'>Afiseaza</a>
+                        <a href='<?php echo base_url();  ?>index.php/main/terran_players_ro' class='btn btn-primary'>Afişează</a>
                     </div>
 
                     <!--<hr class="divider races"/>-->
@@ -60,7 +60,7 @@
                             <p>În cadrul acestei secţiuni vei găsi cei mai buni jucători de Starcraft2 din România, jucând cu rasa <strong>ZERG</strong>, pentru ligile Masters şi Grand Masters.</p>
                         </div>
                         <br class="clearFloats"/>
-                        <a href='<?php echo base_url(); ?>index.php/main/zerg_players_ro' class='btn btn-primary'>Afiseaza</a>
+                        <a href='<?php echo base_url(); ?>index.php/main/zerg_players_ro' class='btn btn-primary'>Afişează</a>
                     </div>
 
                     <!--hr class="divider"/>-->
@@ -77,7 +77,7 @@
                             <p>În cadrul acestei secţiuni vei găsi cei mai buni jucători de Starcraft2 din România, jucând cu rasa <strong>PROTOSS</strong>, pentru ligile Masters şi Grand Masters.</p>
                         </div>
                         <br class="clearFloats"/>
-                        <a href='<?php echo base_url(); ?>index.php/main/protoss_players_ro' class='btn btn-primary'>Afiseaza</a>
+                        <a href='<?php echo base_url(); ?>index.php/main/protoss_players_ro' class='btn btn-primary'>Afişează</a>
                     </div>
                 </div><!--ends terranContainerImage-->
             </div>
@@ -88,7 +88,7 @@
                 <?php
                 $form_attributes = array('class'=>'form-search formSimpleJucator');
                 $input_field_attributes=array('name'=>'search_field','class'=>'span12 search-query');
-                $submit_btn_attributes=array('name'=>'submitBtn','class' => 'btn', 'type'=>'submit','content'=>'Cauta jucator');
+                $submit_btn_attributes=array('name'=>'submitBtn','class' => 'btn', 'type'=>'submit','content'=>'Caută jucător');
                 ?>
                 <div class="input-append">
                     <?php
@@ -100,11 +100,11 @@
                 </div>
                 <br class="clearFloats"/>
                 <div class='alert alert-info'>
-                    In momentul in care doresti sa cauti un jucator, te rugam sa introduci nickname-ul sau - DeathAngel sau Daze de exemplu. Cautarea se face dupa nickname si NU dupa numele de familie etc!
+                    În momentul în care doreşti să cauţi un jucător, te rugăm să introduci nickname-ul sau - Nightend sau DeathAngel de exemplu. Căutarea se face după nickname şi NU după numele de familie etc!
                 </div>
             </div><!--ends sectionDescription-->
             <div class="latestPlayersAddedContainer">
-                <h3>Ultimii jucatori adaugati</h3>
+                <h3>Ultimii jucători adăugaţi</h3>
                 <?php foreach($data_latest_players as $player): ?>
                     <div class="span3 playerContainerSmall">
                         <h4><?php echo $player->nickname;?></h4>
@@ -115,7 +115,7 @@
                             <li><p>Rasa: <?php echo $player->race; ?></p></li>
                             <li><p>Echipa: <?php echo $player->team; ?></p></li>
                         </ul>
-                        <?php echo anchor("index.php/main/getPlayerDetailsRO/$player->player_ID/$player->race/$player->nickname","Citeste intreaga biografie",array('class'=>'btn btn-success')); ?>
+                        <?php echo anchor("index.php/main/getPlayerDetailsRO/$player->player_ID/$player->race/$player->nickname","Citeşte întreaga biografie",array('class'=>'btn btn-success')); ?>
                     </div>
                 <?php endforeach; ?>
             </div><!--ends latestPlayersAddedContainer-->

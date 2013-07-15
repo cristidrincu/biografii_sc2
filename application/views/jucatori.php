@@ -59,10 +59,10 @@
                                        </ul>                                       
                                    </div>
                                    <div class="containerTextDescriereRasa"> 
-                                    <p>Am introdus in cadrul sectiunii Terrane jucatori cu renume mondial, gen Kas, MVP, Marine King Prime si altii. Vei putea citi biografiile celor mai puternici terrani Koreeni, insa si a celor care vin incet din urma, asa cum este spaniolul Lucifron!</p>
+                                    <p>Am introdus în cadrul secţiunii Terrane jucători cu renume mondial, gen Kas, MVP, Marine King Prime şi alţii. Vei putea citi biografiile celor mai puternici terrani Coreeni, însă şi a celor care vin încet din urmă, aşa cum este spaniolul Lucifron!</p>
                                    </div>
                                    <br class="clearFloats"/>
-                                   <a href='<?php echo base_url();  ?>index.php/main/terran_players' class='btn btn-primary'>Afiseaza</a>
+                                   <a href='<?php echo base_url();  ?>index.php/main/terran_players' class='btn btn-primary'>Afişează</a>
                                </div>
                                
                                <!--<hr class="divider races"/>-->
@@ -76,10 +76,10 @@
                                        </ul>                                       
                                    </div>
                                    <div class="containerTextDescriereRasa"> 
-                                    <p>Nume precum Nestea, Zenio, Life si multi altii isi au biografiile in cadrul acestei sectiuni. Afla totul despre ei, de la inceputul carierie de PRO GAMER si pana in acest moment, cat si motivul pentru care au ales sa joace acesta rasa.</p>
+                                    <p>Nume precum Nestea, Zenio, Life şi mulţi alţii îşi au biografiile în cadrul acestei secţiuni. Află totul despre ei, de la începutul carierie de PRO GAMER şi până în acest moment, cât şi motivul pentru care au ales să joace acesta rasă.</p>
                                    </div>
                                    <br class="clearFloats"/>
-                                   <a href='<?php echo base_url(); ?>index.php/main/zerg_players' class='btn btn-primary'>Afiseaza</a>
+                                   <a href='<?php echo base_url(); ?>index.php/main/zerg_players' class='btn btn-primary'>Afişează</a>
                                </div>    
                                
                                <!--hr class="divider"/>-->
@@ -93,10 +93,10 @@
                                        </ul>                                       
                                    </div>
                                    <div class="containerTextDescriereRasa"> 
-                                    <p>Huk, Parting, Socke - nume sonore in cadrul adunarii protosiene, cu rezultate remarcabile, te asteapta sa le citesti biografiile si sa le afli rezultatele obtinute in cadrul concursurilor internationale la care au participat. O sectiune in care DigitalWaves a muncit la greu. Prietenii stiu de ce!</p>
+                                    <p>Huk, Parting, Socke - nume sonore în cadrul adunării protosiene, cu rezultate remarcabile, te aşteaptă să le citeşti biografiile şi să le afli rezultatele obţinute în cadrul concursurilor internaţionale la care au participat. O secţiune în care DigitalWaves a muncit la greu. Prietenii ştiu de ce!</p>
                                    </div>
                                    <br class="clearFloats"/>
-                                   <a href='<?php echo base_url(); ?>index.php/main/protoss_players' class='btn btn-primary'>Afiseaza</a>
+                                   <a href='<?php echo base_url(); ?>index.php/main/protoss_players' class='btn btn-primary'>Afişează</a>
                                </div>
                     </div><!--ends terranContainerImage-->   
                     </div>
@@ -107,7 +107,7 @@
                         <?php
                           $form_attributes = array('class'=>'form-search formSimpleJucator');
                           $input_field_attributes=array('name'=>'search_field','class'=>'span12 search-query');
-                          $submit_btn_attributes=array('name'=>'submitBtn','class' => 'btn', 'type'=>'submit','content'=>'Cauta jucator');
+                          $submit_btn_attributes=array('name'=>'submitBtn','class' => 'btn', 'type'=>'submit','content'=>'Caută jucător');
                         ?>
                             <div class="input-append">
                                 <?php 
@@ -119,12 +119,11 @@
                             </div>
                         <br class="clearFloats"/>
                         <div class='alert alert-info'>
-                            In momentul in care doresti sa cauti un jucator, te rugam sa introduci nickname-ul sau - MVP sau tlo de exemplu. Cautarea se face dupa nickname si NU dupa numele de familie etc. Ne indoim ca veti cauta dupa Jung Jong Hyun!
+                            În momentul în care doreşti să cauţi un jucător, te rugăm să introduci nickname-ul sau - MVP sau tlo de exemplu. Căutarea se face după nickname şi NU după numele de familie etc. Ne îndoim că veţi cauta după Jung Jong Hyun!
                         </div>
-                        <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit pulvinar risus, in vestibulum ligula pulvinar a. Praesent felis mi, ultrices at pellentesque eu, aliquet id neque. Nulla nec turpis nunc, a dignissim sapien. Nullam nec ligula in nisl cursus posuere quis sit amet dui. Nulla sapien libero, ultricies vel commodo nec, condimentum a turpis. Duis felis sapien, euismod et aliquet eget, luctus id neque.</p>-->
                     </div><!--ends sectionDescription--> 
                     <div class="latestPlayersAddedContainer">
-                        <h3>Ultimii jucatori adaugati</h3>
+                        <h3>Ultimii jucători adăugaţi</h3>
                         <?php foreach($data_latest_players as $player): ?>
                             <div class="span3 playerContainerSmall">
                                 <h4><?php echo $player->nickname;?></h4>
@@ -135,7 +134,7 @@
                                     <li><p>Rasa: <?php echo $player->race; ?></p></li>
                                     <li><p>Echipa: <?php echo $player->team; ?></p></li>
                                 </ul>
-                                <?php echo anchor("index.php/main/getPlayerDetails/$player->player_ID/$player->race/$player->nickname","Citeste intreaga biografie",array('class'=>'btn btn-success')); ?>
+                                <?php echo anchor("index.php/main/getPlayerDetails/$player->player_ID/$player->race/$player->nickname","Citeşte întreaga biografie",array('class'=>'btn btn-success')); ?>
                             </div>
                           <?php endforeach; ?>
                     </div><!--ends latestPlayersAddedContainer-->
