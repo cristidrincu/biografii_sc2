@@ -20,28 +20,35 @@ class Contact extends CI_Controller {
         return $this->dataDefaultKeywords;
     }
 
-    public function index(){
+    public function populateKeywords_LoadViews($page_type){
         $dataPlayerKeywords['data_keywords']=$this->getDefaultKeywords();
-
         $this->load->view('header', $dataPlayerKeywords);
-        $this->load->view('contact_view');
+
+        switch($page_type){
+            case 'default_page':
+                $this->load->view('contact_view');
+            break;
+            case 'success_page':
+                $this->load->view('contact_view_success');
+            break;
+            case 'error_page':
+                $this->load->view('contact_view_failure');
+            break;
+        }
+
         $this->load->view('footer');
+    }
+
+    public function index(){
+        $this->populateKeywords_LoadViews('default_page');
     }
 
     public function success_page(){
-        $dataPlayerKeywords['data_keywords']=$this->getDefaultKeywords();
-
-        $this->load->view('header', $dataPlayerKeywords);
-        $this->load->view('contact_view_success');
-        $this->load->view('footer');
+       $this->populateKeywords_LoadViews('success_page');
     }
 
     public function error_page(){
-        $dataPlayerKeywords['data_keywords']=$this->getDefaultKeywords();
-
-        $this->load->view('header', $dataPlayerKeywords);
-        $this->load->view('contact_view_failure');
-        $this->load->view('footer');
+        $this->populateKeywords_LoadViews('error_page');
     }
 
     public function send_email(){
@@ -59,6 +66,5 @@ class Contact extends CI_Controller {
         }else{
             redirect('index.php/contact/error_page');
         }
-
     }
 }
