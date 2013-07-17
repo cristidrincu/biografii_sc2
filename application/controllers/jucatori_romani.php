@@ -30,21 +30,29 @@ class Jucatori_Romani extends CI_Controller {
         $this->dataEntityKeywords=$keywords;
     }
 
-    public function players(){
+    public function injectKeywords(){
         $dataPlayerKeywords['data_keywords']=$this->getDefaultKeywords();
+        return $dataPlayerKeywords;
+    }
 
+    public function loadResultsPage($number_of_players, $player_details){
+        //default views that are loaded
+        $this->load->view('header', $this->injectKeywords());
+
+        if($number_of_players>0){
+            $this->load->view('jucatori_ro', $player_details);
+        }else{
+            $this->load->view('no_database_results_ro');
+        }
+
+        //default views that are loaded
+        $this->load->view('footer');
+    }
+
+    public function players(){
         //load the model that extracts the latest 6 players inserted in the database
         $dataLatestPlayers['data_latest_players']=$this->m_all_entities->getLatestPlayersRO();
-
-        //check to see if it returns any results
-        if(count($dataLatestPlayers['data_latest_players'])==0){
-            $this->load->view('header', $dataPlayerKeywords);
-            $this->load->view('no_database_results_ro');
-            $this->load->view('footer');
-        }else{
-            $this->load->view('header', $dataPlayerKeywords);
-            $this->load->view('jucatori_ro', $dataLatestPlayers);
-            $this->load->view('footer');
-        }
+        $number_of_players= count($dataLatestPlayers['data_latest_players']);
+        $this->loadResultsPage($number_of_players,$dataLatestPlayers);
     }
 }
