@@ -7,6 +7,13 @@ class M_all_entities extends CI_Model{
 		$this->load->database();
 	}
 
+    public function countResults($table_name, $race){
+        $this->db->like('race', $race);
+        $this->db->from($table_name);
+        $rows=$this->db->count_all_results();
+        return $rows;
+    }
+
 	//get all players from the db based on their race
 	public function getAllPlayers($race){
 		$this->db->select('player_ID,name, nickname, DOB, country, race, team')->from('PLAYER')->where('race', $race)->order_by('nickname', 'asc');
