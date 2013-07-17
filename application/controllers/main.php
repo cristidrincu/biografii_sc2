@@ -21,199 +21,271 @@ class Main extends CI_Controller{
         return $this->dataDefaultKeywords;
     }
 
-    public function getEntityKeywords(){
-        return $this->dataEntityKeywords;
-    }
-
     //$keywords parameter must be an array
     public function setEntityKeywords($keywords){
         $this->dataEntityKeywords=$keywords;
     }
 
-	public function index(){
-        $dataPlayerKeywords['data_keywords']=$this->getDefaultKeywords();
+    public function getEntityKeywords(){
+        return $this->dataEntityKeywords;
+    }
 
-		$this->load->view('header', $dataPlayerKeywords);
+    public function injectKeywordsDefault(){
+        $dataPlayerKeywords['data_keywords']=$this->getDefaultKeywords();
+        return $dataPlayerKeywords;
+    }
+
+    public function injectKeywordsCustom($custom_keywords){
+        $dataPlayerKeywords['data_keywords']=array_merge($this->getDefaultKeywords(), $custom_keywords);
+        return $dataPlayerKeywords;
+    }
+
+    public function loadResultsPageDefault($number_of_players, $player_details){
+        //default view
+        $this->load->view('header', $this->injectKeywordsDefault());
+
+        if($number_of_players>0){
+           $this->load->view('jucatori', $player_details);
+        }else{
+            $this->load->view('no_database_results');
+        }
+        //default view
+        $this->load->view('footer');
+    }
+
+    //DESCRIPTION - this method will be used to decide if the no_database_results view will be loaded or the views containing player's details
+    //DETAILS - $number_of_players parameter will be provided by the model m_all_entities' method count_results($table_name, $race)
+    //USAGE - used inside loadResultsPageEntityInternational() method
+    //NOTES - METHOD used for INTERNATIONAL PLAYERS
+    public function checkNumberOfPlayersInternational($number_of_players){
+        $result = null;
+        if($number_of_players>0){
+            $result = true;
+        }else{
+            $result = false;
+        }
+        return $result;
+    }
+
+    //DESCRIPTION - this method will be used to decide if the no_database_results_ro view will be loaded or the views containing player's details
+    //DETAILS - $number_of_players parameter will be provided by the model m_all_entities' method count_results($table_name, $race)
+    //USAGE - used inside loadResultsPageEntityRomania() method
+    //NOTES - METHOD used for ROMANIAN PLAYERS
+    public function checkNumberOfPlayersRomania($number_of_players){
+        $result=null;
+        if($number_of_players>0){
+            $result = true;
+        }else{
+            $result=false;
+        }
+        return $result;
+    }
+
+    public function loadResultsPageEntityInternational($entity_type, $number_of_players, $player_details, $custom_keywords){
+
+    //load the header.php by default
+    $this->load->view('header', $this->injectKeywordsCustom($custom_keywords));
+
+    //check to see if there are any players in the database
+    $numberOfInternationalPlayers=$this->checkNumberOfPlayersInternational($number_of_players);
+
+    switch($entity_type){
+        case "terran":
+            if($numberOfInternationalPlayers){
+                $this->load->view('terran_jucatori', $player_details);
+            }else if(!$numberOfInternationalPlayers){
+                $this->load->view('no_database_results');
+            }
+            break;
+        case "zerg":
+            if($numberOfInternationalPlayers){
+                $this->load->view('zerg_jucatori', $player_details);
+            }else if(!$numberOfInternationalPlayers){
+                $this->load->view('no_database_results');
+            }
+            break;
+        case "protoss":
+            if($numberOfInternationalPlayers){
+                $this->load->view('protoss_jucatori', $player_details);
+            }else if(!$numberOfInternationalPlayers){
+                $this->load->view('no_database_results');
+            }
+            break;
+    }
+}
+
+    public function loadResultsPageEntityRomania($entity_type, $number_of_players, $player_details, $custom_keywords){
+
+        //load the header.php by default
+        $this->load->view('header', $this->injectKeywordsCustom($custom_keywords));
+
+        //check to see if there are any players in the database
+        $numberOfRomanianPlayers=$this->checkNumberOfPlayersRomania($number_of_players);
+
+        switch($entity_type){
+            case "terran":
+                if($numberOfRomanianPlayers){
+                    $this->load->view('terran_jucatori_ro', $player_details);
+                }else if(!$numberOfRomanianPlayers){
+                    $this->load->view('no_database_results_ro');
+                }
+            break;
+            case "zerg":
+                if($numberOfRomanianPlayers){
+                    $this->load->view('zerg_jucatori_ro', $player_details);
+                }else if(!$numberOfRomanianPlayers){
+                    $this->load->view('no_database_results_ro');
+                }
+            break;
+            case "protoss":
+                if($numberOfRomanianPlayers){
+                    $this->load->view('protoss_jucatori_ro', $player_details);
+                }else if(!$numberOfRomanianPlayers){
+                    $this->load->view('no_database_results_ro');
+                }
+                break;
+        }
+    }
+
+    public function getInternationalPlayerData($entity_type){
+        $entity_data[]=null;
+
+        switch($entity_type){
+            case 'terran':
+               $entity_data['display_results']=1;
+               $entity_data['results_all_terrans']=$this->m_all_entities->getAllPlayers('Terran');
+            break;
+            case 'zerg':
+               $entity_data['display_results']=1;
+               $entity_data['results_all_zergs']=$this->m_all_entities->getAllPlayers('Zerg');
+            break;
+            case 'protoss':
+               $entity_data['display_results']=1;
+               $entity_data['results_all_protoss']=$this->m_all_entities->getAllPlayers('Protoss');
+            break;
+        }
+        return $entity_data;
+    }
+
+    public function getRomanianPlayerData($entity_type){
+        $entity_data[]=null;
+
+        switch($entity_type){
+            case 'terran':
+                //load the model for terran retrieval operations
+                $entity_data['display_results']=1;
+                $entity_data['results_all_terrans']=$this->m_all_entities->getAllPlayersRO('Terran');
+            break;
+            case 'zerg':
+                //load the model for terran retrieval operations
+                $entity_data['display_results']=1;
+                $entity_data['results_all_zergs']=$this->m_all_entities->getAllPlayersRO('Zerg');
+            break;
+            case 'protoss':
+                //load the model for terran retrieval operations
+                $entity_data['display_results']=1;
+                $entity_data['results_all_protoss']=$this->m_all_entities->getAllPlayersRO('Protoss');
+            break;
+        }
+
+        return $entity_data;
+    }
+
+	public function index(){
+		$this->load->view('header', $this->injectKeywordsDefault());
 		$this->load->view('home');
 		$this->load->view('footer');
 	}
 
 	public function players(){
-		//setup the pagination for the results displayed
-		// $config['base_url']= 'http://biografiisc2.dev/index.php/main/players';
-		// $config['total_rows']= 50;
-		// $config['per_page']= 4;
-		// $this->pagination->initialize($config);
-		// echo $this->pagination->create_links();
-
-        //set keywords for jucatori.php page
-        $dataPlayerKeywords['data_keywords']=$this->getDefaultKeywords();
-
 		//load the model that extracts the latest 6 players inserted in the database
 		$dataLatestPlayers['data_latest_players']=$this->m_all_entities->getLatestPlayers();
 
 		//check to see if it returns any results
-		if(count($dataLatestPlayers['data_latest_players'])===0){
-			$this->load->view('header');
-			$this->load->view('no_database_results');
-			$this->load->view('footer');
-		}else{
-			$this->load->view('header', $dataPlayerKeywords);
-			$this->load->view('jucatori', $dataLatestPlayers);
-			$this->load->view('footer');
-		}
+        $number_of_players=count($dataLatestPlayers['data_latest_players']);
+		$this->loadResultsPageDefault($number_of_players, $dataLatestPlayers);
 	}
 
-    public function players_ro(){
-        //setup the pagination for the results displayed
-        // $config['base_url']= 'http://biografiisc2.dev/index.php/main/players';
-        // $config['total_rows']= 50;
-        // $config['per_page']= 4;
-        // $this->pagination->initialize($config);
-        // echo $this->pagination->create_links();
-
-        //set keywords for jucatori.php page
-        $dataPlayerKeywords['data_keywords']=$this->getDefaultKeywords();
-
-        //load the model that extracts the latest 6 players inserted in the database
-        $dataLatestPlayers['data_latest_players']=$this->m_all_entities->getLatestPlayers();
-
-        //check to see if it returns any results
-        if(count($dataLatestPlayers['data_latest_players'])===0){
-            $this->load->view('header');
-            $this->load->view('no_database_results');
-            $this->load->view('footer');
-        }else{
-            $this->load->view('header', $dataPlayerKeywords);
-            $this->load->view('jucatori', $dataLatestPlayers);
-            $this->load->view('footer');
-        }
-    }
-
 	public function terran_players(){
-		//load the model for terran retrieval operations
-        $terransData['display_results']=1;
-		$terransData['results_all_terrans']=$this->m_all_entities->getAllPlayers('Terran');
+
+        $entity_data=$this->getInternationalPlayerData('terran');
+
+        $number_of_players=$this->m_all_entities->countResults('PLAYER','Terran');
 
         //set keywords for jucatori.php page
         $this->setEntityKeywords(array('demuslim, flash, kas, lucifron, mma, mvp, ryung, thorzain'));
-        $dataPlayerKeywords['data_keywords']=array_merge($this->getDefaultKeywords(), $this->getEntityKeywords());
+        $dataCustomKeywords['data_keywords']= $this->getEntityKeywords();
 
-		//load the views and pass the results of the query to the main view for terran players
-		$this->load->view('header', $dataPlayerKeywords);
-		$this->load->view('terran_jucatori', $terransData);
-		$this->load->view('footer');
+        $this->loadResultsPageEntityInternational('terran', $number_of_players, $entity_data, $dataCustomKeywords['data_keywords']);
 	}
 
     public function terran_players_ro(){
-        //load the model for terran retrieval operations
-        $terransData['display_results']=1;
-        $terransData['results_all_terrans']=$this->m_all_entities->getAllPlayersRO('Terran');
+
+        $entity_data=$this->getRomanianPlayerData('terran');
+        $number_of_players=$this->m_all_entities->countResults('PLAYER_ROMAN','Terran');
 
         //set keywords for jucatori.php page
-        $this->setEntityKeywords(array('demuslim, flash, kas, lucifron, mma, mvp, ryung, thorzain'));
-        $dataPlayerKeywords['data_keywords']=array_merge($this->getDefaultKeywords(), $this->getEntityKeywords());
+        $this->setEntityKeywords(array('romania'));
+        $dataCustomKeywords['data_keywords']=$this->getEntityKeywords();
 
-        if(count($terransData['results_all_terrans'])==0){
-            $this->load->view('header', $dataPlayerKeywords);
-            $this->load->view('no_database_results_ro');
-            $this->load->view('footer');
-        }else{
-            //load the views and pass the results of the query to the main view for terran players
-            $this->load->view('header', $dataPlayerKeywords);
-            $this->load->view('terran_jucatori_ro', $terransData);
-            $this->load->view('footer');
-        }
+        $this->loadResultsPageEntityRomania('terran', $number_of_players, $entity_data, $dataCustomKeywords['data_keywords']);
     }
 
 	public function zerg_players(){
+
+        $entity_data=$this->getInternationalPlayerData('zerg');
+
         //set keywords for zerg_players.php page
         $this->setEntityKeywords(array('zerg, hots, leenock, tlo, zenio'));
         $dataPlayerKeywords['data_keywords']=array_merge($this->getDefaultKeywords(), $this->getEntityKeywords());
 
-		//load the model for zerg retrieval operations
-        $zergsData['display_results']=1;//this will be used in a switch statement for displaying players based on the first letter in their nickname
-		$zergsData['results_all_zergs']=$this->m_all_entities->getAllPlayers('Zerg');
+		$number_of_players=$this->m_all_entities->countResults('PLAYER', 'Zerg');
 
-		//check to see if the query returned any results
-		if(count($zergsData['results_all_zergs'])===0){
-			$this->load->view('header', $dataPlayerKeywords);
-			$this->load->view('no_database_results');
-			$this->load->view('footer');
-		}else{
-			$this->load->view('header', $dataPlayerKeywords);
-			$this->load->view('zerg_jucatori', $zergsData);
-			$this->load->view('footer');
-		}
+        $this->loadResultsPageEntityInternational('zerg', $number_of_players, $entity_data, $dataPlayerKeywords['data_keywords']);
 		
 	}
 
     public function zerg_players_ro(){
+
+        $entity_data=$this->getRomanianPlayerData('zerg');
+
         //set keywords for zerg_players.php page
-        $this->setEntityKeywords(array('zerg, hots, leenock, tlo, zenio'));
+        $this->setEntityKeywords(array('zerg, hots, deathangel, darkthorn'));
         $dataPlayerKeywords['data_keywords']=array_merge($this->getDefaultKeywords(), $this->getEntityKeywords());
 
-        //load the model for zerg retrieval operations
-        $zergsData['display_results']=1;//this will be used in a switch statement for displaying players based on the first letter in their nickname
-        $zergsData['results_all_zergs']=$this->m_all_entities->getAllPlayersRO('Zerg');
+        $number_of_players=$this->m_all_entities->countResults('PLAYER_ROMAN','Zerg');
 
-        //check to see if the query returned any results
-        if(count($zergsData['results_all_zergs'])===0){
-            $this->load->view('header', $dataPlayerKeywords);
-            $this->load->view('no_database_results_ro');
-            $this->load->view('footer');
-        }else{
-            $this->load->view('header', $dataPlayerKeywords);
-            $this->load->view('zerg_jucatori_ro', $zergsData);
-            $this->load->view('footer');
-        }
+        $this->loadResultsPageEntityRomania('zerg', $number_of_players, $entity_data, $dataPlayerKeywords['data_keywords']);
 
     }
 
 	public function protoss_players(){
-		//load the model for protoss retrieval operations
-        $protossData['display_results']=1;//this will be used in a switch statement for displaying players based on the first letter in their nickname
-		$protossData['results_all_protoss']=$this->m_all_entities->getAllPlayers('Protoss');
+
+        $entity_data=$this->getInternationalPlayerData('protoss');
 
         //set keywords for protoss_players.php page
         $this->setEntityKeywords(array('protoss, hots, hero, huk, mc, naniwa, nightend, parting, rain, socke'));
         $dataPlayerKeywords['data_keywords']=array_merge($this->getDefaultKeywords(), $this->getEntityKeywords());
 
-		//check to see if there are any players to be displayed - if not, load the no results view
-		if(count($protossData['results_all_protoss'])===0){
-			$this->load->view('header', $dataPlayerKeywords);
-			$this->load->view('no_database_results');
-			$this->load->view('footer');
-		}else{
-			$this->load->view('header', $dataPlayerKeywords);
-			$this->load->view('protoss_jucatori', $protossData);
-			$this->load->view('footer');
-		}
+        $number_of_players = $this->m_all_entities->countResults('PLAYER','Protoss');
+
+        $this->loadResultsPageEntityInternational('protoss',$number_of_players, $entity_data, $dataPlayerKeywords['data_keywords']);
 	}
 
     public function protoss_players_ro(){
-        //load the model for protoss retrieval operations
-        $protossData['display_results']=1;//this will be used in a switch statement for displaying players based on the first letter in their nickname
-        $protossData['results_all_protoss']=$this->m_all_entities->getAllPlayersRO('Protoss');
+       $entity_data=$this->getRomanianPlayerData('protoss');
 
         //set keywords for protoss_players.php page
-        $this->setEntityKeywords(array('protoss, hots, hero, huk, mc, naniwa, nightend, parting, rain, socke'));
+        $this->setEntityKeywords(array('nightend'));
         $dataPlayerKeywords['data_keywords']=array_merge($this->getDefaultKeywords(), $this->getEntityKeywords());
 
-        //check to see if there are any players to be displayed - if not, load the no results view
-        if(count($protossData['results_all_protoss'])===0){
-            $this->load->view('header', $dataPlayerKeywords);
-            $this->load->view('no_database_results_ro');
-            $this->load->view('footer');
-        }else{
-            $this->load->view('header', $dataPlayerKeywords);
-            $this->load->view('protoss_jucatori_ro', $protossData);
-            $this->load->view('footer');
-        }
+        $number_of_players = $this->m_all_entities->countResults('PLAYER_ROMAN','Protoss');
+
+        $this->loadResultsPageEntityRomania('protoss', $number_of_players, $entity_data, $dataPlayerKeywords['data_keywords']);
     }
 
 	//get a specific player and send it to the view based on his/her race and nickname
-	public function getPlayerDetails($player_id, $race, $nickname){
+	public function getPlayerDetails($player_id, $nickname){
 
 		$dataPlayer['data_player']=$this->m_all_entities->getPlayer($nickname);
 		$dataPlayer['data_titles']=$this->m_all_entities->getPlayerTitles($player_id);
@@ -223,14 +295,12 @@ class Main extends CI_Controller{
 
         $dataPlayerKeywords['data_keywords']=array_merge($this->getDefaultKeywords(), $this->getEntityKeywords());
 
-		//print_r($dataPlayer);
-
 		$this->load->view('header', $dataPlayerKeywords);
 		$this->load->view('player_full_details', $dataPlayer);
 		$this->load->view('footer');
 	}
 
-    public function getPlayerDetailsRO($player_id, $race, $nickname){
+    public function getPlayerDetailsRO($player_id, $nickname){
 
         $dataPlayer['data_player']=$this->m_all_entities->getPlayerRO($nickname);
         $dataPlayer['data_titles']=$this->m_all_entities->getPlayerTitlesRO($player_id);
