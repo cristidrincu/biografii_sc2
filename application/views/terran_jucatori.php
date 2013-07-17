@@ -168,7 +168,7 @@
                                   <li><p>Rasa: <?php echo $terran->race; ?></p></li>
                                   <li><p>Echipa: <?php echo $terran->team;?></p></li>
                                 </ul>
-                                <?php echo anchor("index.php/main/getPlayerDetails/$terran->player_ID/$terran->race/$terran->nickname","Citeste intreaga biografie",array('class'=>'btn btn-success')); ?>
+                                <?php echo anchor("index.php/main/getPlayerDetails/$terran->player_ID/$terran->nickname","Citeste intreaga biografie",array('class'=>'btn btn-success')); ?>
                             </div>
                           <?php endforeach; ?>
                           <?php break; ?>
@@ -183,7 +183,7 @@
                                             <li><p>Rasa: <?php echo $terran->race; ?></p></li>
                                             <li><p>Echipa: <?php echo $terran->team;?></p></li>
                                         </ul>
-                                        <?php echo anchor("index.php/main/getPlayerDetails/$terran->player_ID/$terran->race/$terran->nickname","Citeste intreaga biografie",array('class'=>'btn btn-success')); ?>
+                                        <?php echo anchor("index.php/main/getPlayerDetails/$terran->player_ID/$terran->nickname","Citeste intreaga biografie",array('class'=>'btn btn-success')); ?>
                                     </div>
                                 <?php endforeach; ?>
                           <?php break; ?>

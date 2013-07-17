@@ -169,7 +169,7 @@
                                     <li><p>Rasa: <?php echo $zerg->race; ?></p></li>
                                     <li><p>Echipa: <?php echo $zerg->team; ?> </p></li>
                                 </ul>
-                                <?php echo anchor("index.php/main/getPlayerDetails/$zerg->player_ID/$zerg->race/$zerg->nickname", "Citeste intreaga biografie",array('class'=>'btn btn-success'));?>
+                                <?php echo anchor("index.php/main/getPlayerDetails/$zerg->player_ID/$zerg->nickname", "Citeste intreaga biografie",array('class'=>'btn btn-success'));?>
                             </div>
                           <?php endforeach; ?>
                           <?php break; ?>
@@ -184,7 +184,7 @@
                                             <li><p>Rasa: <?php echo $zerg->race; ?></p></li>
                                             <li><p>Echipa: <?php echo $zerg->team; ?> </p></li>
                                         </ul>
-                                        <?php echo anchor("index.php/main/getPlayerDetails/$zerg->player_ID/$zerg->race/$zerg->nickname", "Citeste intreaga biografie",array('class'=>'btn btn-success'));?>
+                                        <?php echo anchor("index.php/main/getPlayerDetails/$zerg->player_ID/$zerg->nickname", "Citeste intreaga biografie",array('class'=>'btn btn-success'));?>
                                     </div>
                                 <?php endforeach; ?>
                             <?php break; ?>

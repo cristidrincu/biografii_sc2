@@ -115,14 +115,11 @@
                             <li><p>Rasa: <?php echo $player->race; ?></p></li>
                             <li><p>Echipa: <?php echo $player->team; ?></p></li>
                         </ul>
-                        <?php echo anchor("index.php/main/getPlayerDetailsRO/$player->player_ID/$player->race/$player->nickname","Citeşte întreaga biografie",array('class'=>'btn btn-success')); ?>
+                        <?php echo anchor("index.php/main/getPlayerDetailsRO/$player->player_ID/$player->nickname","Citeşte întreaga biografie",array('class'=>'btn btn-success')); ?>
                     </div>
                 <?php endforeach; ?>
             </div><!--ends latestPlayersAddedContainer-->
         </div><!--ends span8-->
     </div>
-
-
-
 </div><!--ends mainContentContainer-->
 

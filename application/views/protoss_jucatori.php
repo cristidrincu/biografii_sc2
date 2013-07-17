@@ -148,7 +148,7 @@
                                     <li><p>Rasa: <?php echo $protoss->race; ?></p></li>
                                     <li><p>Echipa: <?php echo $protoss->team; ?></p></li>
                                 </ul>
-                                <?php echo anchor("index.php/main/getPlayerDetails/$protoss->player_ID/$protoss->race/$protoss->nickname","Citeste intreaga biografie",array('class'=>'btn btn-success')); ?>
+                                <?php echo anchor("index.php/main/getPlayerDetails/$protoss->player_ID/$protoss->nickname","Citeste intreaga biografie",array('class'=>'btn btn-success')); ?>
                             </div>
                         <?php endforeach; ?>
                         <?php break; ?>
