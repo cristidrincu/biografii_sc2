@@ -57,7 +57,7 @@ class Main extends CI_Controller{
     //DETAILS - $number_of_players parameter will be provided by the model m_all_entities' method count_results($table_name, $race)
     //USAGE - used inside loadResultsPageEntityInternational() method
     //NOTES - METHOD used for INTERNATIONAL PLAYERS
-    public function checkNumberOfPlayersInternational($number_of_players){
+    public function checkNumberOfInternationalPlayers($number_of_players){
         $result = null;
         if($number_of_players>0){
             $result = true;
@@ -71,7 +71,7 @@ class Main extends CI_Controller{
     //DETAILS - $number_of_players parameter will be provided by the model m_all_entities' method count_results($table_name, $race)
     //USAGE - used inside loadResultsPageEntityRomania() method
     //NOTES - METHOD used for ROMANIAN PLAYERS
-    public function checkNumberOfPlayersRomania($number_of_players){
+    public function checkNumberOfRomanianPlayers($number_of_players){
         $result=null;
         if($number_of_players>0){
             $result = true;
@@ -83,11 +83,8 @@ class Main extends CI_Controller{
 
     public function loadResultsPageEntityInternational($entity_type, $number_of_players, $player_details, $custom_keywords){
 
-    //load the header.php by default
-    $this->load->view('header', $this->injectKeywordsCustom($custom_keywords));
-
-    //check to see if there are any players in the database
-    $numberOfInternationalPlayers=$this->checkNumberOfPlayersInternational($number_of_players);
+        $this->load->view('header', $this->injectKeywordsCustom($custom_keywords));
+        $numberOfInternationalPlayers=$this->checkNumberOfInternationalPlayers($number_of_players);
 
     switch($entity_type){
         case "terran":
@@ -120,7 +117,7 @@ class Main extends CI_Controller{
         $this->load->view('header', $this->injectKeywordsCustom($custom_keywords));
 
         //check to see if there are any players in the database
-        $numberOfRomanianPlayers=$this->checkNumberOfPlayersRomania($number_of_players);
+        $numberOfRomanianPlayers=$this->checkNumberOfRomanianPlayers($number_of_players);
 
         switch($entity_type){
             case "terran":
