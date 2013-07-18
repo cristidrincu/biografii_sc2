@@ -77,7 +77,23 @@ class Player extends CI_Controller{
         return $this->player_team_id_id;
     }
 
+    public function checkSessionData($page_type, $data){
+        if($this->session->userdata('logged_in')){
+            $session_data = $this->session->userdata('logged_in');
+            $data['username'] = $session_data['username'];
+            $this->load->view('header_admin_area');
+            $this->load->view($page_type, $data);
+            $this->load->view('footer');
+        }
+        else
+        {
+            //If no session, redirect to login page
+            redirect('index.php/login', 'refresh');
+        }
+    }
+
 	public function prepare_player(){
+
 		$data['teams']=$this->crud_model_team->extractTeamName();
 		$data['page_title']="PLAYER";
 
@@ -85,7 +101,7 @@ class Player extends CI_Controller{
 
 		//load the view with the form with the creation of a player
 		$this->load->view('header_admin_area');
-		$this->load->view('create_player', $data);
+        $this->checkSessionData('create_player', $data);
 		$this->load->view('footer_admin_area');
 
 	}
@@ -256,7 +272,7 @@ class Player extends CI_Controller{
 	public function loadSuccessPage($data){
 		//load the view with the form with the creation of a video
 		$this->load->view('header_admin_area');
-		$this->load->view('create_entity_success', $data);
+        $this->checkSessionData('create_entity_success', $data);
 		$this->load->view('footer_admin_area');
 	}
 
@@ -271,22 +287,14 @@ class Player extends CI_Controller{
 	public function loadEntityDetails($data){
 		//load the view with the form with the creation of a title
 		$this->load->view('header_admin_area');
-		$this->load->view('entity_details_admin', $data);
+        $this->checkSessionData('entity_details_admin', $data);
 		$this->load->view('footer_admin_area');
 	}
-
-    //method for loading the view for admin area containing all players in the database
-    public function loadEntityDetailsRO($data){
-        //load the view with the form with the creation of a title
-        $this->load->view('header_admin_area');
-        $this->load->view('entity_details_admin_ro', $data);
-        $this->load->view('footer_admin_area');
-    }
 
 	//report page for the team being deleted
 	public function loadDeletePageReport($data){
 		$this->load->view('header_admin_area');
-		$this->load->view('delete_report_player', $data);
+        $this->checkSessionData('delete_report_player', $data);
 		$this->load->view('footer_admin_area');
 	}
 
@@ -298,9 +306,8 @@ class Player extends CI_Controller{
             $data['entity_type']=1;
         }
 
-
         $this->load->view('header_admin_area');
-        $this->load->view('entity_exists_failure', $data);
+        $this->checkSessionData('entity_exists_failure', $data);
         $this->load->view('footer_admin_area');
     }
 
@@ -310,16 +317,8 @@ class Player extends CI_Controller{
 		$this->load->view('header_admin_area');
 		switch($data['entity_type']){
 			case 1:
-			$this->load->view('prepare_update_player', $data);
+            $this->checkSessionData('prepare_update_player', $data);
 			break;
-			case 2:
-			$this->load->view('prepare_update_team', $data);
-			break;
-			case 3:
-			$this->load->view('prepare_update_title', $data);
-			break;
-			case 4:
-			$this->load->view('prepare_update_video', $data);
 		}
 		$this->load->view('footer_admin_area');
 	}
