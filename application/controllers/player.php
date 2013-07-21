@@ -27,7 +27,12 @@ class Player extends CI_Controller{
 		//headers for preventing the user to use the back button after logout
 		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0"); 
 		$this->output->set_header("Pragma: no-cache");
+
+        //helpers and custom helpers
+        $this->load->helper('auth_helper');
+
 		$this->load->model('login_model');
+
 		$this->load->model('crud_model_player');
 		$this->load->model('crud_model_team');
 
@@ -81,9 +86,7 @@ class Player extends CI_Controller{
         if($this->session->userdata('logged_in')){
             $session_data = $this->session->userdata('logged_in');
             $data['username'] = $session_data['username'];
-            $this->load->view('header_admin_area');
             $this->load->view($page_type, $data);
-            $this->load->view('footer');
         }
         else
         {
@@ -101,7 +104,7 @@ class Player extends CI_Controller{
 
 		//load the view with the form with the creation of a player
 		$this->load->view('header_admin_area');
-        $this->checkSessionData('create_player', $data);
+        checkSessionData('create_player', $data);
 		$this->load->view('footer_admin_area');
 
 	}
@@ -147,7 +150,7 @@ class Player extends CI_Controller{
 		if (!$this->upload->do_upload('player_image')){
 			$error['error'] = $this->upload->display_errors();
 			$this->load->view('create_entity_failure', $error);
-			print_r($error);
+			//print_r($error);
 		}
 		else
 		{
@@ -272,7 +275,7 @@ class Player extends CI_Controller{
 	public function loadSuccessPage($data){
 		//load the view with the form with the creation of a video
 		$this->load->view('header_admin_area');
-        $this->checkSessionData('create_entity_success', $data);
+        checkSessionData('create_entity_success', $data);
 		$this->load->view('footer_admin_area');
 	}
 
@@ -287,14 +290,14 @@ class Player extends CI_Controller{
 	public function loadEntityDetails($data){
 		//load the view with the form with the creation of a title
 		$this->load->view('header_admin_area');
-        $this->checkSessionData('entity_details_admin', $data);
+        checkSessionData('entity_details_admin', $data);
 		$this->load->view('footer_admin_area');
 	}
 
 	//report page for the team being deleted
 	public function loadDeletePageReport($data){
 		$this->load->view('header_admin_area');
-        $this->checkSessionData('delete_report_player', $data);
+        checkSessionData('delete_report_player', $data);
 		$this->load->view('footer_admin_area');
 	}
 
@@ -307,7 +310,7 @@ class Player extends CI_Controller{
         }
 
         $this->load->view('header_admin_area');
-        $this->checkSessionData('entity_exists_failure', $data);
+        checkSessionData('entity_exists_failure', $data);
         $this->load->view('footer_admin_area');
     }
 
@@ -317,7 +320,7 @@ class Player extends CI_Controller{
 		$this->load->view('header_admin_area');
 		switch($data['entity_type']){
 			case 1:
-            $this->checkSessionData('prepare_update_player', $data);
+            checkSessionData('prepare_update_player', $data);
 			break;
 		}
 		$this->load->view('footer_admin_area');
