@@ -6,9 +6,6 @@ class Crud_model_player extends CI_Model{
 		parent::__construct();
 	}
 
-	//HELPER METHODS
-	//method to extract team name and populate the select element on the view used to create a new player in the database
-
 	public function countRowsPlayer(){
 		$total_rows=$this->db->count_all('PLAYER');
 		return $total_rows;
