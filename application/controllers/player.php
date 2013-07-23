@@ -20,16 +20,24 @@ class Player extends CI_Controller{
 	 //array member used to store parameters for CRUD operations on the Player Entity
 	public $parameters_crud=array();
 
+    //parameters for upload regarding Player entity
+
+
 	//class constructor
 	function __construct(){
 		parent::__construct();
+
+        define('IMG_FOLDER_PATH', base_url().'uploads/players/');
 
 		//headers for preventing the user to use the back button after logout
 		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0"); 
 		$this->output->set_header("Pragma: no-cache");
 
-        //helpers and custom helpers
+        //custom helpers
         $this->load->helper('auth_helper');
+        $this->load->helper('custom/upload_config');
+        $this->load->helper('custom/create_entity_report');
+        $this->load->helper('custom/pagination_config');
 
 		$this->load->model('login_model');
 
@@ -53,6 +61,14 @@ class Player extends CI_Controller{
 		$this->player_team_id=$this->crud_model_team->extractTeamID($this->parameters_crud['player_team']);
 	}
 
+    public function setParametersCRUD($parameters){
+       $this->parameters_crud=$parameters;
+    }
+
+    public function getParametersCRUD(){
+        return $this->parameters_crud;
+    }
+
 	public function setPageTitle($title){
 		$this->page_title=$title;
 		return $this->page_title;
@@ -65,6 +81,14 @@ class Player extends CI_Controller{
 	public function getPlayerTeam(){
 		return $this->player_team;
 	}
+
+    public function setImagePath($image_path){
+       $this->image_path=$image_path;
+    }
+
+    public function getImagePath(){
+        return $this->image_path;
+    }
 
 	public function getImagePathThumb(){
 		return $this->image_path_thumb;
@@ -80,19 +104,6 @@ class Player extends CI_Controller{
 
     public function getPlayerTeamID(){
         return $this->player_team_id_id;
-    }
-
-    public function checkSessionData($page_type, $data){
-        if($this->session->userdata('logged_in')){
-            $session_data = $this->session->userdata('logged_in');
-            $data['username'] = $session_data['username'];
-            $this->load->view($page_type, $data);
-        }
-        else
-        {
-            //If no session, redirect to login page
-            redirect('index.php/login', 'refresh');
-        }
     }
 
 	public function prepare_player(){
@@ -131,53 +142,25 @@ class Player extends CI_Controller{
 	}
 
 	public function create_player(){
-		//prepare upload config
-		$config['upload_path'] = './uploads/players';
-		$config['allowed_types'] = 'gif|jpg|png';
-		$config['max_size']	= '5000';
-		$config['max_width'] = '1920';
-		$config['max_height'] = '1500';
-		$config['remove_spaces'] = TRUE;
-
         $entity_type='player';
 
-		$this->load->library('upload', $config);
+        //helper function containing all configuration parameters for upload of images concerning the player entity
+        configUpload();
 
         if($this->crud_model_player->prevent_duplicate_player_entries($this->parameters_crud['player_nickname'])){
             redirect('index.php/player/load_entity_exists_failure/'.$entity_type);
         }
 
-		if (!$this->upload->do_upload('player_image')){
-			$error['error'] = $this->upload->display_errors();
-			$this->load->view('create_entity_failure', $error);
-			//print_r($error);
-		}
-		else
-		{
-			$data_info_inserted['upload_data']=$this->upload->data();
-			$this->image_path=$data_info_inserted['upload_data']['file_name'];
-			$data['image_path']=$this->image_path;
-			$this->create_thumbs($this->image_path);
-		}
-
-		$this->upload->initialize($config);
+        $upload_info_inserted['upload_data']=$this->upload->data();
+		//$this->image_path=$data_info_inserted['upload_data']['file_name'];
+        $this->setImagePath($upload_info_inserted['upload_data']['file_name']);
+		$data['image_path']=$this->getImagePath();
+		$this->create_thumbs($this->getImagePath());
 
 		//first parameter is the team id based on the team name, second parameter is the controller defined array, parameter_crud, which contains all variables for an insert statement defined in the model, third and final parameter is the image path, also defined in the controller 
-		if($this->crud_model_player->insertPlayerDB($this->player_team_id,$this->parameters_crud,$this->image_path)){
-			//create an array that holds the information inserted in the database
-			$data_info_inserted['username']=$this->setSessionData();
-			$data_info_inserted['player_name']=$this->parameters_crud['player_name'];
-			$data_info_inserted['player_nickname']=$this->parameters_crud['player_nickname'];
-			$data_info_inserted['player_dob']=$this->parameters_crud['player_dob'];
-			$data_info_inserted['player_country']=$this->parameters_crud['player_country'];
-			$data_info_inserted['player_race']=$this->parameters_crud['player_race'];
-			$data_info_inserted['player_team']=$this->parameters_crud['player_team'];
-			$data_info_inserted['player_winnings']=$this->parameters_crud['player_winnings'];
-            $data_info_inserted['player_keywords']=$this->parameters_crud['player_keywords'];
-			$data_info_inserted['entity_type']=1;
-			$data_info_inserted['report_entity']='Player';
+		if($this->crud_model_player->insertPlayerDB($this->player_team_id, $this->getParametersCRUD(), $this->getImagePath())){
 
-			//load the view with the form with the creation of a player
+            $data_info_inserted=playerReport($this->getParametersCRUD()); //SEE create_entity_report HELPER for playerReport() method
 			$this->loadSuccessPage($data_info_inserted);
 		}else{
 			//load the view with the form with the creation of a player
@@ -186,45 +169,19 @@ class Player extends CI_Controller{
 	}
 
 	public function read_player(){
-		//pagination configuration for results
-		$config['base_url']=base_url().'index.php/player/read_player/';
-		$config['total_rows']=$this->crud_model_player->countRowsPlayer();
-		$config['per_page']=10;
-		$config['uri_segment'] = 3;
-		$config['full_tag_open'] = '<div class="pagination"><ul>';
-		$config['full_tag_close'] = '</ul></div>';
-
-		$config['first_link'] = '&laquo; First';
-		$config['first_tag_open'] = '<li class="prev page">';
-		$config['first_tag_close'] = '</li>';
- 
-		$config['last_link'] = 'Last &raquo;';
-		$config['last_tag_open'] = '<li class="next page">';
-		$config['last_tag_close'] = '</li>';
-		 
-		$config['next_link'] = 'Next &rarr;';
-		$config['next_tag_open'] = '<li class="next page">';
-		$config['next_tag_close'] = '</li>';
-		 
-		$config['prev_link'] = '&larr; Previous';
-		$config['prev_tag_open'] = '<li class="prev page">';
-		$config['prev_tag_close'] = '</li>';
-		 
-		$config['cur_tag_open'] = '<li class="active"><a href="">';
-		$config['cur_tag_close'] = '</a></li>';
-		 
-		$config['num_tag_open'] = '<li class="page">';
-		$config['num_tag_close'] = '</li>';
 
 		//session username and page title
 		$data['page_title']=$this->setPageTitle("READ PLAYERS");
 		$data['username'] =  $this->setSessionData();
 
 		//extract players and offset method for pagination
-		$data['player_details']=$this->crud_model_player->extractPlayerTeamName($config['per_page'], $this->uri->segment(3));
+		//$data['player_details']=$this->crud_model_player->extractPlayerTeamName($config['per_page'], $this->uri->segment(3));
+        $data['player_details']=$this->crud_model_player->extractPlayerTeamName(10, $this->uri->segment(3));
 		$data['entity_type']=1; //1 is a flag for PLAYER entity
 
-		$this->pagination->initialize($config);
+        $pagination_config = config_pagination(10);//SEE pagination_config_helper HELPER for config_pagination($results_per_page) method
+
+		$this->pagination->initialize($pagination_config);
 		$data['links']=$this->pagination->create_links();
 
 		$this->loadEntityDetails($data);
@@ -266,8 +223,16 @@ class Player extends CI_Controller{
 	}
 
 	public function delete_player($player_id){
-		$this->crud_model_player->deletePlayer($player_id);
-		redirect('index.php/player/read_player');
+        //when a player is deleted, the image on the server must be deleted as well
+        $file_name=$this->crud_model_player->extractPlayerImage($player_id);
+
+        if($this->crud_model_player->deletePlayer($player_id)){
+            unlink('uploads/players/'.$file_name);
+            redirect('index.php/player/read_player');
+        }else{
+            //!!!CREATE DELETE FAILURE PAGE
+            redirect('index.php/player/loadFailurePage');
+        }
 	}
 
 
@@ -328,7 +293,7 @@ class Player extends CI_Controller{
 
 	public function create_thumbs($image_path){
 		$config['image_library'] = 'gd2';
-		$config['source_image']	= $this->image_path;
+		$config['source_image']	= $image_path;
 		$config['create_thumb'] = TRUE;
 		$config['maintain_ratio'] = TRUE;
 		$config['width']	 = 500;

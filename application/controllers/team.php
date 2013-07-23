@@ -56,20 +56,6 @@ class Team extends CI_Controller{
 		$this->image_path_thumb=$image_path_thumb;
 	}
 
-//    public function checkSessionData($page_type, $data){
-//        if($this->session->userdata('logged_in')){
-//            $session_data = $this->session->userdata('logged_in');
-//            $data['username'] = $session_data['username'];
-//            $this->load->view($page_type, $data);
-//        }
-//        else
-//        {
-//            //If no session, redirect to login page
-//            redirect('index.php/login', 'refresh');
-//        }
-//    }
-
-
 	//crud operations for team
 	public function prepare_team(){
 		$this->setPageTitle("ECHIPA");
