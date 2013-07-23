@@ -121,6 +121,13 @@ class Crud_model_player extends CI_Model{
         }
     }
 
+    public function extractPlayerImage($player_id){
+        $query=$this->db->get_where('PLAYER P', array('P.player_ID'=>$player_id));
+        foreach($query->result() as $row){
+            return $row->player_image;
+        }
+    }
+
 
 //CREATE METHODS FOR PLAYER, TEAM, TITLE AND VIDEO ENTITIES
 	public function insertPlayerDB($player_team_id, $parameters, $image_path){
@@ -228,7 +235,11 @@ class Crud_model_player extends CI_Model{
     }
 
 	public function deletePlayer($player_id){
-		$this->db->delete('PLAYER', array('player_ID'=>$player_id));
+		if($this->db->delete('PLAYER', array('player_ID'=>$player_id))){
+            return true;
+        }else{
+            return false;
+        }
 	}
 
     public function deletePlayerRO($player_id){
