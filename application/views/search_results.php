@@ -135,7 +135,7 @@
                                   <li><p>Rasa: <?php echo $result->race; ?></p></li>
                                   <li><p>Echipa: <?php echo $result->team;?></p></li>
                                 </ul>
-                                <?php echo anchor("index.php/main/getPlayerDetails/$result->player_ID/$result->race/$result->nickname","Citeste intreaga biografie",array('class'=>'btn btn-success')); ?>
+                                <?php echo anchor("index.php/main/getPlayerDetails/$result->player_ID/$result->nickname","Citeste intreaga biografie",array('class'=>'btn btn-success')); ?>
                             </div>
                           <?php endforeach; ?>
 

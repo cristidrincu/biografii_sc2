@@ -53,6 +53,32 @@
                         </div>
                     </div>
                 </div><!--ends player_videos entity options-->
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFive">
+                            CRUD for REQUESTED PLAYER entity
+                        </a>
+                    </div>
+                    <div id="collapseFive" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                            <?php echo anchor("index.php/requested_player/prepare_requested_player", "CREATE Player", array("class"=>"btn")); ?>
+                            <?php echo anchor("index.php/requested_player/read_requested_player", "READ Player", array("class"=>"btn")); ?>
+                        </div>
+                    </div>
+                </div><!--ends requested_player entity options-->
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseSix">
+                            CRUD for REQUESTED RESOURCES entity
+                        </a>
+                    </div>
+                    <div id="collapseSix" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                            <?php echo anchor("index.php/resources_requested_player/prepare_requested_resource", "CREATE Resource", array("class"=>"btn")); ?>
+                            <?php echo anchor("index.php/resources_requested_player/read_requested_resources", "READ Resource", array("class"=>"btn")); ?>
+                        </div>
+                    </div>
+                </div><!--ends requested_player_resource entity options-->
             </div>
         </div><!--ends CRUD main menu-->
         <!--section for romanian players - CRUD ops-->
@@ -269,6 +295,70 @@
                     <?php endforeach; ?>
                 </tbody>
             <?php break; ?>
+            <?php case 5: ?>
+                <div class="span4 input-append">
+                    <?php
+                    $form_attributes = array('class'=>'form-search formRequestedPlayer');
+                    $input_field_attributes=array('name'=>'search_field','class'=>'span12 search-query');
+                    $submit_btn_attributes=array('name'=>'submitBtn','class' => 'btn', 'type'=>'submit','content'=>'Cauta Requested Player');
+
+                    echo form_open('index.php/search/get_requested_player_backend', $form_attributes);
+                    echo form_input($input_field_attributes);
+                    echo form_button($submit_btn_attributes);
+                    echo form_close();
+                    ?>
+                </div>
+                <div class='span4 offset4'><?php echo $links; ?></div>
+                <thead>
+                    <th>Nickname</th>
+                    <th>Name</th>
+                    <th>Race</th>
+                    <th>Image</th>
+                </thead>
+                <tbody>
+                    <?php foreach ($requested_players as $player): ?>
+                         <tr>
+                             <td><?php echo $player->requested_player_nickname ?></td>
+                             <td><?php echo $player->requested_player_name ?></td>
+                             <td><?php echo $player->requested_player_race ?></td>
+                             <td><img src="<?=$player->requested_player_image_url?>" alt="<?=$player->requested_player_nickname?>" </td>
+                             <td><?php echo anchor("index.php/requested_player/prepare_update_requested_player/".$player->requested_player_id, "Update", array("class"=>"btn btn-primary"));?></td>
+                             <td><?php echo anchor("index.php/requested_player/delete_requested_player/".$player->requested_player_id, "Delete", array("class"=>"btn btn-danger")); ?></td>
+                         </tr>
+                    <?php endforeach ?>
+                </tbody>
+            <?php break; ?>
+            <?php case 6: ?>
+                <div class="span4 input-append">
+                    <?php
+                    $form_attributes = array('class'=>'form-search formRequestedResource');
+                    $input_field_attributes=array('name'=>'search_field','class'=>'span12 search-query');
+                    $submit_btn_attributes=array('name'=>'submitBtn','class' => 'btn', 'type'=>'submit','content'=>'Cauta Requested Resource');
+
+                    echo form_open('index.php/search/get_requested_resource_backend', $form_attributes);
+                    echo form_input($input_field_attributes);
+                    echo form_button($submit_btn_attributes);
+                    echo form_close();
+                    ?>
+                </div>
+                <div class='span4 offset4'><?php echo $links; ?></div>
+                <thead>
+                <th>Name</th>
+                <th>Link</th>
+                <th>Player</th>
+                </thead>
+                <tbody>
+                    <?php foreach ($requested_resources as $resource): ?>
+                <tr>
+                    <td><?php echo $resource->resource_name ?></td>
+                    <td><?php echo anchor($resource->resource_link); ?></td>
+                    <td><?php echo $resource->requested_player_nickname?></td>
+                    <td><?php echo anchor("index.php/resources_requested_player/prepare_update_requested_resource/".$resource->resource_id, "Update", array("class"=>"btn btn-primary"));?></td>
+                    <td><?php echo anchor("index.php/resources_requested_player/prepare_delete_requested_resource/".$resource->resource_id, "Delete", array("class"=>"btn btn-danger")); ?></td>
+                </tr>
+                    <?php endforeach ?>
+                </tbody>
+                    <?php break; ?>
             <?php endswitch; ?>
     	</table>
     </div><!--ends section data-->

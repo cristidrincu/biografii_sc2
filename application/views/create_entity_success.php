@@ -83,9 +83,7 @@
    <?php echo anchor('index.php/title/prepare_title', 'Introdu un alt titlu', 'title="Introdu un alt titlu"'); ?>
    <?php echo anchor('index.php/title/read_title', 'Inapoi la meniul principal', 'title="Inapoi la meniul principal"'); ?>
 	<?php break; ?>
-	<?php 
-		case 4:
-	?>
+	<?php case 4:?>
 	<h1>Ai introdus cu success urmatorul video:</h1>
 	<table class="table table-condensed">
 		<thead>
@@ -104,6 +102,21 @@
     <?php echo anchor('index.php/video/prepare_video', 'Introdu un alt video', 'title="Introdu un alt video"'); ?>
     <?php echo anchor('index.php/video/read_video', 'Inapoi la meniul principal', 'title="Inapoi la meniul principal"'); ?>
 	<?php break; ?>
+    <?php case 6: ?>
+    <h1>Ai introdus cu success urmatoarea resursa:</h1>
+        <table class="table table-condensed">
+            <thead>
+            <th>Resource Name</th>
+            <th>Resource Link</th>
+            </thead>
+            <tbody>
+            <tr>
+                <td><?php echo $resource_name; ?></td>
+                <td><?php echo $resource_link; ?></td>
+            </tr>
+            </tbody>
+        </table>
+    <?php break; ?>
 	<?php endswitch;?>
 	</div><!--ends span12-->
 </div>
