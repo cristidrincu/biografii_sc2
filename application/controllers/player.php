@@ -29,11 +29,8 @@ class Player extends CI_Controller{
 
         define('IMG_FOLDER_PATH', base_url().'uploads/players/');
 
-		//headers for preventing the user to use the back button after logout
-		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0"); 
-		$this->output->set_header("Pragma: no-cache");
-
         //custom helpers
+        $this->load->helper('custom/prevent_back_browser');
         $this->load->helper('auth_helper');
         $this->load->helper('custom/upload_config');
         $this->load->helper('custom/create_entity_report');
@@ -43,6 +40,9 @@ class Player extends CI_Controller{
 
 		$this->load->model('crud_model_player');
 		$this->load->model('crud_model_team');
+
+        //prevent user from using the back button and relogin or other weird operations
+        preventUserBackButtonBrowser();
 
 		//initialize crud parameters by assigning them values from the $_POST array which contains player team, name etc
 		$this->parameters_crud['player_team']=$this->input->post('player_team');
@@ -179,7 +179,7 @@ class Player extends CI_Controller{
         $data['player_details']=$this->crud_model_player->extractPlayerTeamName(10, $this->uri->segment(3));
 		$data['entity_type']=1; //1 is a flag for PLAYER entity
 
-        $pagination_config = config_pagination(10);//SEE pagination_config_helper HELPER for config_pagination($results_per_page) method
+        $pagination_config = config_pagination(10,"player");//SEE pagination_config_helper HELPER for config_pagination($results_per_page) method
 
 		$this->pagination->initialize($pagination_config);
 		$data['links']=$this->pagination->create_links();
@@ -238,7 +238,7 @@ class Player extends CI_Controller{
 
 	//helper methods
 	public function loadSuccessPage($data){
-		//load the view with the form with the creation of a video
+		//load the view with the form with the creation of a player
 		$this->load->view('header_admin_area');
         checkSessionData('create_entity_success', $data);
 		$this->load->view('footer_admin_area');
