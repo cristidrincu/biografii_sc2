@@ -16,12 +16,7 @@ class Title extends CI_Controller{
 		parent::__construct();
 		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0"); 
 		$this->output->set_header("Pragma: no-cache");
-
-        //helpers and custom helpers
-        $this->load->helper('auth_helper');
-
 		$this->load->library('pagination');
-
 		$this->load->model('login_model');
 		$this->load->model('crud_model_player');
 		$this->load->model('crud_model_title');
@@ -40,21 +35,6 @@ class Title extends CI_Controller{
 	public function getPageTitle(){
 		return $this->page_title;
 	}
-
-//    public function checkSessionData($page_type, $data){
-//        if($this->session->userdata('logged_in')){
-//            $session_data = $this->session->userdata('logged_in');
-//            $data['username'] = $session_data['username'];
-//            $this->load->view($page_type, $data);
-//        }
-//        else
-//        {
-//            //If no session, redirect to login page
-//            redirect('index.php/login', 'refresh');
-//        }
-//    }
-
-
 
 	public function prepare_update_title($title_id){
 		$data['title_details']=$this->crud_model_title->extractTitleDetailsID($title_id);
@@ -84,7 +64,7 @@ class Title extends CI_Controller{
 
 		//load the view with the form with the creation of a player
 		$this->load->view('header_admin_area');
-        checkSessionData('create_title', $data);
+		$this->load->view('create_title', $data);
 		$this->load->view('footer_admin_area');
 	}
 
@@ -172,7 +152,7 @@ class Title extends CI_Controller{
 	public function loadSuccessPage($data){
 		//load the view with the form with the creation of a video
 		$this->load->view('header_admin_area');
-        checkSessionData('create_entity_success', $data);
+		$this->load->view('create_entity_success', $data);
 		$this->load->view('footer_admin_area');
 	}
 
@@ -185,7 +165,7 @@ class Title extends CI_Controller{
 
 	public function loadDeletePageReport($data){
 		$this->load->view('header_admin_area');
-        checkSessionData('delete_report_title', $data);
+		$this->load->view('delete_report_title', $data);
 		$this->load->view('footer_admin_area');
 	}
 
@@ -193,7 +173,7 @@ class Title extends CI_Controller{
 	public function loadEntityDetails($data){
 		//load the view with the form with the creation of a title
 		$this->load->view('header_admin_area');
-        checkSessionData('entity_details_admin', $data);
+		$this->load->view('entity_details_admin', $data);
 		$this->load->view('footer_admin_area');
 	}
 
@@ -202,9 +182,17 @@ class Title extends CI_Controller{
 		//load the view with the form with the creation of a title
 		$this->load->view('header_admin_area');
 		switch($data['entity_type']){
-			case 3:
-            checkSessionData('prepare_update_title', $data);
+			case 1:
+			$this->load->view('prepare_update_player', $data);
 			break;
+			case 2:
+			$this->load->view('prepare_update_team', $data);
+			break;
+			case 3:
+			$this->load->view('prepare_update_title', $data);
+			break;
+			case 4:
+			$this->load->view('prepare_update_video', $data);
 		}
 		$this->load->view('footer_admin_area');
 	}

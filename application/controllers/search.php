@@ -14,14 +14,6 @@ class Search extends CI_Controller{
 		parent::__construct();
 		$this->load->model('m_search_entities');
 
-        //custom helpers
-        //custom helpers
-        $this->load->helper('custom/prevent_back_browser');
-        $this->load->helper('auth_helper');
-        $this->load->helper('custom/upload_config');
-        $this->load->helper('custom/create_entity_report');
-        $this->load->helper('custom/pagination_config');
-
         $this->dataDefaultKeywords[]='Starcraft 2, Starcraft2, Blizzard, jucatori pro, biografii, coreea, europa, statele unite, castiguri, titluri, clipuri video, echipe profesionale, evil geniuses, team liquid, alliance, acer, alternate, axiom, azubu, cjentus, complexity gaming, fnatic, fxopen, incredible miracle, mvp, prime, team 8, samsung khan, root gaming, sk gaming, sk telecom t1, startale, stx soul, team empire, team liquid, woongjin stars';
         //$this->playerNickname=$this->input->post('search_field');
         $this->dataPlayerEntity=$this->m_search_entities->searchPlayerFirstName($this->input->post('search_field'));
@@ -88,7 +80,7 @@ class Search extends CI_Controller{
         $dataKeywords['data_keywords']=$this->getDefaultKeywords();
         $data['search_results_nickname']=$this->m_search_entities->searchPlayerFirstName($nickname);
         $this->load->view('header', $dataKeywords);
-        checkSessionData('search_results', $data);
+        $this->load->view('search_results', $data);
         $this->load->view('footer');
 
     }
@@ -98,7 +90,7 @@ class Search extends CI_Controller{
         $data['search_results_team_name']= $this->m_search_entities->searchTeam($team_name);
 
         $this->load->view('header', $dataKeywords);
-        checkSessionData('search_results_team', $data);
+        $this->load->view('search_results_team', $data);
         $this->load->view('footer');
     }
 
@@ -139,7 +131,7 @@ class Search extends CI_Controller{
         $data['entity_type']=$entity_type;
 
         $this->load->view('header_admin_area');
-        checkSessionData('search_results_backend', $data);
+        $this->load->view('search_results_backend', $data);
         $this->load->view('footer');
     }
 
@@ -152,7 +144,7 @@ class Search extends CI_Controller{
         $data['entity_type']=$entity_type;
 
         $this->load->view('header_admin_area');
-        checkSessionData('search_results_backend', $data);
+        $this->load->view('search_results_backend', $data);
         $this->load->view('footer');
     }
 
@@ -165,7 +157,7 @@ class Search extends CI_Controller{
         $data['entity_type']=$entity_type;
 
         $this->load->view('header_admin_area');
-        checkSessionData('search_results_backend', $data);
+        $this->load->view('search_results_backend', $data);
         $this->load->view('footer');
     }
 
@@ -178,22 +170,9 @@ class Search extends CI_Controller{
         $data['entity_type']=$entity_type;
 
         $this->load->view('header_admin_area');
-        checkSessionData('search_results_backend', $data);
+        $this->load->view('search_results_backend', $data);
         $this->load->view('footer');
 
-    }
-
-    public function load_results_page_backend_requested_player($search_keyword, $entity_type){
-        $this->setPageTitle("Rezultate cautare dupa jucator requested");
-
-        $data["requested_player_entity"]=$this->m_search_entities->requested_player_backend_results($search_keyword);
-        $data['entity_type']=$entity_type;
-        $data['page_title']=$this->getPageTitle();
-        $data['username']=$this->setSessionData();
-
-        $this->load->view('header_admin_area');
-        checkSessionData('search_results_backend', $data);
-        $this->load->view('footer');
     }
 
     //POST-REDIRECT-GET DESIGN PATTERN - BELOW ARE THE POST FUNCTIONS + INDIVIDUAL REDIRECTS PER THE ENTITY THEY REPRESENT
@@ -296,19 +275,6 @@ class Search extends CI_Controller{
             redirect('index.php/search/load_no_results_page_backend');
         }else{
             redirect('index.php/search/load_results_page_backend_video/'.$this->input->post('search_field').'/'.$this->getEntityType());
-        }
-    }
-
-    public function get_requested_player_backend(){
-        $this->setEntityType(5);
-        $data["requested_player_entity"]=$this->m_search_entities->requested_player_backend_results($this->input->post('search_field'));
-
-        if(empty($_POST['search_field'])){
-            redirect('index.php/search/load_no_results_page_backend');
-        }else if(count($data["requested_player_entity"])==0){
-            redirect('index.php/search/load_no_results_page_backend');
-        }else{
-            redirect('index.php/search/load_results_page_backend_requested_player/'.$this->input->post('search_field').'/'.$this->getEntityType());
         }
     }
     //END OF PRG DESIGN PATTERN FUNCTIONS

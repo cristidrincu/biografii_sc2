@@ -17,19 +17,11 @@ class Video extends CI_Controller{
 		parent::__construct();
 		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0"); 
 		$this->output->set_header("Pragma: no-cache");
-
-        //libraries
 		$this->load->library('pagination');
-
-        //helpers and custom helpers
-        $this->load->helper('auth_helper');
-
-        //models
 		$this->load->model('login_model');
 		$this->load->model('crud_model_player');
 		$this->load->model('crud_model_video');
 
-        //class members init
 		$this->parameters_crud['player_nickname']=$this->input->post('player_nickname');
 		$this->parameters_crud['video_name']=$this->input->post('video_name');
 		$this->parameters_crud['video_link']=$this->input->post('video_link');
@@ -50,18 +42,6 @@ class Video extends CI_Controller{
 	}
 
 
-//    public function checkSessionData($page_type, $data){
-//        if($this->session->userdata('logged_in')){
-//            $session_data = $this->session->userdata('logged_in');
-//            $data['username'] = $session_data['username'];
-//            $this->load->view($page_type, $data);
-//        }
-//        else{
-//            redirect('index.php/login', 'refresh');
-//        }
-//    }
-
-
 	//crud operations for video entity
 	public function prepare_video(){
 		$this->setPageTitle("VIDEO");
@@ -73,7 +53,7 @@ class Video extends CI_Controller{
 
 		//load the view with the form with the creation of a video
 		$this->load->view('header_admin_area');
-        checkSessionData('create_video', $data);
+		$this->load->view('create_video', $data);
 		$this->load->view('footer_admin_area');
 	}
 
@@ -190,7 +170,7 @@ class Video extends CI_Controller{
 	public function loadSuccessPage($data){
 		//load the view with the form with the creation of a video
 		$this->load->view('header_admin_area');
-        checkSessionData('create_entity_success', $data);
+		$this->load->view('create_entity_success', $data);
 		$this->load->view('footer_admin_area');
 	}
 
@@ -205,14 +185,14 @@ class Video extends CI_Controller{
 	public function loadEntityDetails($data){
 		//load the view with the form with the creation of a title
 		$this->load->view('header_admin_area');
-        checkSessionData('entity_details_admin', $data);
+		$this->load->view('entity_details_admin', $data);
 		$this->load->view('footer_admin_area');
 	}
 
 	//report page for the video being deleted
 	public function loadDeletePageReport($data){
 		$this->load->view('header_admin_area');
-        checkSessionData('delete_report_video', $data);
+		$this->load->view('delete_report_video', $data);
 		$this->load->view('footer_admin_area');
 	}
 
@@ -221,9 +201,17 @@ class Video extends CI_Controller{
 		//load the view with the form with the creation of a title
 		$this->load->view('header_admin_area');
 		switch($data['entity_type']){
+			case 1:
+			$this->load->view('prepare_update_player', $data);
+			break;
+			case 2:
+			$this->load->view('prepare_update_team', $data);
+			break;
+			case 3:
+			$this->load->view('prepare_update_title', $data);
+			break;
 			case 4:
-            checkSessionData('prepare_update_video', $data);
-            break;
+			$this->load->view('prepare_update_video', $data);
 		}
 		$this->load->view('footer_admin_area');
 	}

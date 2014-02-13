@@ -6,6 +6,9 @@ class Crud_model_player extends CI_Model{
 		parent::__construct();
 	}
 
+	//HELPER METHODS
+	//method to extract team name and populate the select element on the view used to create a new player in the database
+
 	public function countRowsPlayer(){
 		$total_rows=$this->db->count_all('PLAYER');
 		return $total_rows;
@@ -121,13 +124,6 @@ class Crud_model_player extends CI_Model{
         }
     }
 
-    public function extractPlayerImage($player_id){
-        $query=$this->db->get_where('PLAYER P', array('P.player_ID'=>$player_id));
-        foreach($query->result() as $row){
-            return $row->player_image;
-        }
-    }
-
 
 //CREATE METHODS FOR PLAYER, TEAM, TITLE AND VIDEO ENTITIES
 	public function insertPlayerDB($player_team_id, $parameters, $image_path){
@@ -235,11 +231,7 @@ class Crud_model_player extends CI_Model{
     }
 
 	public function deletePlayer($player_id){
-		if($this->db->delete('PLAYER', array('player_ID'=>$player_id))){
-            return true;
-        }else{
-            return false;
-        }
+		$this->db->delete('PLAYER', array('player_ID'=>$player_id));
 	}
 
     public function deletePlayerRO($player_id){

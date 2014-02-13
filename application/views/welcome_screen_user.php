@@ -53,32 +53,6 @@
                     </div>
                 </div>
             </div><!--ends player_videos entity options-->
-            <div class="accordion-group">
-                <div class="accordion-heading">
-                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFive">
-                        CRUD operations for REQUESTED PLAYER entity
-                    </a>
-                </div>
-                <div id="collapseFive" class="accordion-body collapse">
-                    <div class="accordion-inner">
-                        <?php echo anchor("index.php/requested_player/prepare_requested_player", "CREATE Requested Player", array("class"=>"btn")); ?>
-                        <?php echo anchor("index.php/requested_player/read_requested_player", "READ Requested Player", array("class"=>"btn")); ?>
-                    </div>
-                </div>
-            </div><!--ends requested_player entity options-->
-            <div class="accordion-group">
-                <div class="accordion-heading">
-                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseSix">
-                        CRUD operations for REQUESTED RESOURCES entity
-                    </a>
-                </div>
-                <div id="collapseSix" class="accordion-body collapse">
-                    <div class="accordion-inner">
-                        <?php echo anchor("index.php/resources_requested_player/prepare_requested_resource", "CREATE Request Resources", array("class"=>"btn")); ?>
-                        <?php echo anchor("index.php/resources_requested_player/read_requested_resources", "READ Requested Resources", array("class"=>"btn")); ?>
-                    </div>
-                </div>
-            </div><!--ends requested_player entity options-->
         </div>
     </div><!--ends CRUD main menu-->
     <!--section for romanian players - CRUD ops-->

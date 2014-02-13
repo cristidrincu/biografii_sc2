@@ -18,12 +18,11 @@ class Team extends CI_Controller{
 		parent::__construct();
 		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0"); 
 		$this->output->set_header("Pragma: no-cache");
-
-        //helpers and custom helpers
-        $this->load->helper('auth_helper');
-
 		$this->load->model('login_model');
 		$this->load->model('crud_model_team');
+
+		//load validation helper
+		$this->load->helper('check_user_validation');
 
 		//initialize crud parameters by assigning them values from the $_POST array which contains player team, name etc
 		$this->parameters_crud['team_name']=$this->input->post('team_name');
@@ -65,7 +64,7 @@ class Team extends CI_Controller{
 
 		//load the view with the form with the creation of a team
 		$this->load->view('header_admin_area');
-        checkSessionData('create_team', $data);
+		$this->load->view('create_team', $data);
 		$this->load->view('footer_admin_area');
 
 	}
@@ -101,7 +100,7 @@ class Team extends CI_Controller{
 
 		if (!$this->upload->do_upload('teamLogoUpload')){
 			$error['error'] = $this->upload->display_errors();
-            checkSessionData('create_entity_failure', $error);
+			$this->load->view('create_entity_failure', $error);
 			print_r($error);
 		}
 		else
@@ -232,7 +231,7 @@ class Team extends CI_Controller{
 	public function loadSuccessPage($data){
 		//load the view with the form with the creation of a video
 		$this->load->view('header_admin_area');
-        checkSessionData('create_entity_success', $data);
+		$this->load->view('create_entity_success', $data);
 		$this->load->view('footer_admin_area');
 	}
 
@@ -247,14 +246,14 @@ class Team extends CI_Controller{
 	public function loadEntityDetails($data){
 		//load the view with the form with the creation of a title
 		$this->load->view('header_admin_area');
-        checkSessionData('entity_details_admin', $data);
+		$this->load->view('entity_details_admin', $data);
 		$this->load->view('footer_admin_area');
 	}
 
 	//report page for the team being deleted
 	public function loadDeletePageReport($data){
 		$this->load->view('header_admin_area');
-        checkSessionData('delete_report_team', $data);
+		$this->load->view('delete_report_team', $data);
 		$this->load->view('footer_admin_area');
 	}
 
@@ -263,9 +262,17 @@ class Team extends CI_Controller{
 		//load the view with the form with the creation of a title
 		$this->load->view('header_admin_area');
 		switch($data['entity_type']){
-			case 2:
-            checkSessionData('prepare_update_team', $data);
+			case 1:
+			$this->load->view('prepare_update_player', $data);
 			break;
+			case 2:
+			$this->load->view('prepare_update_team', $data);
+			break;
+			case 3:
+			$this->load->view('prepare_update_title', $data);
+			break;
+			case 4:
+			$this->load->view('prepare_update_video', $data);
 		}
 		$this->load->view('footer_admin_area');
 	}

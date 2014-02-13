@@ -82,8 +82,6 @@
                         <br class="clearFloats"/>
                         <a href='<?php echo base_url(); ?>index.php/main/protoss_players_ro' class='btn btn-primary'>Afişează</a>
                     </div>
-
-                    <!--<hr class="divider"/>-->
                 </div><!--ends terranContainerImage-->
             </div>
 
@@ -92,17 +90,17 @@
             <div class="sectionDescription containerEntities">
                 <?php
                 $form_attributes = array('class'=>'form-horizontal');
-                $subject_field_attributes=array('name'=>'subject', 'class'=>'span4', 'required'=>'required');
-                $email_field_attributes=array('name'=>'email','class'=>'span4','required'=>'required');
-                $name_field_attributes=array('name'=>'name_sender', 'class'=>'span4','required'=>'required');
-                $message_field_attributes=array('name'=>'message_sender', 'class'=>'span4', 'required'=>'required');
-                $honey_trap_field_attributes=array('name'=>'honey_trap_bots', 'class'=>'span4','type'=>'hidden');
+                $subject_field_attributes=array('name'=>'subject', 'class'=>'span6', 'required'=>'required');
+                $email_field_attributes=array('name'=>'email','class'=>'span6','required'=>'required');
+                $name_field_attributes=array('name'=>'name_sender', 'class'=>'span6','required'=>'required');
+                $message_field_attributes=array('name'=>'message_sender', 'class'=>'span6', 'required'=>'required');
+                $honey_trap_field_attributes=array('name'=>'honey_trap_bots', 'class'=>'span6','type'=>'hidden');
                 $submit_btn_attributes=array('name'=>'submitBtn','class' => 'btn', 'type'=>'submit','content'=>'Trimite mesaj');
 
                 echo form_open('index.php/contact/send_email', $form_attributes);
                 ?>
             </div><!--ends sectionDescription-->
-            <div class="latestPlayersAddedContainer">
+            <div class="latestPlayersAddedContainer span7">
                 <h1 class="teaserFormularContact">Ai întrebări? Sau vrei să ne laşi o sugestie?</h1>
                 <p class="textInfoFormularContact">Deşi am încercat să testăm, citim, corectăm informaţiile introduse în acest site, se poate să fi avut şi scăpări. Drept urmare, dacă găseşti vreo greşeală sau pur şi simplu doreşti să ne feliciţi pentru muncă depusă, te rugăm să foloseşti formularul de mai jos. Îţi mulţumim!</p>
                 <div class="control-group">
@@ -141,7 +139,10 @@
                     </div>
                 </div><!--ends email control group-->
             </div><!--ends latestPlayersAddedContainer-->
+            <div class="containerContactMembrii span4 offset1">
+                <h1 class="teaserFormularContact">Membrii echipei</h1>
+                <p class="textInfoFormularContact">Daca doresti sa intri in contact direct cu unul din membrii acestui proiect, o poti face citind informatiile de mai jos!</p>
+            </div>
         </div><!--ends span10-->
     </div>
 </div><!--ends mainContentContainer-->
-

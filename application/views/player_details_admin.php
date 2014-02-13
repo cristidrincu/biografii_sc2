@@ -70,32 +70,6 @@
                     </div>
                 </div>
             </div><!--ends player_videos entity options-->
-            <div class="accordion-group">
-                <div class="accordion-heading">
-                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFive">
-                        CRUD for REQUESTED PLAYER entity
-                    </a>
-                </div>
-                <div id="collapseFive" class="accordion-body collapse">
-                    <div class="accordion-inner">
-                        <?php echo anchor("index.php/requested_player/prepare_requested_player", "CREATE Player", array("class"=>"btn")); ?>
-                        <?php echo anchor("index.php/requested_player/read_requested_player", "READ Player", array("class"=>"btn")); ?>
-                    </div>
-                </div>
-            </div><!--ends requested_player entity options-->
-            <div class="accordion-group">
-                <div class="accordion-heading">
-                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseSix">
-                        CRUD for REQUESTED RESOURCES entity
-                    </a>
-                </div>
-                <div id="collapseSix" class="accordion-body collapse">
-                    <div class="accordion-inner">
-                        <?php echo anchor("index.php/resources_requested_player/prepare_requested_resource", "CREATE Resource", array("class"=>"btn")); ?>
-                        <?php echo anchor("index.php/resources_requested_player/read_requested_resources", "READ Resource", array("class"=>"btn")); ?>
-                    </div>
-                </div>
-            </div><!--ends requested_player_resource entity options-->
         </div>
     </div><!--ends CRUD main menu-->
     <div class='span6 reportsOperationsArea'>

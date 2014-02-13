@@ -76,11 +76,4 @@ class M_search_entities extends CI_Model{
         return $result;
 
     }
-
-    public function requested_player_backend_results($player_nickname){
-        $this->db->select()->from("requested_players");
-        $query=$this->db->get();
-        $result=$query->result();
-        return $result;
-    }
 }

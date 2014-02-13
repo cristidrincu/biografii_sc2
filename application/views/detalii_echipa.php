@@ -91,7 +91,7 @@
                                     <li><p>Nickname: <?php echo $player->nickname; ?></p></li>
                                     <li><p>Rasa: <?php echo $player->race; ?></p></li>
                                 </ul>
-                                <?php echo anchor("index.php/main/getPlayerDetails/$player->player_ID/$player->nickname", "Citeşte mai mult!", array("class"=>"btn btn-success")); ?>
+                                <?php echo anchor("index.php/main/getPlayerDetails/$player->player_ID/$player->race/$player->nickname", "Citeşte mai mult!", array("class"=>"btn btn-success")); ?>
                               </div>
                           <?php endforeach; ?>   
                     </div>

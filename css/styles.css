@@ -41,9 +41,9 @@ div#header{
     width:inherit;
     height: 410px;
     padding-bottom:40px;
-    /*background-image: url("../imgs/pattern_3.png");*/
+    background-image: url("../imgs/pattern_3.png");
     background-repeat:repeat;
-    /*border-bottom:2px solid #666;*/
+    border-bottom:2px solid #666;
 }
 
 div#mainMenuContainer{
@@ -131,8 +131,7 @@ div#welcomeMessage{
 
 h1.mainTextWelcomeMessage{
     font-size:100px;
-    /*color:#fff;*/
-    color:#000;
+    color:#fff;
     text-align:center;
     line-height:100px;
     margin-bottom: 20px;
@@ -142,8 +141,7 @@ h3.mottoArchive{
     display:inline-block;
     line-height: 30px;
     font-size:20px;
-    /*color:#fff;*/
-    color:#000;
+    color:#fff;
     text-align: center;
     margin-bottom: 10px;
 }
