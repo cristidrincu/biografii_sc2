@@ -1,10 +1,10 @@
 <div class='row-fluid mainContentContainer'>
     <div class="navbar">
         <div class="navbar-inner">
-            <a class="brand" href="<?php echo base_url(); ?>index.php/home/index">ADMINISTRATION AREA</a>
+            <a class="brand" href="<?php echo base_url(); ?>home/index">ADMINISTRATION AREA</a>
             <ul class="nav pull-right">
                 <li class='username'>Bine ai venit, <?php echo $username; ?> </li>
-                <li><?php echo anchor("index.php/home/logout","Logout", "");?></li>
+                <li><?php echo anchor("home/logout","Logout", "");?></li>
             </ul>
         </div>
     </div>
@@ -46,7 +46,7 @@
         ?>
 
         <?php
-        echo form_open('index.php/resources_requested_player/update_requested_resource/'. $requested_resource[0]->resource_id, $form_attributes);
+        echo form_open('resources_requested_player/update_requested_resource/'. $requested_resource[0]->resource_id, $form_attributes);
         ?>
         <div class="control-group">
             <label class="control-label" for="resourceCurrentName">Current Name</label>

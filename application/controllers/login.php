@@ -5,7 +5,7 @@ class Login extends CI_Controller{
 	function __construct(){
 		parent::__construct();
 		$this->load->library('form_validation');
-		$this->load->model('user');
+		$this->load->model('crud_model_user');
 
 		$this->output->set_header('Expires: Sat, 26 Jul 1997 05:00:00 GMT');
 		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0"); 
@@ -31,7 +31,7 @@ class Login extends CI_Controller{
    		else
    		{
      		//Go to private area
-     		redirect('index.php/home', 'refresh');
+     		redirect('home', 'refresh');
    		}
 	}
 
@@ -40,16 +40,17 @@ class Login extends CI_Controller{
 	   $username = $this->input->post('username');
 
 	   //query the database
-	   $result = $this->user->login($username, $password);
+	   $result = $this->crud_model_user->login($username, $password);
 
 	   if($result)
 	   {
-	     $sess_array = array();
 	     foreach($result as $row)
 	     {
 	       $sess_array = array(
 	         'id' => $row->user_id,
-	         'username' => $row->user_name
+	         'username' => $row->user_name,
+             'userrole' => $row->user_role
+
 	       );
 	       $this->session->set_userdata('logged_in', $sess_array);
 	     }

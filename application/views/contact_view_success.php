@@ -10,19 +10,19 @@
                     <!--<a href="index.php" target="_self"><img src="imgs/logo_smaller.png" alt="Starcraft2 Vidcasts"/></a>-->
                     <div id="logoTitles">
                         <a href='<?php echo base_url(); ?>' target='_self'><h4 class="miniTitleStarcraft2">Arhiva Starcraft2</h4></a>
-                        <a href='http://www.starcraft2-vidcasts.ro' target='self'><h5 class="miniSubtitleVGN">Un proiect VGN &amp; Starcraft2-Vidcasts România</h5></a>
+                        <a href='http://www.starcraft2-vidcasts.ro' target='self'><h5 class="miniSubtitleVGN">Un proiect VGN Starcraft2-Vidcasts România</h5></a>
                     </div><!--ends logoTitles-->
                 </div><!--ends containerLogo-->
             </div><!--ends span4-->
             <div class="span8">
                 <div id="mainMenuContainer">
                     <ul class="mainMenu">
-                        <li><a href="<?php echo base_url();?>index.php/main/index" target="_self">Acasă</a></li>
-                        <li><a href="<?php echo base_url();?>index.php/main/players" target="_self">Jucători internaţionali</a></li>
-                        <li><a href="<?php echo base_url();?>index.php/jucatori_romani/players" target="_self">Jucători români</a></li>
-                        <li><a href="<?php echo base_url();?>index.php/main/teams" target="_self">Echipe</a></li>
-                        <li><a href="<?php echo base_url();?>index.php/contribute/ajuta" target="_self">Contribuie</a></li>
-                        <li><a class="activeLink" href="<?php echo base_url();?>index.php/contact" target="_self">Contact</a></li>
+                        <li><a href="<?php echo base_url();?>main/index" target="_self">Acasă</a></li>
+                        <li><a href="<?php echo base_url();?>main/players" target="_self">Jucători</a></li>
+<!--                        <li><a href="--><?php //echo base_url();?><!--jucatori_romani/players" target="_self">Jucători români</a></li>-->
+                        <li><a href="<?php echo base_url();?>main/teams" target="_self">Echipe</a></li>
+<!--                        <li><a href="--><?php //echo base_url();?><!--contribute/ajuta" target="_self">Contribuie</a></li>-->
+                        <li><a class="activeLink" href="<?php echo base_url();?>contact" target="_self">Contact</a></li>
                     </ul>
                 </div><!--ends mainMenuContainer-->
                 <!--ELEMENTS FOR DROPDOWNS-->
@@ -46,7 +46,7 @@
                             <p>În cadrul acestei secţiuni vei găsi cei mai buni jucători de Starcraft2 din România, jucând cu rasa <strong>TERRAN</strong>, pentru ligile Masters şi Grand Masters.</p>
                         </div>
                         <br class="clearFloats"/>
-                        <a href='<?php echo base_url(); ?>index.php/main/terran_players_ro' class='btn btn-primary'>Afiseaza</a>
+                        <a href='<?php echo base_url(); ?>main/terran_players_ro' class='btn btn-primary'>Afiseaza</a>
                     </div>
 
                     <!--<hr class="divider races"/>-->
@@ -63,7 +63,7 @@
                             <p>În cadrul acestei secţiuni vei găsi cei mai buni jucători de Starcraft2 din România, jucând cu rasa <strong>ZERG</strong>, pentru ligile Masters şi Grand Masters.</p>
                         </div>
                         <br class="clearFloats"/>
-                        <a href='<?php echo base_url(); ?>index.php/main/zerg_players_ro' class='btn btn-primary'>Afiseaza</a>
+                        <a href='<?php echo base_url(); ?>main/zerg_players_ro' class='btn btn-primary'>Afiseaza</a>
                     </div>
 
                     <!--hr class="divider"/>-->
@@ -80,7 +80,7 @@
                             <p>În cadrul acestei secţiuni vei găsi cei mai buni jucători de Starcraft2 din România, jucând cu rasa <strong>PROTOSS</strong>, pentru ligile Masters şi Grand Masters.</p>
                         </div>
                         <br class="clearFloats"/>
-                        <a href='<?php echo base_url(); ?>index.php/main/protoss_players_ro' class='btn btn-primary'>Afiseaza</a>
+                        <a href='<?php echo base_url(); ?>main/protoss_players_ro' class='btn btn-primary'>Afiseaza</a>
                     </div>
 
                     <!--<hr class="divider"/>-->
@@ -93,8 +93,8 @@
             <div class="containerLinksEmail">
                 <h4 class="gratitudeTextEmailH4">Îţi mulţumim pentru mesajul trimis.</h4>
                 <p class="gratitudeTextEmail"> Încercăm să răspundem la toate email-urile voastre cât de repede putem. Există unele cazuri în care răspunsul din partea noastră poate să întârzie, însă vom răspunde la toate email-urile trimise!</p>
-                <?php echo anchor('index.php/contact', 'Trimite un alt email', 'title="message_success", class="sendEmailAgain btn btn-success"'); ?>
-                <?php echo anchor('index.php/main', 'Întoarce-te în pagină principala', 'title="back_to_main", class="sendEmailAgain btn"'); ?>
+                <?php echo anchor('contact', 'Trimite un alt email', 'title="message_success", class="sendEmailAgain btn btn-success"'); ?>
+                <?php echo anchor('main', 'Întoarce-te în pagină principala', 'title="back_to_main", class="sendEmailAgain btn"'); ?>
             </div>
         </div><!--ends span9-->
     </div>

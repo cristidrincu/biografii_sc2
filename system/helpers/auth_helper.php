@@ -9,6 +9,6 @@ function checkSessionData($page_type, $data){
         $ci->load->view($page_type, $data);
     }
     else{
-        redirect('index.php/login', 'refresh');
+        redirect('login', 'refresh');
     }
 }

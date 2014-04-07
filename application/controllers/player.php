@@ -20,6 +20,10 @@ class Player extends CI_Controller{
 	 //array member used to store parameters for CRUD operations on the Player Entity
 	public $parameters_crud=array();
 
+    public $upload_info_inserted = null;
+    public $error_upload = null;
+    public $currentPlayerImageFromDB = null;
+
     //parameters for upload regarding Player entity
 
 
@@ -27,12 +31,16 @@ class Player extends CI_Controller{
 	function __construct(){
 		parent::__construct();
 
+        $this->output->set_header('Last-Modified:'.gmdate('D, d M Y H:i:s').'GMT');
+        $this->output->set_header('Cache-Control: no-store, no-cache, must-revalidate');
+        $this->output->set_header('Cache-Control: post-check=0, pre-check=0',false);
+        $this->output->set_header('Pragma: no-cache');
+
         define('IMG_FOLDER_PATH', base_url().'uploads/players/');
 
         //custom helpers
         $this->load->helper('custom/prevent_back_browser');
         $this->load->helper('auth_helper');
-        $this->load->helper('custom/upload_config');
         $this->load->helper('custom/create_entity_report');
         $this->load->helper('custom/pagination_config');
 
@@ -40,6 +48,7 @@ class Player extends CI_Controller{
 
 		$this->load->model('crud_model_player');
 		$this->load->model('crud_model_team');
+        $this->load->model('crud_model_user');
 
         //prevent user from using the back button and relogin or other weird operations
         preventUserBackButtonBrowser();
@@ -56,6 +65,7 @@ class Player extends CI_Controller{
 		$this->parameters_crud['player_description']=$this->input->post('player_description');
 		$this->parameters_crud['player_image']=$this->input->post('player_image');
         $this->parameters_crud['player_keywords']=$this->input->post('player_keywords');
+        $this->parameters_crud['user_id'] = $this->crud_model_user->extractUserID($this->setSessionDataUserName());
 
 		//initialize player_team_id variable used in inserting a new player in the database
 		$this->player_team_id=$this->crud_model_team->extractTeamID($this->parameters_crud['player_team']);
@@ -71,7 +81,6 @@ class Player extends CI_Controller{
 
 	public function setPageTitle($title){
 		$this->page_title=$title;
-		return $this->page_title;
 	}
 
 	public function setPlayerTeam($team_name){
@@ -90,13 +99,13 @@ class Player extends CI_Controller{
         return $this->image_path;
     }
 
-	public function getImagePathThumb(){
-		return $this->image_path_thumb;
-	}
-
 	public function setImagePathThumb($image_path_thumb){
 		$this->image_path_thumb=$image_path_thumb;
 	}
+
+    public function getImagePathThumb(){
+        return $this->image_path_thumb;
+    }
 
     public function setPlayerTeamID($player_team_id){
         $this->player_team_id_id=$player_team_id;
@@ -111,7 +120,7 @@ class Player extends CI_Controller{
 		$data['teams']=$this->crud_model_team->extractTeamName();
 		$data['page_title']="PLAYER";
 
-		$data['username']=$this->setSessionData();
+		$data['username']=$this->setSessionDataUserName();
 
 		//load the view with the form with the creation of a player
 		$this->load->view('header_admin_area');
@@ -121,12 +130,15 @@ class Player extends CI_Controller{
 	}
 
 	public function prepare_update_player($entity_id){
+//        $tmp_dir = ini_get('upload_tmp_dir') ? ini_get('upload_tmp_dir') : sys_get_temp_dir();
+//        die($tmp_dir);
+
 
 		$data['player_details']=$this->crud_model_player->extractPlayerDetailsID($entity_id);
 		$data['teams']=$this->crud_model_team->extractTeamName();
 		$data['page_title']=$this->setPageTitle("UPDATE PLAYER SCREEN");
 
-		$data['username']=$this->setSessionData();
+		$data['username']=$this->setSessionDataUserName();
 
 		$data['entity_type']=1; //1 is a flag for PLAYER entity
 		$this->loadUpdateEntityDetails($data);
@@ -136,30 +148,25 @@ class Player extends CI_Controller{
 		$data['page_title']=$this->setPageTitle('Raport preliminar stergere jucator');
 		$data['player_details']=$this->crud_model_player->extractPlayerDetailsID($player_id);
 
-	    $data['username'] =  $this->setSessionData();
+	    $data['username'] =  $this->setSessionDataUserName();
 
 		$this->loadDeletePageReport($data);
 	}
 
 	public function create_player(){
         $entity_type='player';
+        $playerImage = $_FILES['player_image']['name'];
+        $user_id = $this->crud_model_user->extractUserID($this->setSessionDataUserName());
 
-        //helper function containing all configuration parameters for upload of images concerning the player entity
-        configUpload();
-
-        if($this->crud_model_player->prevent_duplicate_player_entries($this->parameters_crud['player_nickname'])){
-            redirect('index.php/player/load_entity_exists_failure/'.$entity_type);
+        if($this->upload_images()){
+            $this->upload_info_inserted = array('upload_data' => $this->upload->data());
         }
 
-        $upload_info_inserted['upload_data']=$this->upload->data();
-		//$this->image_path=$data_info_inserted['upload_data']['file_name'];
-        $this->setImagePath($upload_info_inserted['upload_data']['file_name']);
-		$data['image_path']=$this->getImagePath();
-		$this->create_thumbs($this->getImagePath());
+        if($this->crud_model_player->prevent_duplicate_player_entries($this->parameters_crud['player_nickname'])){
+            redirect('player/load_entity_exists_failure/'.$entity_type);
+        }
 
-		//first parameter is the team id based on the team name, second parameter is the controller defined array, parameter_crud, which contains all variables for an insert statement defined in the model, third and final parameter is the image path, also defined in the controller 
-		if($this->crud_model_player->insertPlayerDB($this->player_team_id, $this->getParametersCRUD(), $this->getImagePath())){
-
+		if($this->crud_model_player->insertPlayerDB($this->player_team_id, $this->getParametersCRUD(), $playerImage)){
             $data_info_inserted=playerReport($this->getParametersCRUD()); //SEE create_entity_report HELPER for playerReport() method
 			$this->loadSuccessPage($data_info_inserted);
 		}else{
@@ -172,12 +179,16 @@ class Player extends CI_Controller{
 
 		//session username and page title
 		$data['page_title']=$this->setPageTitle("READ PLAYERS");
-		$data['username'] =  $this->setSessionData();
+		$data['username'] =  $this->setSessionDataUserName();
+        $data['user_id'] = $this->crud_model_user->extractUserID($this->setSessionDataUserName());
 
 		//extract players and offset method for pagination
 		//$data['player_details']=$this->crud_model_player->extractPlayerTeamName($config['per_page'], $this->uri->segment(3));
         $data['player_details']=$this->crud_model_player->extractPlayerTeamName(10, $this->uri->segment(3));
 		$data['entity_type']=1; //1 is a flag for PLAYER entity
+        $data['user_role'] = $this->setSessionDataUserRole();
+        $data['total_number_of_players'] = $this->crud_model_player->countRowsPlayer();
+
 
         $pagination_config = config_pagination(10,"player");//SEE pagination_config_helper HELPER for config_pagination($results_per_page) method
 
@@ -189,49 +200,84 @@ class Player extends CI_Controller{
 
 	public function update_player($player_id){
 
+        $this->image_path = "./uploads/players/";
+
 		//initialize player_id variable used in updating a player in the database
 		$this->player_id=$this->crud_model_player->extractPlayerID($player_id);
 
-        //uses the update_upload_config() function to prepare upload parameters. Also checks to see if the field for a new picture is empty or not
-        //If it is empty, nothing will be uploaded, else, it will upload the new picture that is set in the upload field by the user
-        $this->update_upload_config();
+        //helper function containing all configuration parameters for upload of images concerning the player entity
+        if($this->upload_images()){
+            $this->upload_info_inserted = array('upload_data' => $this->upload->data());
+        }
 
         if(empty($_POST['player_keywords'])){
             $this->parameters_crud['player_keywords']=$this->input->post('player_keywords_actual');
+        }else{
+            $this->parameters_crud['player_keywords'] .= ", " . $this->input->post('player_keywords_actual');
         }
 
-        //check to see if the FIELD for a possible new image is empty or not
-		if($_POST['update_player']=='please_select'){
+		if($_POST['update_player_team']=='please_select'){
 			$this->setPlayerTeam($this->input->post('player_team'));
             $this->parameters_crud['player_team']=$this->getPlayerTeam();
-            //the team id is needed when updating a player - a team id is extracted by passing the team name to the model method extractTeanID($team_name)
             $this->setPlayerTeamID($this->crud_model_team->extractTeamID($this->input->post('player_team')));
 		}else{
             $this->setPlayerTeam($this->input->post('update_player'));
             $this->parameters_crud['player_team']=$this->getPlayerTeam();
-            $this->setPlayerTeamID($this->crud_model_team->extractTeamID($this->input->post('update_player')));
+            $this->setPlayerTeamID($this->crud_model_team->extractTeamID($this->input->post('update_player_team')));
 		}
 
-		//assign return value for getImagePathThumb to a variable and pass that variable to the updatePlayer() method
-		$team_logo=$this->getImagePathThumb();
+        if( !empty($_FILES['player_image']['name']) ){
+            if( !empty( $_POST['player_image_current']) ){
+                unlink($this->image_path . $_POST['player_image_current']); //delete the current file from the server
+            }
 
-		//load crud_model and the method that does the updating
-		//1st parameter - player_id, 2nd parameter - player team id, 3rd parameter - array containing name, nickname etc, 4th parameter - the image to be uploaded
-		$this->crud_model_player->updatePlayer($this->player_id, $this->getPlayerTeamID(), $this->parameters_crud, $team_logo);
+            $this->currentPlayerImageFromDB = $_FILES['player_image']['name'];
+        }else{
+            $this->currentPlayerImageFromDB = $_POST['player_image_current'];
+        }
 
-		redirect('index.php/player/read_player');
+
+        $this->crud_model_player->updatePlayer($this->player_id, $this->getPlayerTeamID(), $this->parameters_crud, $this->currentPlayerImageFromDB);
+        redirect('player/read_player');
+
 	}
+
+    public function upload_images(){
+        //prepare upload config
+        $config['upload_path'] = './uploads/players';
+        $config['allowed_types'] = 'gif|jpg|png';
+        $config['max_size']	= '5000';
+        $config['max_width'] = '1920';
+        $config['max_height'] = '2500';
+        $config['remove_spaces'] = TRUE;
+
+        //the "player_image" parameter is the name of the upload input field. Usage of $this->input->post('player_image') DOES NOT WORK
+        //ALSO CHECK FOR FOLDER PERMISSIONS IN ./uploads/players - if the folder is not writable, you will get an error
+        $selected_image = "player_image";
+
+        $this->load->library('upload', $config);
+
+        if ( ! $this->upload->do_upload($selected_image))
+        {
+            $this->error_upload = array('error' => $this->upload->display_errors());
+            return false;
+        }else{
+            return true;
+        }
+
+    }
 
 	public function delete_player($player_id){
         //when a player is deleted, the image on the server must be deleted as well
         $file_name=$this->crud_model_player->extractPlayerImage($player_id);
 
         if($this->crud_model_player->deletePlayer($player_id)){
-            unlink('uploads/players/'.$file_name);
-            redirect('index.php/player/read_player');
+            //remove image from server when player deleted
+            //unlink('uploads/players/'.$file_name);
+            redirect('player/read_player');
         }else{
             //!!!CREATE DELETE FAILURE PAGE
-            redirect('index.php/player/loadFailurePage');
+            redirect('player/loadFailurePage');
         }
 	}
 
@@ -268,7 +314,7 @@ class Player extends CI_Controller{
 
     public function load_entity_exists_failure($entity_type){
 
-        $data['username']=$this->setSessionData();
+        $data['username']=$this->setSessionDataUserName();
 
         if($entity_type=='player'){
             $data['entity_type']=1;
@@ -297,42 +343,17 @@ class Player extends CI_Controller{
 		$config['create_thumb'] = TRUE;
 		$config['maintain_ratio'] = TRUE;
 		$config['width']	 = 500;
-		//$config['height']	= 50;
 		$this->load->library('image_lib', $config);
 		$this->image_lib->resize();
 	}
 
-	public function setSessionData(){  //helper function for retrieving username based on who is logged in
+	public function setSessionDataUserName(){  //helper function for retrieving username based on who is logged in
 		$session_data = $this->session->userdata('logged_in');
 	    return $session_data['username'];
 	}
 
-    public function update_upload_config(){
-        //prepare upload config
-        $config['upload_path'] = './uploads/players';
-        $config['allowed_types'] = 'gif|jpg|png';
-        $config['max_size']	= '5000';
-        $config['max_width'] = '1920';
-        $config['max_height'] = '1500';
-        $config['remove_spaces'] = TRUE;
-
-        $this->load->library('upload', $config);
-
-        //if the upload field is empty, populate it with the current image in the database for the team that is being updated
-        if(empty($_FILES['player_image']['name'])){
-            $this->setImagePathThumb($this->input->post('player_image_current'));
-        }else{
-            $this->upload->do_upload('player_image');
-            $data_info_inserted['upload_data']=$this->upload->data();
-
-            //get the full path of the image being uploaded - will be used in creating a thumbnail
-            $this->image_path=$data_info_inserted['upload_data']['full_path'];
-            //the create_thumbs function will automatically append a _thumb.jpg|png|gif to the image in question
-            $this->create_thumbs($this->image_path);
-            //get the raw name of the image, without the .jpg,.png extension - append the _thumb to the file name - this filename will be inserted in the database
-            $this->setImagePathThumb($data_info_inserted['upload_data']['raw_name'].'_thumb'.$data_info_inserted['upload_data']['file_ext']);
-        }
-
-        $this->upload->initialize($config);
+    public function setSessionDataUserRole(){  //helper function for retrieving username based on who is logged in
+        $session_data = $this->session->userdata('logged_in');
+        return $session_data['userrole'];
     }
 }

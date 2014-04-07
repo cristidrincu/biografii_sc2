@@ -16,10 +16,15 @@ class Team extends CI_Controller{
 	//class constructor
 	function __construct(){
 		parent::__construct();
-		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0"); 
-		$this->output->set_header("Pragma: no-cache");
+
+        $this->output->set_header('Last-Modified:'.gmdate('D, d M Y H:i:s').'GMT');
+        $this->output->set_header('Cache-Control: no-store, no-cache, must-revalidate');
+        $this->output->set_header('Cache-Control: post-check=0, pre-check=0',false);
+        $this->output->set_header('Pragma: no-cache');
+
 		$this->load->model('login_model');
 		$this->load->model('crud_model_team');
+        $this->load->model('crud_model_user');
 
 		//load validation helper
 		$this->load->helper('check_user_validation');
@@ -59,7 +64,7 @@ class Team extends CI_Controller{
 	public function prepare_team(){
 		$this->setPageTitle("ECHIPA");
 
-		$data['username']=$this->setSessionData();
+		$data['username']=$this->setSessionDataUsername();
 		$data['page_title']=$this->getPageTitle();
 
 		//load the view with the form with the creation of a team
@@ -71,7 +76,7 @@ class Team extends CI_Controller{
 
 	public function prepare_update_team($team_id){
 		$data['page_title']=$this->setPageTitle("UPDATE TEAM SCREEN");
-		$data['username']=$this->setSessionData();
+		$data['username']=$this->setSessionDataUsername();
 
 		$data['team_details']=$this->crud_model_team->extractTeamDetailsID($team_id);
 		$data['entity_type']=2; //2 is a flag for TEAM entity
@@ -80,7 +85,7 @@ class Team extends CI_Controller{
 
 	public function prepare_delete_team($team_id){
 		$data['page_title']=$this->setPageTitle('Raport preliminar stergere titlu');
-		$data['username']=$this->setSessionData();
+		$data['username']=$this->setSessionDataUsername();
 
 		$data['team_details']=$this->crud_model_team->extractTeamDetailsID($team_id);
 		$this->loadDeletePageReport($data);
@@ -115,7 +120,7 @@ class Team extends CI_Controller{
 
 
 		if($this->crud_model_team->insertTeam($this->parameters_crud, $this->image_path)){
-			$data_info_inserted['username']=$this->setSessionData();
+			$data_info_inserted['username']=$this->setSessionDataUsername();
 			$data_info_inserted['team_name']=$this->input->post('team_name');
 			$data_info_inserted['team_country']=$this->input->post('team_country');
 			$data_info_inserted['team_number_of_players']=$this->input->post('team_number_of_players');
@@ -139,7 +144,8 @@ class Team extends CI_Controller{
 		$this->setPageTitle("READ TEAMS");
 
 		$data['page_title']=$this->getPageTitle();
-		$data['username']=$this->setSessionData();
+		$data['username']=$this->setSessionDataUsername();
+        $data['user_role'] = $this->setSessionDataUserRole();
 
 		//pagination configuration for results
 		$config['base_url']=base_url().'index.php/team/read_team/';
@@ -178,6 +184,8 @@ class Team extends CI_Controller{
 
 		$this->pagination->initialize($config);
 		$data['links']=$this->pagination->create_links();
+        $data['total_number_of_teams'] = $this->crud_model_team->countRowsTeam();
+        $data['user_id'] = $this->crud_model_user->extractUserID($this->setSessionDataUserName());
 		
 		$this->loadEntityDetails($data);
 	}
@@ -218,12 +226,12 @@ class Team extends CI_Controller{
 
 		$this->crud_model_team->updateTeam($this->team_id, $this->parameters_crud, $team_logo);
 		
-		redirect('index.php/team/read_team');
+		redirect('team/read_team');
 	}
 
 	public function delete_team($team_id){
 		$this->crud_model_team->deleteTeam($team_id);
-		redirect('index.php/team/read_team', 'location');
+		redirect('team/read_team', 'location');
 	}
 
 
@@ -288,8 +296,13 @@ class Team extends CI_Controller{
 		$this->image_lib->resize();
 	}
 
-	public function setSessionData(){
+	public function setSessionDataUsername(){
 		$session_data = $this->session->userdata('logged_in');
 	    return $session_data['username'];
 	}
+
+    public function setSessionDataUserRole(){  //helper function for retrieving username based on who is logged in
+        $session_data = $this->session->userdata('logged_in');
+        return $session_data['userrole'];
+    }
 }

@@ -145,8 +145,6 @@ class Requested_player extends CI_Controller
         }else{
             echo "Failure";
         }
-
-
     }
 
     public function delete_requested_player($player_id){

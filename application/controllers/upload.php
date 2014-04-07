@@ -35,7 +35,7 @@ class Upload extends CI_Controller{
 			$this->image_path=$data['upload_data']['full_path'];
 			$this->image_name=$data['upload_data']['file_name'];
 			$data['image_name']=$this->image_name;
-			$this->create_thumbs($this->image_path);
+			//$this->create_thumbs($this->image_path);
 			$this->load->view('upload_success', $data);
 		}
 

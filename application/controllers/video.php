@@ -15,12 +15,17 @@ class Video extends CI_Controller{
 	//class constructor
 	function __construct(){
 		parent::__construct();
-		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0"); 
-		$this->output->set_header("Pragma: no-cache");
+
+        $this->output->set_header('Last-Modified:'.gmdate('D, d M Y H:i:s').'GMT');
+        $this->output->set_header('Cache-Control: no-store, no-cache, must-revalidate');
+        $this->output->set_header('Cache-Control: post-check=0, pre-check=0',false);
+        $this->output->set_header('Pragma: no-cache');
+
 		$this->load->library('pagination');
 		$this->load->model('login_model');
 		$this->load->model('crud_model_player');
 		$this->load->model('crud_model_video');
+        $this->load->model('crud_model_user');
 
 		$this->parameters_crud['player_nickname']=$this->input->post('player_nickname');
 		$this->parameters_crud['video_name']=$this->input->post('video_name');
@@ -47,7 +52,7 @@ class Video extends CI_Controller{
 		$this->setPageTitle("VIDEO");
 
 		$data['page_title']=$this->getPageTitle();
-		$data['username']=$this->setSessionData();
+		$data['username']=$this->setSessionDataUsername();
 
 		$data['players']=$this->crud_model_player->extractPlayerName();
 
@@ -61,7 +66,7 @@ class Video extends CI_Controller{
 		$this->setPageTitle('Update video');
 
 		$data['page_title']=$this->getPageTitle();
-		$data['username']=$this->setSessionData();
+		$data['username']=$this->setSessionDataUsername();
 
 		$data['video_details']=$this->crud_model_video->extractVideoDetailsID($video_id);
 		
@@ -73,7 +78,7 @@ class Video extends CI_Controller{
 		$this->setPageTitle('Raport preliminar stergere titlu');
 
 		$data['page_title']=$this->getPageTitle();
-		$data['username']=$this->setSessionData();
+		$data['username']=$this->setSessionDataUsername();
 
 		$data['video_details']=$this->crud_model_video->extractVideoDetailsID($video_id);
 
@@ -86,7 +91,7 @@ class Video extends CI_Controller{
 
 		if($this->crud_model_video->insertVideo($this->video_player_id, $this->parameters_crud)){
 
-			$data_info_inserted['username']=$this->setSessionData();
+			$data_info_inserted['username']=$this->setSessionDataUsername();
 			$data_info_inserted['player_nickname']=$this->input->post('player_nickname');
 			$data_info_inserted['video_name']=$this->input->post('video_name');
 			$data_info_inserted['video_link']=$this->input->post('video_link');
@@ -114,7 +119,8 @@ class Video extends CI_Controller{
 		$this->setPageTitle('READ VIDEOS');
 
 		$data['page_title']=$this->getPageTitle();
-		$data['username']=$this->setSessionData();
+		$data['username'] = $this->setSessionDataUsername();
+        $data['user_role'] = $this->setSessionDataUserRole();
 
 		//pagination configuration for results
 		$config['base_url']=base_url().'index.php/video/read_video/';
@@ -147,7 +153,7 @@ class Video extends CI_Controller{
 		$config['num_tag_close'] = '</li>';
 
 		$data['page_title']=$this->getPageTitle();
-		$data['username']=$this->setSessionData();
+		$data['username']=$this->setSessionDataUsername();
 
 		//apply model methods for getting the teams in the database
 		$data['video_details']=$this->crud_model_video->extractVideoDetails($config['per_page'],$this->uri->segment(3));//limit and offset parameters
@@ -155,6 +161,8 @@ class Video extends CI_Controller{
 
 		$this->pagination->initialize($config);
 		$data['links']=$this->pagination->create_links();
+        $data['total_number_of_videos'] = $this->crud_model_video->countRowsVideo();
+        $data['user_id'] = $this->crud_model_user->extractUserID($this->setSessionDataUserName());
 
 
 		$this->loadEntityDetails($data);
@@ -216,8 +224,13 @@ class Video extends CI_Controller{
 		$this->load->view('footer_admin_area');
 	}
 
-	public function setSessionData(){
+	public function setSessionDataUsername(){
 		$session_data = $this->session->userdata('logged_in');
 	    return $session_data['username'];
 	}
+
+    public function setSessionDataUserRole(){  //helper function for retrieving username based on who is logged in
+        $session_data = $this->session->userdata('logged_in');
+        return $session_data['userrole'];
+    }
 }

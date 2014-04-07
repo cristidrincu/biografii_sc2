@@ -94,7 +94,7 @@ ul.dropDownList li {
 }
 
 img#logoSC2VidcastsLarge{
-    margin-top: 90px;
+    margin-top: 180px;
 }
 
 div#containerLogo{
@@ -228,19 +228,13 @@ div.containerPicDeveloper img{
 
 /*search options*/
 div.sidebarContainer{
-    height:100%;
-    /*margin-top:10px;
-    margin-left: 10px;*/
+    height:auto;
     background-color:#F0F0F0;
-    /*background-color:#000;*/
     padding-bottom: 30px;
 }
 
 div.searchOptionsContainer{
     padding-top:20px;
-    /*padding-bottom: 10px;*/
-    /*margin-left: 35px;*/
-    /*background-color:#000; */
 }
 
 div.searchOptionsContainer h4{
@@ -249,11 +243,7 @@ div.searchOptionsContainer h4{
 }
 
 div.terranContainerImage{
-    /*margin-top: 20px;*/
     font-size: 20px;
-    /*font-weight: bold;*/
-    /*margin-left: 35px;*/
-    /*background-color:#000;*/
     padding-top:20px;
     padding-bottom:20px;
 }
@@ -299,6 +289,7 @@ div.sectionDescription{
 div.sectionDescription h1{
     font-size:50px;
     line-height: 50px;
+    margin-left: 30px;
     float:left;
 }
 
@@ -316,7 +307,7 @@ div.sectionDescription p{
 div.playerContainerSmall{
     margin-top:20px;
     margin-bottom: 20px;
-    margin-left: 0;
+    padding-left: 30px;
 }
 
 div.playerContainerSmall h4{
@@ -330,7 +321,7 @@ div.playerContainerSmall ul{
 }
 
 div.containerEntities{
-    padding-left: 20px;
+    /*margin-left: 10px;*/
 }
 
 /*footer*/
@@ -342,6 +333,7 @@ div.footerContainer{
     padding-bottom:30px;
     margin-top: 30px;
     border-top:1px solid #ccc;
+    margin:0;
     /*color:#000;*/
 }
 
@@ -389,11 +381,16 @@ i.iconFooter{
 }
 
 div.latestPlayersAddedContainer{
-    padding-left: 20px;
+    height:450px;
 }
 
-h3.playerNameTitle, h3.teamName{
+h3.teamName{
     margin-bottom:10px;
+}
+
+h1.playerNameTitle{
+    margin-bottom:30px;
+    color: #fff;
 }
 
 h4.teamCountry{
@@ -410,6 +407,7 @@ p.teamDescription{
 
 h3.vidcastsJucatorTitle{
     margin-top:15px;
+    margin-bottom: 15px;
 }
 
 /*admin area styles*/
@@ -514,3 +512,194 @@ p.gratitudeTextEmail{
 p.textInfoFormularContact{
     margin-bottom: 15px;
 }
+
+.breakerMainForm{
+    margin-bottom: 60px;
+}
+
+.player-description{
+    width: 500px;
+    height:300px;
+}
+
+.formBreakerSubmit{
+    text-align:right;
+}
+
+.formBreakerSubmit .btn-success{
+    margin-right: 100px;
+}
+
+.keywords-actual, .add-new-keywords{
+    width:600px;
+}
+
+.add-video-link{
+    width:500px;
+}
+
+#teamDescription{
+    width:545px;
+    height:300px;
+}
+
+.inputFieldSearchPlayer{
+    margin-right: 20px;
+}
+
+.player-image{
+    margin:0;
+    padding: 0;
+}
+
+.textMesaj{
+    width:595px;
+}
+
+.basicPlayerInformationContainer{
+    width: 500px;
+    position: relative;
+}
+
+.basicPlayerTitluriObtinuteContainer{
+    width:500px;
+    position: relative;
+    left: 30px;
+    top:200px;
+}
+
+.containerTextTitluri{
+    position: absolute;
+    top: -400px;
+    color: #fff;
+}
+
+    .containerTextTitluri ul{
+        font-size: 14px;
+    }
+
+.containerTextTitluri ul li{
+    padding-bottom: 3px;
+}
+
+    .titluriObtinuteJucator{
+        padding-top: 20px;
+    }
+
+    .playerInformation{
+        position: absolute;
+        top:-500px;
+        left:30px;
+    }
+
+    .playerInformation ul{
+        font-size: 20px;
+        color:#fff;
+    }
+
+    .playerInformation ul li {
+        padding-bottom: 10px;
+    }
+
+.whiteBackgroundBreadCrumbs{
+    /*height: 50px;*/
+    /*background-color: #357c93;*/
+    background-color: #000;
+}
+
+.whiteBackgroundBreadCrumbs ul li{
+    display: inline-block;
+    padding-top: 10px;
+    padding-right: 10px;
+    margin-left: 30px;
+    /*border-right: 1px solid #74818e;*/
+}
+
+.whiteBackgroundBreadCrumbs ul li a{
+    position:relative;
+    color: #fff;
+    text-decoration: none;
+    top:-15px;
+}
+
+.containerVidcastsJucator{
+    padding-left: 30px;
+    margin-bottom: 30px;
+}
+
+.formSearchPlayer{
+    padding-bottom: 20px;
+}
+
+.formSearchEntities{
+    float: none;
+}
+
+.indicatii-cautare{
+    margin-left:12px;
+}
+
+.containerLetters{
+    margin-left: 30px;
+}
+
+h4.titleComponentiEchipa{
+    margin-left: 30px;
+}
+
+h3.titluLatestPlayersAdded{
+    margin-left: 30px;
+}
+
+.shortDescriptionPlayer{
+    font-size:20px;
+}
+
+.playerPicture{
+    margin-top: 20px;
+    height:450px;
+}
+
+.containerDescriereJucator{
+    padding-left: 40px;
+}
+
+.containerDescriereJucator ul li{
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.search-player-details{
+    margin-top: 20px;
+    float:left;
+}
+
+.containerContact{
+    padding-left: 30px;
+}
+
+.teamLogo, .mesajNoDatabaseResults, .mesajRezultateCautare{
+    padding-top: 20px;
+    padding-left: 30px;
+}
+
+.mesajNoDatabaseResults, .mesajRezultateCautare{
+    padding-left: 34px;
+}
+
+.total-number-database-entity{
+    padding-left: 7px;
+    margin-bottom: 10px;
+    color: #2f96b4;
+}
+
+.published-by-author-name{
+    padding-top: 10px;
+    font-size: 16px;
+    color: #2f96b4;
+    font-weight: bold;
+}
+
+
+

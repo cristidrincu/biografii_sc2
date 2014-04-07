@@ -1,10 +1,10 @@
 <div class='row-fluid mainContentContainer'>
     <div class="navbar">
         <div class="navbar-inner">
-            <a class="brand" href="<?php echo base_url(); ?>index.php/home/index">ADMINISTRATION AREA</a>
+            <a class="brand" href="<?php echo base_url(); ?>home/index">ADMINISTRATION AREA</a>
                 <ul class="nav pull-right">
                   <li class='username'>Bine ai venit, <?php echo $username; ?> </li>  
-                  <li><?php echo anchor("index.php/home/logout","Logout", "");?></li>
+                  <li><?php echo anchor("home/logout","Logout", "");?></li>
                 </ul>
   		</div>
   	</div>
@@ -43,7 +43,7 @@
 		 ?>
 
 		 <?php 
-            echo form_open_multipart('index.php/team/update_team/'. $team_details[0]->ID, $form_attributes);
+            echo form_open_multipart('team/update_team/'. $team_details[0]->ID, $form_attributes);
         ?>
             <div class="control-group">
                 <label class="control-label" for="teamName">Name</label>

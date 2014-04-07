@@ -13,32 +13,11 @@
                 <div class="span8">
                     <div id="mainMenuContainer">
                         <ul class="mainMenu">
-                            <li><a href="<?php echo base_url();?>index.php/main/index" target="_self">Acasă</a></li>
-                            <!--<li>
-                                <div class="droppDownMainContainer">
-                                    <a id="dropDownTriggerProiect" href="#" target="_self">Despre acest proiect</a>
-                                    
-                                         <div class="menuContainer">
-                                             
-                                             <ul class="dropDownList">
-                                                 <h1 class="dropDownTitle">Afla cine contribuie la acest proiect si motivatiile lor!</h1>
-                                                 <i class="icon-question-sign icon-white"></i>
-                                                 <li><a href="#" target="_self">Cine?</a></li>
-                                                 <i class="icon-wrench icon-white"></i>
-                                                 <li><a href="#" target="_self">Cum?</a></li>
-                                                 <i class="icon-heart icon-white"></i>
-                                                 <li><a href="#" target="_self">De ce?</a></li>
-                                             </ul>
-                                         </div>                                    
-                                </div>
-                            </li><!--ends menuContainer-->
-
-                            <li><a class="activeLink" href="<?php echo base_url();?>index.php/main/players" target="_self">Jucători internaţionali</a></li>
-                            <li><a href="<?php echo base_url();?>index.php/jucatori_romani/players" target="_self">Jucători români</a></li>
-                            <li><a href="<?php echo base_url();?>index.php/main/teams" target="_self">Echipe</a></li>
-                            <li><a href="<?php echo base_url();?>index.php/contribute/ajuta" target="_self">Contribuie</a></li>
-                            <li><a href="<?php echo base_url();?>index.php/contact" target="_self">Contact</a></li>
-                            <!--<li><a href="#" target="_self">Contact</a></li>-->
+                            <li><a href="<?php echo base_url();?>main/index" target="_self">Acasă</a></li>
+                            <li><a class="activeLink" href="<?php echo base_url();?>main/players" target="_self">Jucători</a></li>
+                            <li><a href="<?php echo base_url();?>main/teams" target="_self">Echipe</a></li>
+<!--                            <li><a href="--><?php //echo base_url();?><!--contribute/ajuta" target="_self">Contribuie</a></li>-->
+                            <li><a href="<?php echo base_url();?>contact" target="_self">Contact</a></li>
                         </ul>
                     </div><!--ends mainMenuContainer-->
                     <!--ELEMENTS FOR DROPDOWNS-->
@@ -62,7 +41,7 @@
                                     <p>Am introdus în cadrul secţiunii Terrane jucători cu renume mondial, gen Kas, MVP, Marine King Prime şi alţii. Vei putea citi biografiile celor mai puternici terrani Coreeni, însă şi a celor care vin încet din urmă, aşa cum este spaniolul Lucifron!</p>
                                    </div>
                                    <br class="clearFloats"/>
-                                   <a href='<?php echo base_url();  ?>index.php/main/terran_players' class='btn btn-primary'>Afişează</a>
+                                   <a href='<?php echo base_url();  ?>main/terran_players' class='btn btn-primary'>Afişează</a>
                                </div>
                                
                                <!--<hr class="divider races"/>-->
@@ -79,7 +58,7 @@
                                     <p>Nume precum Nestea, Zenio, Life şi mulţi alţii îşi au biografiile în cadrul acestei secţiuni. Află totul despre ei, de la începutul carierie de PRO GAMER şi până în acest moment, cât şi motivul pentru care au ales să joace acesta rasă.</p>
                                    </div>
                                    <br class="clearFloats"/>
-                                   <a href='<?php echo base_url(); ?>index.php/main/zerg_players' class='btn btn-primary'>Afişează</a>
+                                   <a href='<?php echo base_url(); ?>main/zerg_players' class='btn btn-primary'>Afişează</a>
                                </div>    
                                
                                <!--hr class="divider"/>-->
@@ -96,7 +75,7 @@
                                     <p>Huk, Parting, Socke - nume sonore în cadrul adunării protosiene, cu rezultate remarcabile, te aşteaptă să le citeşti biografiile şi să le afli rezultatele obţinute în cadrul concursurilor internaţionale la care au participat. O secţiune în care DigitalWaves a muncit la greu. Prietenii ştiu de ce!</p>
                                    </div>
                                    <br class="clearFloats"/>
-                                   <a href='<?php echo base_url(); ?>index.php/main/protoss_players' class='btn btn-primary'>Afişează</a>
+                                   <a href='<?php echo base_url(); ?>main/protoss_players' class='btn btn-primary'>Afişează</a>
                                </div>
                     </div><!--ends terranContainerImage-->   
                     </div>
@@ -111,19 +90,16 @@
                         ?>
                             <div class="input-append">
                                 <?php 
-                                    echo form_open('index.php/search/results', $form_attributes);
+                                    echo form_open('search/results', $form_attributes);
                                     echo form_input($input_field_attributes);
                                     echo form_button($submit_btn_attributes);
                                     echo form_close();
                                 ?>
                             </div>
                         <br class="clearFloats"/>
-                        <div class='alert alert-info'>
-                            În momentul în care doreşti să cauţi un jucător, te rugăm să introduci nickname-ul sau - MVP sau tlo de exemplu. Căutarea se face după nickname şi NU după numele de familie etc. Ne îndoim că veţi cauta după Jung Jong Hyun!
-                        </div>
                     </div><!--ends sectionDescription--> 
                     <div class="latestPlayersAddedContainer">
-                        <h3>Ultimii jucători adăugaţi</h3>
+                        <h3 class="titluLatestPlayersAdded">Ultimii jucători adăugaţi</h3>
                         <?php foreach($data_latest_players as $player): ?>
                             <div class="span3 playerContainerSmall">
                                 <h4><?php echo $player->nickname;?></h4>
@@ -134,7 +110,7 @@
                                     <li><p>Rasa: <?php echo $player->race; ?></p></li>
                                     <li><p>Echipa: <?php echo $player->team; ?></p></li>
                                 </ul>
-                                <?php echo anchor("index.php/main/getPlayerDetails/$player->player_ID/$player->nickname","Citeşte întreaga biografie",array('class'=>'btn btn-success')); ?>
+                                <?php echo anchor("main/getPlayerDetails/$player->player_ID","Citeşte întreaga biografie",array('class'=>'btn btn-success')); ?>
                             </div>
                           <?php endforeach; ?>
                     </div><!--ends latestPlayersAddedContainer-->

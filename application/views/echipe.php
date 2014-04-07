@@ -5,42 +5,21 @@
                 <div class="row-fluid">
                 <div class="span4">
                     <div id="containerLogo">
-                       <!--<a href="index.php" target="_self"><img src="imgs/logo_smaller.png" alt="Starcraft2 Vidcasts"/></a>-->
+                       <!--<a href="" target="_self"><img src="imgs/logo_smaller.png" alt="Starcraft2 Vidcasts"/></a>-->
                        <div id="logoTitles">
                            <a href='<?php echo base_url(); ?>' target='_self'><h4 class="miniTitleStarcraft2">Arhiva Starcraft2</h4></a>
-                           <a href='http://www.starcraft2-vidcasts.ro' target='self'><h5 class="miniSubtitleVGN">Un proiect VGN &amp; Starcraft2-Vidcasts România</h5></a>
+                           <a href='http://www.starcraft2-vidcasts.ro' target='self'><h5 class="miniSubtitleVGN">Un proiect Starcraft2-Vidcasts România</h5></a>
                        </div><!--ends logoTitles-->                       
                     </div><!--ends containerLogo-->
                 </div><!--ends span4-->
                 <div class="span8">
                     <div id="mainMenuContainer">
                         <ul class="mainMenu">
-                            <li><a href="<?php echo base_url();?>index.php/main/index" target="_self">Acasă</a></li>
-                            <!--<li>
-                                <div class="droppDownMainContainer">
-                                    <a id="dropDownTriggerProiect" href="#" target="_self">Despre acest proiect</a>
-                                    
-                                         <div class="menuContainer">
-                                             
-                                             <ul class="dropDownList">
-                                                 <h1 class="dropDownTitle">Afla cine contribuie la acest proiect si motivatiile lor!</h1>
-                                                 <i class="icon-question-sign icon-white"></i>
-                                                 <li><a href="#" target="_self">Cine?</a></li>
-                                                 <i class="icon-wrench icon-white"></i>
-                                                 <li><a href="#" target="_self">Cum?</a></li>
-                                                 <i class="icon-heart icon-white"></i>
-                                                 <li><a href="#" target="_self">De ce?</a></li>
-                                             </ul>
-                                         </div>
-                                    
-                                </div>
-                            </li><!--ends menuContainer-->
-                            <li><a href="<?php echo base_url();?>index.php/main/players" target="_self">Jucători internaţionali</a></li>
-                            <li><a href="<?php echo base_url();?>index.php/jucatori_romani/players" target="_self">Jucători români</a></li>
-                            <li><a class="activeLink" href="<?php echo base_url();?>index.php/main/teams" target="_self">Echipe</a></li>
-                            <li><a href="<?php echo base_url();?>index.php/contribute/ajuta" target="_self">Contribuie</a></li>
-                            <li><a href="<?php echo base_url();?>index.php/contact" target="_self">Contact</a></li>
-                            <!--<li><a href="#" target="_self">Contact</a></li>-->
+                            <li><a href="<?php echo base_url();?>main/" target="_self">Acasă</a></li>
+                            <li><a href="<?php echo base_url();?>main/players" target="_self">Jucători</a></li>
+                            <li><a class="activeLink" href="<?php echo base_url();?>main/teams" target="_self">Echipe</a></li>
+<!--                            <li><a href="--><?php //echo base_url();?><!--/contribute/ajuta" target="_self">Contribuie</a></li>-->
+                            <li><a href="<?php echo base_url();?>contact" target="_self">Contact</a></li>
                         </ul>
                     </div><!--ends mainMenuContainer-->
                     <!--ELEMENTS FOR DROPDOWNS-->
@@ -59,14 +38,43 @@
                         ?>
                             <div class="input-append">
                                 <?php 
-                                    echo form_open('index.php/search/team_results/', $form_attributes);
+                                    echo form_open('/search/team_results/', $form_attributes);
                                     echo form_input($input_field_attributes);
                                     echo form_button($submit_btn_attributes);
                                     echo form_close();
                                 ?>
                             </div>
                         <br class="clearFloats"/>
-                        <p>Fiecare din echipele existente au asociaţi şi jucătorii din cadrul lor. Pentru unele echipe veţi găsi toţi jucătorii, pentru altele doar cei mai importanţi, însă vor exista echipe cărora nu am apucat să le asociem nici un jucător. Va mulţumim pentru înţelegere!</p>
+                        <div class="btn-toolbar containerLetters">
+                            <div class="btn-group">
+                                <?php echo anchor('/main/find_team/A', 'A', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipAEchipa')); ?>
+                                <?php echo anchor('/main/find_team/B', 'B', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipBEchipa')); ?>
+                                <?php echo anchor('/main/find_team/C', 'C', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipCEchipa')); ?>
+                                <?php echo anchor('/main/find_team/D', 'D', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipDEchipa')); ?>
+                                <?php echo anchor('/main/find_team/E', 'E', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipEEchipa')); ?>
+                                <?php echo anchor('/main/find_team/F', 'F', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipFEchipa')); ?>
+                                <?php echo anchor('/main/find_team/G', 'G', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipGEchipa')); ?>
+                                <?php echo anchor('/main/find_team/H', 'H', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipHEchipa')); ?>
+                                <?php echo anchor('/main/find_team/I', 'I', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipIEchipa')); ?>
+                                <?php echo anchor('/main/find_team/J', 'J', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipJEchipa')); ?>
+                                <?php echo anchor('/main/find_team/K', 'K', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipKEchipa')); ?>
+                                <?php echo anchor('/main/find_team/L', 'L', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipLEchipa')); ?>
+                                <?php echo anchor('/main/find_team/M', 'M', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipMEchipa')); ?>
+                                <?php echo anchor('/main/find_team/N', 'N', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipNEchipa')); ?>
+                                <?php echo anchor('/main/find_team/O', 'O', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipOEchipa')); ?>
+                                <?php echo anchor('/main/find_team/P', 'P', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipPEchipa')); ?>
+                                <?php echo anchor('/main/find_team/Q', 'Q', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipQEchipa')); ?>
+                                <?php echo anchor('/main/find_team/R', 'R', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipREchipa')); ?>
+                                <?php echo anchor('/main/find_team/S', 'S', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipSEchipa')); ?>
+                                <?php echo anchor('/main/find_team/T', 'T', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipTEchipa')); ?>
+                                <?php echo anchor('/main/find_team/U', 'U', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipUEchipa')); ?>
+                                <?php echo anchor('/main/find_team/V', 'V', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipVEchipa')); ?>
+                                <?php echo anchor('/main/find_team/W', 'W', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipWEchipa')); ?>
+                                <?php echo anchor('/main/find_team/X', 'X', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipXEchipa')); ?>
+                                <?php echo anchor('/main/find_team/Y', 'Y', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipYEchipa')); ?>
+                                <?php echo anchor('/main/find_team/Z', 'Z', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipZEchipa')); ?>
+                            </div>
+                        </div>
                     </div><!--ends sectionDescription-->
                 </div><!--ends span12--> 
               </div><!--ends row fluid top-->
@@ -78,7 +86,7 @@
                           <li><p>Număr jucători: <?php echo $team->number_of_players; ?></p></li>
                           <li><p>Țara de origine: <?php echo $team->team_country; ?></p></li>
                         </ul>
-                        <?php echo anchor("index.php/main/getTeamDetails/".$team->ID,"Află mai multe despre echipa",array('class'=>'btn btn-success')); ?>
+                        <?php echo anchor("/main/getTeamDetails/".$team->ID,"Află mai multe despre echipa",array('class'=>'btn btn-success')); ?>
                     </div>
                   <?php endforeach; ?>     
               </div>  

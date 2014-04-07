@@ -1,5 +1,5 @@
 <!--footer-->
-        <div class="footerContainer">
+        <div class="span12 footerContainer">
             <h1>Află mai multe detalii despre acest proiect și Starcraft2 Vidcasts România!</h1>
             <div class="row-fluid">
                 <div class="span4 footerContent">

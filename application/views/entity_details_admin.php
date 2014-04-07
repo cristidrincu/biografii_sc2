@@ -1,10 +1,10 @@
 <div class='row-fluid mainContentContainer'>
     <div class="navbar">
         <div class="navbar-inner">
-            <a class="brand" href="<?php echo base_url(); ?>index.php/home/index">ADMINISTRATION AREA - <?php echo $page_title; ?></a>
+            <a class="brand" href="<?php echo base_url(); ?>home/index">ADMINISTRATION AREA - <?php echo $page_title; ?></a>
                 <ul class="nav pull-right">
-                  <li class='username'>Bine ai venit, <?php echo $username; ?> </li>  
-                  <li><?php echo anchor("index.php/home/logout","Logout", "");?></li>
+                  <li class='username'>Bine ai venit, <?php echo $username; ?> </li>
+                  <li><?php echo anchor("home/logout","Logout", "");?></li>
                 </ul>
   </div>
 </div>
@@ -21,8 +21,8 @@
                     </div>
                     <div id="collapseOne" class="accordion-body collapse in">
                         <div class="accordion-inner">
-                            <?php echo anchor("index.php/player/prepare_player", "CREATE Player", array("class"=>"btn")); ?>
-                            <?php echo anchor("index.php/player/read_player", "READ Player", array("class"=>"btn")); ?>
+                            <?php echo anchor("player/prepare_player", "CREATE Player", array("class"=>"btn")); ?>
+                            <?php echo anchor("player/read_player", "READ Player", array("class"=>"btn")); ?>
                         </div>
                     </div>
                 </div><!--ends player entity options-->
@@ -35,8 +35,8 @@
                     </div>
                     <div id="collapseThree" class="accordion-body collapse">
                         <div class="accordion-inner">
-                            <?php echo anchor("index.php/title/prepare_title", "CREATE Title", array("class"=>"btn")); ?>
-                            <?php echo anchor("index.php/title/read_title", "READ Title", array("class"=>"btn")); ?>
+                            <?php echo anchor("title/prepare_title", "CREATE Title", array("class"=>"btn")); ?>
+                            <?php echo anchor("title/read_title", "READ Title", array("class"=>"btn")); ?>
                         </div>
                     </div>
                 </div><!--ends title entity options-->
@@ -48,59 +48,13 @@
                     </div>
                     <div id="collapseFour" class="accordion-body collapse">
                         <div class="accordion-inner">
-                            <?php echo anchor("index.php/video/prepare_video", "CREATE Video", array("class"=>"btn")); ?>
-                            <?php echo anchor("index.php/video/read_video", "READ Video", array("class"=>"btn")); ?>
+                            <?php echo anchor("video/prepare_video", "CREATE Video", array("class"=>"btn")); ?>
+                            <?php echo anchor("video/read_video", "READ Video", array("class"=>"btn")); ?>
                         </div>
                     </div>
                 </div><!--ends player_videos entity options-->
             </div>
         </div><!--ends CRUD main menu-->
-        <!--section for romanian players - CRUD ops-->
-        <div class='CRUDMainMenu'>
-            <h4 class='indicatorOperatiiCRUDJucatori'>JUCATORI ROMANI</h4>
-            <div class="accordion" id="accordion3">
-                <div class="accordion-group">
-                    <div class="accordion-heading">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#collapseOneRo">
-                            CRUD operations for PLAYER ROMAN entity
-                        </a>
-                    </div>
-                    <div id="collapseOneRo" class="accordion-body collapse in">
-                        <div class="accordion-inner">
-                            <?php echo anchor("index.php/player_ro/prepare_player_ro", "CREATE Player", array("class"=>"btn")); ?>
-                            <?php echo anchor("index.php/player_ro/read_player_ro", "READ Player", array("class"=>"btn")); ?>
-                        </div>
-                    </div>
-                </div><!--ends player roman entity options-->
-                <div class="accordion-group">
-                    <div class='accordion-heading'>
-                        <a class='accordion-toggle' data-toggle="collapse" data-parent="#accordion3" href="#collapseThreeRo">
-                            CRUD operations for TITLE entity
-                        </a>
-                    </div>
-                    <div id="collapseThreeRo" class="accordion-body collapse">
-                        <div class="accordion-inner">
-                            <?php echo anchor("index.php/title_ro/prepare_title_ro", "CREATE Title", array("class"=>"btn")); ?>
-                            <?php echo anchor("index.php/title_ro/read_title_ro", "READ Title", array("class"=>"btn")); ?>
-                        </div>
-                    </div>
-                </div><!--ends title entity options-->
-                <div class="accordion-group">
-                    <div class="accordion-heading">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#collapseFourRo">
-                            CRUD operations for VIDEO entity
-                        </a>
-                    </div>
-                    <div id="collapseFourRo" class="accordion-body collapse">
-                        <div class="accordion-inner">
-                            <?php echo anchor("index.php/video_ro/prepare_video_ro", "CREATE Video", array("class"=>"btn")); ?>
-                            <?php echo anchor("index.php/video_ro/read_video_ro", "READ Video", array("class"=>"btn")); ?>
-                        </div>
-                    </div>
-                </div><!--ends player_videos entity options-->
-            </div>
-        </div><!--ends CRUD main menu-->
-
         <!--operations for TEAM entity-->
         <div class='CRUDMainMenu'>
             <h4 class='indicatorOperatiiCRUDJucatori'>ECHIPE</h4>
@@ -113,14 +67,51 @@
                     </div>
                     <div id="collapseTeam" class="accordion-body collapse in">
                         <div class="accordion-inner">
-                            <?php echo anchor("index.php/team/prepare_team", "CREATE Team", array("class"=>"btn")); ?>
-                            <?php echo anchor("index.php/team/read_team", "READ Team", array("class"=>"btn")); ?>
+                            <?php echo anchor("team/prepare_team", "CREATE Team", array("class"=>"btn")); ?>
+                            <?php echo anchor("team/read_team", "READ Team", array("class"=>"btn")); ?>
                         </div>
                     </div>
                 </div>
             </div><!--ends team entity options-->
-
         </div><!--ends CRUD main menu for team operations-->
+        <?php if($user_role == 'admin'): ?>
+        <div class='CRUDMainMenu'>
+            <h4 class='indicatorOperatiiCRUDJucatori'>USERS</h4>
+            <div class="accordion" id="accordion4">
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#collapseTeam">
+                            CRUD operations for USERS
+                        </a>
+                    </div>
+                    <div id="collapseTeam" class="accordion-body collapse in">
+                        <div class="accordion-inner">
+                            <?php echo anchor("user/prepare_create_user", "CREATE User", array("class"=>"btn")); ?>
+                            <?php echo anchor("user/read_users", "READ User", array("class"=>"btn")); ?>
+                        </div>
+                    </div>
+                </div>
+            </div><!--ends users entity options-->
+        </div><!--ends CRUD main menu for users operations-->
+        <?php else: ?>
+            <div class='CRUDMainMenu'>
+                <h4 class='indicatorOperatiiCRUDJucatori'>USER</h4>
+                <div class="accordion" id="accordion4">
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#collapseTeam">
+                                UPDATE ACCOUNT
+                            </a>
+                        </div>
+                        <div id="collapseTeam" class="accordion-body collapse in">
+                            <div class="accordion-inner">
+                                <?php echo anchor("user/prepare_update_user/".$user_id, "Update User Information", array("class"=>"btn")); ?>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--ends users entity options-->
+            </div><!--ends CRUD main menu for users operations-->
+        <?php endif; ?>
     </div><!--ends container for CRUD menus-->
     <div class='span9 reportsOperationsArea'>
     	<table class="table table-striped">
@@ -133,13 +124,14 @@
                     $input_field_attributes=array('name'=>'search_field','class'=>'span12 search-query');
                     $submit_btn_attributes=array('name'=>'submitBtn','class' => 'btn', 'type'=>'submit','content'=>'Cauta jucator');
 
-                    echo form_open('index.php/search/get_player_backend', $form_attributes);
+                    echo form_open('search/get_player_backend', $form_attributes);
                     echo form_input($input_field_attributes);
                     echo form_button($submit_btn_attributes);
                     echo form_close();
                 ?>
             </div>
             <div class='span4 offset4'><?php echo $links; ?></div>
+            <h4 class="total-number-database-entity">Numarul total de jucatori din baza de date: <?php echo $total_number_of_players; ?></h4>
     		<thead>
     			<th>Nickname</th>
     			<th>Name</th>
@@ -162,8 +154,8 @@
 	    				<td><?php echo $player->team_name; ?></td>
 	    				<td><?php echo $player->winnings; ?></td>
                         <!--<td><a href="#updatePlayerModal" role="button" class="btn" data-toggle="modal">Update</a></td>-->
-                        <td><?php echo anchor('index.php/player/prepare_update_player/'.$player->player_ID, 'Update', array("class"=>"btn btn-primary")); ?></td>
-                        <td><?php echo anchor('index.php/player/prepare_delete_player/'.$player->player_ID, 'Delete', array("class"=>"btn btn-danger")); ?></td>
+                        <td><?php echo anchor('player/prepare_update_player/'.$player->player_ID, 'Update', array("class"=>"btn btn-primary")); ?></td>
+                        <td><?php echo anchor('player/prepare_delete_player/'.$player->player_ID, 'Delete', array("class"=>"btn btn-danger")); ?></td>
 	    			</tr>
     			<?php endforeach; ?>
     		</tbody>
@@ -175,13 +167,14 @@
                     $input_field_attributes=array('name'=>'search_field','class'=>'span12 search-query');
                     $submit_btn_attributes=array('name'=>'submitBtn','class' => 'btn', 'type'=>'submit','content'=>'Cauta echipa');
 
-                    echo form_open('index.php/search/get_team_backend', $form_attributes);
+                    echo form_open('search/get_team_backend', $form_attributes);
                     echo form_input($input_field_attributes);
                     echo form_button($submit_btn_attributes);
                     echo form_close();
                 ?>
             </div>
             <div class='span4 offset4'><?php echo $links; ?></div>
+                <h4 class="total-number-database-entity">Numarul total de echipe din baza de date: <?php echo $total_number_of_teams; ?></h4>
                 <thead>
                     <th>Name</th>
                     <th>Country</th>
@@ -197,8 +190,8 @@
                         <td><?php echo $team->team_country; ?></td>
                         <td><?php echo $team->number_of_players; ?></td>
                         <td><?php echo $team->team_found_date; ?></td>
-                        <td><?php echo anchor('index.php/team/prepare_update_team/'.$team->ID, 'Update', array("class"=>"btn btn-primary")); ?></td>
-                        <td><?php echo anchor('index.php/team/prepare_delete_team/'.$team->ID, 'Delete', array("class"=>"btn btn-danger")); ?></td>
+                        <td><?php echo anchor('team/prepare_update_team/'.$team->ID, 'Update', array("class"=>"btn btn-primary")); ?></td>
+                        <td><?php echo anchor('team/prepare_delete_team/'.$team->ID, 'Delete', array("class"=>"btn btn-danger")); ?></td>
                     </tr>
             </tbody>
                 <?php endforeach; ?>
@@ -210,13 +203,14 @@
                     $input_field_attributes=array('name'=>'search_field','class'=>'span12 search-query');
                     $submit_btn_attributes=array('name'=>'submitBtn','class' => 'btn', 'type'=>'submit','content'=>'Cauta titlu');
 
-                    echo form_open('index.php/search/get_title_backend', $form_attributes);
+                    echo form_open('search/get_title_backend', $form_attributes);
                     echo form_input($input_field_attributes);
                     echo form_button($submit_btn_attributes);
                     echo form_close();
                 ?>
             </div>
             <div class='span4 offset4'><?php echo $links; ?></div>
+                <h4 class="total-number-database-entity">Numarul total de titluri din baza de date: <?php echo $total_number_of_titles; ?></h4>
                 <thead>
                     <th>Nickname</th>
                     <th>Title name</th>
@@ -230,8 +224,8 @@
                     <td><?php echo $title->nickname; ?></td>
                     <td><?php echo $title->title_name; ?></td>
                     <td><?php echo $title->title_date; ?></td>
-                    <td><?php echo anchor('index.php/title/prepare_update_title/'.$title->ID, 'Update', array("class"=>"btn btn-primary")); ?></td>
-                    <td><?php echo anchor('index.php/title/prepare_delete_title/'.$title->ID, 'Delete', array("class"=>"btn btn-danger")); ?></td>
+                    <td><?php echo anchor('title/prepare_update_title/'.$title->ID, 'Update', array("class"=>"btn btn-primary")); ?></td>
+                    <td><?php echo anchor('title/prepare_delete_title/'.$title->ID, 'Delete', array("class"=>"btn btn-danger")); ?></td>
                 </tr>
                 <?php endforeach; ?>
             </tbody>
@@ -243,13 +237,14 @@
                     $input_field_attributes=array('name'=>'search_field','class'=>'span12 search-query');
                     $submit_btn_attributes=array('name'=>'submitBtn','class' => 'btn', 'type'=>'submit','content'=>'Cauta video');
 
-                    echo form_open('index.php/search/get_video_backend', $form_attributes);
+                    echo form_open('search/get_video_backend', $form_attributes);
                     echo form_input($input_field_attributes);
                     echo form_button($submit_btn_attributes);
                     echo form_close();
                 ?>
             </div>
             <div class='span4 offset4'><?php echo $links; ?></div>
+                <h4 class="total-number-database-entity">Numarul total de link-uri video din baza de date: <?php echo $total_number_of_videos; ?></h4>
                 <thead>
                     <th>Name</th>
                     <th>Video Title</th>
@@ -263,13 +258,34 @@
                             <td><?php echo $video->nickname; ?></td>
                             <td><?php echo $video->video_title; ?></td>
                             <td><?php echo anchor($video->video_link, $video->video_title); ?></td>
-                            <td><?php echo anchor('index.php/video/prepare_update_video/'.$video->video_id, 'Update', array("class"=>"btn btn-primary")); ?></td>
-                            <td><?php echo anchor('index.php/video/prepare_delete_video/'.$video->video_id, 'Delete', array("class"=>"btn btn-danger")); ?></td>
+                            <td><?php echo anchor('video/prepare_update_video/'.$video->video_id, 'Update', array("class"=>"btn btn-primary")); ?></td>
+                            <td><?php echo anchor('video/prepare_delete_video/'.$video->video_id, 'Delete', array("class"=>"btn btn-danger")); ?></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
             <?php break; ?>
-            <?php endswitch; ?>
+                <?php case 5: ?>
+                    <div class='span4 offset4'><?php echo $links; ?></div>
+                    <thead>
+                    <th>Username</th>
+                    <th>User email</th>
+                    <th>User role</th>
+                    </thead>
+                    <tbody>
+                    <?php foreach($user_details as $user): ?>
+                        <tr>
+                            <td><?php echo $user->user_name; ?></td>
+                            <td><?php echo $user->user_email; ?></td>
+                            <td><?php echo $user->user_role; ?></td>
+                        <?php if($user_role == 'admin'): ?>
+                            <td><?php echo anchor('user/prepare_update_user/'.$user->user_id, 'Update', array("class"=>"btn btn-primary")); ?></td>
+                            <td><?php echo anchor('user/delete_user/'.$user->user_id, 'Delete', array("class"=>"btn btn-danger")); ?></td>
+                        </tr>
+                        <?php endif ?>
+                    <?php endforeach; ?>
+                    </tbody>
+                    <?php break; ?>
+                <?php endswitch; ?>
     	</table>
     </div><!--ends section data-->
 </div><!--ends main container-->

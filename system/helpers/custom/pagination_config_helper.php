@@ -7,34 +7,28 @@ function config_pagination($results_per_page, $entity_type){
     $ci->load->model('crud_model_title');
     $ci->load->model('crud_model_team');
     $ci->load->model('crud_model_video');
-    $ci->load->model('crud_model_requested_player');
-
-
+    $ci->load->model('crud_model_user');
 
     switch($entity_type){
         case "player":
-            $config["base_url"] = base_url().'index.php/player/read_player/';
+            $config["base_url"] = base_url().'player/read_player/';
             $config['total_rows']=$ci->crud_model_player->countRowsPlayer();
         break;
         case "title":
-            $config["base_url"] = base_url().'index.php/title/read_title/';
+            $config["base_url"] = base_url().'title/read_title/';
             $config["total_rows"]=$ci->crud_model_title-countRowsTitle();
         break;
         case "team":
-            $config["base_url"] = base_url().'index.php/team/read_team/';
+            $config["base_url"] = base_url().'team/read_team/';
             $config["total_rows"]=$ci->crud_model_team->countRowsTeam();
         break;
         case "video":
-            $config["base_url"] = base_url().'index.php/video/read_video/';
+            $config["base_url"] = base_url().'video/read_video/';
             $config["total_rows"]=$ci->crud_model_video->countRowsVideo();
         break;
-        case "requested_player":
-            $config["base_url"] = base_url().'index.php/requested_player/read_requested_player/';
-            $config["total_rows"]=$ci->crud_model_requested_player->countRowsReqPlayer();
-        break;
-        case "resource_requested_player":
-            $config["base_url"] = base_url().'index.php/resources_requested_player/read_requested_resource/';
-            $config["total_rows"]=$ci->crud_model_requested_resource->countRowsRequests();
+        case "user":
+            $config["base_url"] = base_url().'user/read_users/';
+            $config["total_rows"]=$ci->crud_model_user->countRowsUsers();
         break;
     }
 

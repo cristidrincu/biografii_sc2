@@ -51,11 +51,11 @@ class Search extends CI_Controller{
         $dataKeywords['data_keywords']=$this->getDefaultKeywords();
         $data['search_results_nickname']=$this->m_search_entities->searchPlayerFirstName($this->input->post('search_field'));
         if(empty($_POST['search_field'])){
-            redirect('index.php/search/loadNoResultsPage');
+            redirect('search/loadNoResultsPage');
         }else if(count($data['search_results_nickname'])==0){
-            redirect('index.php/search/loadNoResultsPage');
+            redirect('search/loadNoResultsPage');
         }else{
-            redirect('index.php/search/loadResultsPage/'.$this->input->post('search_field'));
+            redirect('search/loadResultsPage/'.$this->input->post('search_field'));
         }
     }
 
@@ -101,12 +101,12 @@ class Search extends CI_Controller{
         $data['search_results_team_name'] = $this->m_search_entities->searchTeam($this->input->post('search_field_team'));
 
 		if(empty($_POST['search_field_team'])){
-			redirect('index.php/search/loadNoResultsPage');
+			redirect('search/loadNoResultsPage');
 		}else{
 			if(count($data['search_results_team_name'])==0){
-                redirect('index.php/search/loadNoResultsPageTeam');
+                redirect('search/loadNoResultsPageTeam');
 			}else{
-                redirect('index.php/search/loadResultsPageTeam/'.$this->input->post('search_field_team'));
+                redirect('search/loadResultsPageTeam/'.$this->input->post('search_field_team'));
 			}
 		}
 	}
@@ -127,7 +127,8 @@ class Search extends CI_Controller{
 
 
         $data['page_title']=$this->getPageTitle();
-        $data['username']=$this->setSessionData();
+        $data['username'] = $this->setSessionDataUserName();
+        $data['user_role'] = $this->setSessionDataUserRole();
         $data['entity_type']=$entity_type;
 
         $this->load->view('header_admin_area');
@@ -140,7 +141,8 @@ class Search extends CI_Controller{
 
         $data['team_entity']=$this->m_search_entities->team_backend_results($search_keyword);
         $data['page_title']=$this->getPageTitle();
-        $data['username']=$this->setSessionData();
+        $data['username']=$this->setSessionDataUserName();
+        $data['user_role'] = $this->setSessionDataUserRole();
         $data['entity_type']=$entity_type;
 
         $this->load->view('header_admin_area');
@@ -153,7 +155,8 @@ class Search extends CI_Controller{
 
         $data['title_entity']=$this->m_search_entities->title_backend_results($search_keyword);
         $data['page_title']=$this->getPageTitle();
-        $data['username']=$this->setSessionData();
+        $data['username']=$this->setSessionDataUserName();
+        $data['user_role'] = $this->setSessionDataUserRole();
         $data['entity_type']=$entity_type;
 
         $this->load->view('header_admin_area');
@@ -166,7 +169,8 @@ class Search extends CI_Controller{
 
         $data['video_entity']=$this->m_search_entities->video_backend_results($search_keyword);
         $data['page_title']=$this->getPageTitle();
-        $data['username']=$this->setSessionData();
+        $data['username']=$this->setSessionDataUserName();
+        $data['user_role'] = $this->setSessionDataUserRole();
         $data['entity_type']=$entity_type;
 
         $this->load->view('header_admin_area');
@@ -183,11 +187,11 @@ class Search extends CI_Controller{
         $data['player_entity']=$this->m_search_entities->player_backend_results($this->input->post('search_field'));
 
 		if(empty($_POST['search_field'])){
-			redirect('index.php/search/load_no_results_page_backend');
+			redirect('search/load_no_results_page_backend');
 		}else if(count($data['player_entity'])==0){
-            redirect('index.php/search/load_no_results_page_backend');
+            redirect('search/load_no_results_page_backend');
 		}else{
-		    redirect('index.php/search/load_results_page_backend_player/'.$this->input->post('search_field').'/'.$this->getEntityType());
+		    redirect('search/load_results_page_backend_player/'.$this->input->post('search_field').'/'.$this->getEntityType());
 		}
 	}
 
@@ -198,11 +202,11 @@ class Search extends CI_Controller{
         $data['player_entity']=$this->m_search_entities->player_backend_results_ro($this->input->post('search_field'));
 
         if(empty($_POST['search_field'])){
-            redirect('index.php/search/load_no_results_page_backend');
+            redirect('search/load_no_results_page_backend');
         }else if(count($data['player_entity'])==0){
-            redirect('index.php/search/load_no_results_page_backend');
+            redirect('search/load_no_results_page_backend');
         }else{
-            redirect('index.php/search/load_results_page_backend_player_ro/'.$this->input->post('search_field').'/'.$this->getEntityType());
+            redirect('search/load_results_page_backend_player_ro/'.$this->input->post('search_field').'/'.$this->getEntityType());
         }
     }
 
@@ -212,11 +216,11 @@ class Search extends CI_Controller{
         $data['team_entity']=$this->m_search_entities->team_backend_results($this->input->post('search_field'));
 
 		if(empty($_POST['search_field'])){
-			redirect('index.php/search/load_no_results_page_backend');
+			redirect('search/load_no_results_page_backend');
 		}else if(count($data['team_entity'])===0){
-            redirect('index.php/search/load_no_results_page_backend');
+            redirect('search/load_no_results_page_backend');
 		}else{
-            redirect('index.php/search/load_results_page_backend_team/'.$this->input->post('search_field').'/'.$this->getEntityType());
+            redirect('search/load_results_page_backend_team/'.$this->input->post('search_field').'/'.$this->getEntityType());
 		}
      }
 
@@ -226,11 +230,11 @@ class Search extends CI_Controller{
         $data['title_entity']=$this->m_search_entities->title_backend_results($this->input->post('search_field'));
 
 		if(empty($_POST['search_field'])){
-			redirect('index.php/search/load_no_results_page_backend');
+			redirect('search/load_no_results_page_backend');
 		}else if(count($data['title_entity'])==0){
-            redirect('index.php/search/load_no_results_page_backend');
+            redirect('search/load_no_results_page_backend');
 		}else{
-			redirect('index.php/search/load_results_page_backend_title/'.$this->input->post('search_field').'/'.$this->getEntityType());
+			redirect('search/load_results_page_backend_title/'.$this->input->post('search_field').'/'.$this->getEntityType());
 		}
 	}
 
@@ -240,11 +244,11 @@ class Search extends CI_Controller{
         $data['title_entity']=$this->m_search_entities->title_backend_results_ro($this->input->post('search_field'));
 
         if(empty($_POST['search_field'])){
-            redirect('index.php/search/load_no_results_page_backend');
+            redirect('search/load_no_results_page_backend');
         }else if(count($data['title_entity'])==0){
-            redirect('index.php/search/load_no_results_page_backend');
+            redirect('search/load_no_results_page_backend');
         }else{
-            redirect('index.php/search/load_results_page_backend_title/'.$this->input->post('search_field').'/'.$this->getEntityType());
+            redirect('search/load_results_page_backend_title/'.$this->input->post('search_field').'/'.$this->getEntityType());
         }
     }
 
@@ -255,11 +259,11 @@ class Search extends CI_Controller{
 
 
 		if(empty($_POST['search_field'])){
-			redirect('index.php/search/load_no_results_page_backend');
+			redirect('search/load_no_results_page_backend');
 		}else if(count($data['video_entity'])==0){
-            redirect('index.php/search/load_no_results_page_backend');
+            redirect('search/load_no_results_page_backend');
 		}else{
-            redirect('index.php/search/load_results_page_backend_video/'.$this->input->post('search_field').'/'.$this->getEntityType());
+            redirect('search/load_results_page_backend_video/'.$this->input->post('search_field').'/'.$this->getEntityType());
 		}
 	}
 
@@ -270,18 +274,23 @@ class Search extends CI_Controller{
 
 
         if(empty($_POST['search_field'])){
-            redirect('index.php/search/load_no_results_page_backend');
+            redirect('search/load_no_results_page_backend');
         }else if(count($data['video_entity'])==0){
-            redirect('index.php/search/load_no_results_page_backend');
+            redirect('search/load_no_results_page_backend');
         }else{
-            redirect('index.php/search/load_results_page_backend_video/'.$this->input->post('search_field').'/'.$this->getEntityType());
+            redirect('search/load_results_page_backend_video/'.$this->input->post('search_field').'/'.$this->getEntityType());
         }
     }
     //END OF PRG DESIGN PATTERN FUNCTIONS
 
 
-	public function setSessionData(){
+	public function setSessionDataUserName(){
 		$session_data = $this->session->userdata('logged_in');
 	    return $session_data['username'];
 	}
+
+    public function setSessionDataUserRole(){  //helper function for retrieving username based on who is logged in
+        $session_data = $this->session->userdata('logged_in');
+        return $session_data['userrole'];
+    }
 }

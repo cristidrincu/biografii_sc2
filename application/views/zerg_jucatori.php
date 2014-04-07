@@ -14,31 +14,10 @@
                     <div id="mainMenuContainer">
                         <ul class="mainMenu">
                             <li><a href="<?php echo base_url();?>index.php/main/index" target="_self">Acasă</a></li>
-                            <!--<li>
-                                <div class="droppDownMainContainer">
-                                    <a id="dropDownTriggerProiect" href="#" target="_self">Despre acest proiect</a>
-                                    
-                                         <div class="menuContainer">
-                                             
-                                             <ul class="dropDownList">
-                                                 <h1 class="dropDownTitle">Afla cine contribuie la acest proiect si motivatiile lor!</h1>
-                                                 <i class="icon-question-sign icon-white"></i>
-                                                 <li><a href="#" target="_self">Cine?</a></li>
-                                                 <i class="icon-wrench icon-white"></i>
-                                                 <li><a href="#" target="_self">Cum?</a></li>
-                                                 <i class="icon-heart icon-white"></i>
-                                                 <li><a href="#" target="_self">De ce?</a></li>
-                                             </ul>
-                                         </div>
-                                    
-                                </div>
-                            </li><!--ends menuContainer-->
-                            <li><a class="activeLink" href="<?php echo base_url();?>index.php/main/players" target="_self">Jucători internaţionali</a></li>
-                            <li><a href="<?php echo base_url();?>index.php/jucatori_romani/players" target="_self">Jucători români</a></li>
+                            <li><a class="activeLink" href="<?php echo base_url();?>index.php/main/players" target="_self">Jucători</a></li>
                             <li><a href="<?php echo base_url();?>index.php/main/teams" target="_self">Echipe</a></li>
-                            <li><a href="<?php echo base_url();?>index.php/contribute/ajuta" target="_self">Contribuie</a></li>
+<!--                            <li><a href="--><?php //echo base_url();?><!--index.php/contribute/ajuta" target="_self">Contribuie</a></li>-->
                             <li><a href="<?php echo base_url();?>index.php/contact" target="_self">Contact</a></li>
-                            <!--<li><a href="#" target="_self">Contact</a></li>-->
                         </ul>
                     </div><!--ends mainMenuContainer-->
                     <!--ELEMENTS FOR DROPDOWNS-->
@@ -121,37 +100,34 @@
                                 ?>
                             </div>
                         <br class="clearFloats"/>
-                        <div class='alert alert-info'>
-                            In momentul in care doresti sa cauti un jucator, te rugam sa introduci nickname-ul sau - MVP sau tlo de exemplu. Cautarea se face dupa nickname si NU dupa numele de familie etc. Ne indoim ca veti cauta dupa Jung Jong Hyun!
-                        </div>
-                        <div class="btn-toolbar">
+                        <div class="btn-toolbar containerLetters">
                             <div class="btn-group">
-                                <?php echo anchor('index.php/main/find_player/A/Zerg', 'A', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipA')); ?>
-                                <?php echo anchor('index.php/main/find_player/B/Zerg', 'B', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipB')); ?>
-                                <?php echo anchor('index.php/main/find_player/C/Zerg', 'C', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipC')); ?>
-                                <?php echo anchor('index.php/main/find_player/D/Zerg', 'D', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipD')); ?>
-                                <?php echo anchor('index.php/main/find_player/E/Zerg', 'E', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipE')); ?>
-                                <?php echo anchor('index.php/main/find_player/F/Zerg', 'F', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipF')); ?>
-                                <?php echo anchor('index.php/main/find_player/G/Zerg', 'G', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipG')); ?>
-                                <?php echo anchor('index.php/main/find_player/H/Zerg', 'H', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipH')); ?>
-                                <?php echo anchor('index.php/main/find_player/I/Zerg', 'I', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipI')); ?>
-                                <?php echo anchor('index.php/main/find_player/J/Zerg', 'J', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipJ')); ?>
-                                <?php echo anchor('index.php/main/find_player/K/Zerg', 'K', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipK')); ?>
-                                <?php echo anchor('index.php/main/find_player/L/Zerg', 'L', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipL')); ?>
-                                <?php echo anchor('index.php/main/find_player/M/Zerg', 'M', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipM')); ?>
-                                <?php echo anchor('index.php/main/find_player/N/Zerg', 'N', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipN')); ?>
-                                <?php echo anchor('index.php/main/find_player/O/Zerg', 'O', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipO')); ?>
-                                <?php echo anchor('index.php/main/find_player/P/Zerg', 'P', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipP')); ?>
-                                <?php echo anchor('index.php/main/find_player/Q/Zerg', 'Q', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipQ')); ?>
-                                <?php echo anchor('index.php/main/find_player/R/Zerg', 'R', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipR')); ?>
-                                <?php echo anchor('index.php/main/find_player/S/Zerg', 'S', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipS')); ?>
-                                <?php echo anchor('index.php/main/find_player/T/Zerg', 'T', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipT')); ?>
-                                <?php echo anchor('index.php/main/find_player/U/Zerg', 'U', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipU')); ?>
-                                <?php echo anchor('index.php/main/find_player/V/Zerg', 'V', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipV')); ?>
-                                <?php echo anchor('index.php/main/find_player/W/Zerg', 'W', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipW')); ?>
-                                <?php echo anchor('index.php/main/find_player/X/Zerg', 'X', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipX')); ?>
-                                <?php echo anchor('index.php/main/find_player/Y/Zerg', 'Y', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipY')); ?>
-                                <?php echo anchor('index.php/main/find_player/Z/Zerg', 'Z', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipZ')); ?>
+                                <?php echo anchor('main/find_player/A/Zerg', 'A', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipA')); ?>
+                                <?php echo anchor('main/find_player/B/Zerg', 'B', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipB')); ?>
+                                <?php echo anchor('main/find_player/C/Zerg', 'C', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipC')); ?>
+                                <?php echo anchor('main/find_player/D/Zerg', 'D', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipD')); ?>
+                                <?php echo anchor('main/find_player/E/Zerg', 'E', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipE')); ?>
+                                <?php echo anchor('main/find_player/F/Zerg', 'F', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipF')); ?>
+                                <?php echo anchor('main/find_player/G/Zerg', 'G', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipG')); ?>
+                                <?php echo anchor('main/find_player/H/Zerg', 'H', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipH')); ?>
+                                <?php echo anchor('main/find_player/I/Zerg', 'I', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipI')); ?>
+                                <?php echo anchor('main/find_player/J/Zerg', 'J', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipJ')); ?>
+                                <?php echo anchor('main/find_player/K/Zerg', 'K', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipK')); ?>
+                                <?php echo anchor('main/find_player/L/Zerg', 'L', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipL')); ?>
+                                <?php echo anchor('main/find_player/M/Zerg', 'M', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipM')); ?>
+                                <?php echo anchor('main/find_player/N/Zerg', 'N', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipN')); ?>
+                                <?php echo anchor('main/find_player/O/Zerg', 'O', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipO')); ?>
+                                <?php echo anchor('main/find_player/P/Zerg', 'P', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipP')); ?>
+                                <?php echo anchor('main/find_player/Q/Zerg', 'Q', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipQ')); ?>
+                                <?php echo anchor('main/find_player/R/Zerg', 'R', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipR')); ?>
+                                <?php echo anchor('main/find_player/S/Zerg', 'S', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipS')); ?>
+                                <?php echo anchor('main/find_player/T/Zerg', 'T', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipT')); ?>
+                                <?php echo anchor('main/find_player/U/Zerg', 'U', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipU')); ?>
+                                <?php echo anchor('main/find_player/V/Zerg', 'V', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipV')); ?>
+                                <?php echo anchor('main/find_player/W/Zerg', 'W', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipW')); ?>
+                                <?php echo anchor('main/find_player/X/Zerg', 'X', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipX')); ?>
+                                <?php echo anchor('main/find_player/Y/Zerg', 'Y', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipY')); ?>
+                                <?php echo anchor('main/find_player/Z/Zerg', 'Z', array('class' => 'btn', 'data-toggle'=>'tooltip', 'rel'=>'tooltipZ')); ?>
                             </div>
                         </div>
                     </div><!--ends sectionDescription--> 
@@ -169,7 +145,7 @@
                                     <li><p>Rasa: <?php echo $zerg->race; ?></p></li>
                                     <li><p>Echipa: <?php echo $zerg->team; ?> </p></li>
                                 </ul>
-                                <?php echo anchor("index.php/main/getPlayerDetails/$zerg->player_ID/$zerg->nickname", "Citeste intreaga biografie",array('class'=>'btn btn-success'));?>
+                                <?php echo anchor("index.php/main/getPlayerDetails/$zerg->player_ID", "Citeste intreaga biografie",array('class'=>'btn btn-success'));?>
                             </div>
                           <?php endforeach; ?>
                           <?php break; ?>
@@ -184,7 +160,7 @@
                                             <li><p>Rasa: <?php echo $zerg->race; ?></p></li>
                                             <li><p>Echipa: <?php echo $zerg->team; ?> </p></li>
                                         </ul>
-                                        <?php echo anchor("index.php/main/getPlayerDetails/$zerg->player_ID/$zerg->nickname", "Citeste intreaga biografie",array('class'=>'btn btn-success'));?>
+                                        <?php echo anchor("index.php/main/getPlayerDetails/$zerg->player_ID", "Citeste intreaga biografie",array('class'=>'btn btn-success'));?>
                                     </div>
                                 <?php endforeach; ?>
                             <?php break; ?>

@@ -39,7 +39,6 @@
 */
 
 $route['default_controller'] = "main";
-$route['main/getPlayerDetails/:num']="main/players";
 $route['main/getPlayerDetails/:num/Terran']="main/terran_players";
 $route['main/getPlayerDetails/:num/Zerg']="main/zerg_players";
 $route['main/getPlayerDetails/:num/Protoss']="main/protoss_players";
@@ -48,8 +47,8 @@ $route['main/getTeamDetails']="main/teams";
 $route['search/loadResultsPage']="main/players";
 $route['search/load_results_page_backend_player']="player/read_player";
 $route['search/load_results_page_backend_player/:num']="player/read_player";
-//$route['search/load_results_page_backend_player/(:any)']="player/read_player";
 $route['404_override'] = '';
+$route['user'] = "user/read_users";
 
 
 /* End of file routes.php */

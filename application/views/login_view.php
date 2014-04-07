@@ -22,7 +22,7 @@
     <div class='row'>
     	<div class='span12 formContainer'>
 		    	
-		        <form class="form-horizontal loginForm" action='<?php echo base_url();?>index.php/login/process' method='post' name='process'>
+		        <form class="form-horizontal loginForm" action='<?php echo base_url();?>login/process' method='post' name='process'>
 		        	<div class="control-group">
 		        		<label class="control-label" for='username'>Username</label>
 		        		<div class="controls">

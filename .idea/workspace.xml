@@ -2,111 +2,270 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/imgs/1.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/Alien_Invasion_Banner.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/Nvidia-Almost-Fixes-the-PCIe-3-0-Bug-on-Kepler-GeForce-600-Cards-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/Nvidia-Almost-Fixes-the-PCIe-3-0-Bug-on-Kepler-GeForce-600-Cards-2_thumb.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/imgs/Thumbs.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/imgs/arvixe.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/romani/deathangel-300x212_thumb.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/romani/deathangel_2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/romani/deathangel_2_thumb.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/flash1_(1).jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/flash_size_ok_thumb.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/hero_size_ok.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/hero_size_ok_thumb.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/huk_size_ok.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/huk_size_ok_thumb.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/kas.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/kas_thumb.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/imgs/leaf.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/leenock_size_ok.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/leenock_size_ok_thumb.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/imgs/lemon_tree.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/lucifron_size_ok.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/lucifron_size_ok_thumb.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/mc_size_ok.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/mc_size_ok_thumb.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/mma_size_ok.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/mma_size_ok_thumb.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/mvp_size_ok.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/mvp_size_ok_thumb.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/naniwa_size_ok.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/naniwa_size_ok_thumb.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/nightend_size_ok1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/nightend_size_ok1_thumb.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/nightend_size_ok2_thumb.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/nightend_size_ok_thumb.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/parting_size_ok.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/parting_size_ok_thumb.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/rain_size_ok.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/rain_size_ok_thumb.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/ryung_size_ok.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/ryung_size_ok_thumb.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/socke_size_ok.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/socke_size_ok_thumb.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/thorzain_size_ok.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/thorzain_size_ok_thumb.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/tlo_size_ok.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/tlo_size_ok1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/tlo_size_ok1_thumb.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/tlo_size_ok_thumb.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/imgs/web_site_lb.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/imgs/web_site_lt.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/imgs/web_site_rb.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/imgs/web_site_rt.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/zenio_size_ok.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/zenio_size_ok_thumb.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/config/database.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/uploads/players/nightend_size_ok.jpg" afterPath="$PROJECT_DIR$/uploads/players/nightend_size_ok2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/players/nightend_size_ok.jpg" afterPath="$PROJECT_DIR$/uploads/players/nightend_size_ok.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/biografii_sc2.iml" afterPath="$PROJECT_DIR$/biografii_sc2.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/contact_view.php" afterPath="$PROJECT_DIR$/application/views/contact_view.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/JYP_editat.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/acer_bly_editat.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/acer_bly_editat1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/acer_bly_editat2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/acer_bly_editat3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/acer_bly_editat4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/alicia_editat.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/cpu_editat.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/crank_editat.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/demuslim_pic.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/empire_kas_new_version.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/flash_new_version.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/golden_editat.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/heart_editat.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/hero_2_new_version.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/huk_new_version.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/imgs/hundrei_pic.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/immvp_new_version.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/impact.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/incontrol_editat.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/innovation_editat.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/jaedong_editat.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/leenock_new_version.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/lucifron_new_version.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/imgs/main_background.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/mc_new_version.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/mma_new_version.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/naniwa_new_version.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/nerchio_editat.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/nightend_new_version.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/paranoid_editat.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/parting_new_version.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/rain_new_version.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/ryung_new_version.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/scarlett_editat.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/socke_new_version.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/sortof.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/suppy_editat.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/thorzain_new_version.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/tlo_new_version.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/xenocider_editat.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/players/zenio_new_version.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.htaccess" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/libraries/Slug.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/create_user.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/create_user_failure.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/create_user_success.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/models/crud_model_user.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/prepare_update_user.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/temp.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/user.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/welcome_screen_contributor.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/controllers/jucatori_romani.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/controllers/player_ro.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/controllers/search_ro.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/controllers/title_ro.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/controllers/video_ro.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/models/user.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/views/create_entity_success_ro.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/views/create_player_ro.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/views/create_title_ro.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/views/create_video_ro.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/views/entity_details_admin_ro.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/views/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/views/no_database_results_ro.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/views/player_full_details_ro.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/views/prepare_requested_player_view.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/views/prepare_requested_resource_view.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/views/prepare_update_player_ro.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/views/prepare_update_title_ro.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/views/prepare_update_video_ro.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/views/protoss_jucatori_ro.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/views/search_results_backend_ro.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/views/search_results_ro.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/views/terran_jucatori_ro.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/views/zerg_jucatori_ro.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/demulsim2_(1).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/demulsim2_(1)1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/demulsim2_(1)1_thumb.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/demulsim2_(2).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/demulsim2_(2)1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/demulsim2_(2)1_thumb.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/demulsim2_(2)_thumb.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/flash1_(1).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/flash_size_ok.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/flash_size_ok1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/flash_size_ok2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/flash_size_ok_thumb.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/hero_size_ok.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/hero_size_ok_thumb.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/huk_size_ok.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/huk_size_ok_thumb.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/kas.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/kas_thumb.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/leenock_size_ok.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/leenock_size_ok_thumb.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/lucifron_size_ok.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/lucifron_size_ok_thumb.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/mc_size_ok.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/mc_size_ok_thumb.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/mma_size_ok.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/mma_size_ok_thumb.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/mvp_size_ok.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/mvp_size_ok_thumb.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/naniwa-.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/naniwa_size_ok.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/naniwa_size_ok_thumb.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/nightend_size_ok.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/nightend_size_ok1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/nightend_size_ok1_thumb.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/nightend_size_ok2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/nightend_size_ok2_thumb.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/nightend_size_ok_thumb.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/parting_size_ok.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/parting_size_ok_thumb.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/rain_size_ok.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/rain_size_ok_thumb.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/romani/deathangel-300x212.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/romani/deathangel-300x212_thumb.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/romani/deathangel_2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/romani/deathangel_2_thumb.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/romani/nightend_size_ok.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/ryung_size_ok.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/ryung_size_ok_thumb.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/socke_size_ok.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/socke_size_ok_thumb.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/thorzain_size_ok.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/thorzain_size_ok_thumb.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/tlo_size_ok.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/tlo_size_ok1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/tlo_size_ok1_thumb.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/tlo_size_ok_thumb.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/zenio.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/zenio_size_ok.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/players/zenio_size_ok_thumb.jpg" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/application/views/jucatori_ro.php" afterPath="$PROJECT_DIR$/application/views/contact_view.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/300px-AZUBU.png" afterPath="$PROJECT_DIR$/uploads/300px-AZUBU.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/300px-AZUBU_thumb.png" afterPath="$PROJECT_DIR$/uploads/300px-AZUBU_thumb.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/300px-CJEntusLogo.png" afterPath="$PROJECT_DIR$/uploads/300px-CJEntusLogo.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/300px-CJEntusLogo_thumb.png" afterPath="$PROJECT_DIR$/uploads/300px-CJEntusLogo_thumb.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/300px-EG.png" afterPath="$PROJECT_DIR$/uploads/300px-EG.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/300px-EG_thumb.png" afterPath="$PROJECT_DIR$/uploads/300px-EG_thumb.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/300px-Fnaticlogo.png" afterPath="$PROJECT_DIR$/uploads/300px-Fnaticlogo.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/300px-Fnaticlogo_thumb.png" afterPath="$PROJECT_DIR$/uploads/300px-Fnaticlogo_thumb.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/300px-KTRolsterLogo.jpg" afterPath="$PROJECT_DIR$/uploads/300px-KTRolsterLogo.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/300px-KTRolsterLogo_thumb.jpg" afterPath="$PROJECT_DIR$/uploads/300px-KTRolsterLogo_thumb.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/300px-Liquidlogobig.png" afterPath="$PROJECT_DIR$/uploads/300px-Liquidlogobig.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/300px-Liquidlogobig_thumb.png" afterPath="$PROJECT_DIR$/uploads/300px-Liquidlogobig_thumb.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/300px-MVPlogo.png" afterPath="$PROJECT_DIR$/uploads/300px-MVPlogo.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/300px-MVPlogo_thumb.png" afterPath="$PROJECT_DIR$/uploads/300px-MVPlogo_thumb.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/300px-RootGaming_Logo_Transparent.png" afterPath="$PROJECT_DIR$/uploads/300px-RootGaming_Logo_Transparent.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/300px-RootGaming_Logo_Transparent_thumb.png" afterPath="$PROJECT_DIR$/uploads/300px-RootGaming_Logo_Transparent_thumb.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/300px-SKTelecomT1.png" afterPath="$PROJECT_DIR$/uploads/300px-SKTelecomT1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/300px-SKTelecomT1_thumb.png" afterPath="$PROJECT_DIR$/uploads/300px-SKTelecomT1_thumb.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/300px-SK_Gaming.jpg" afterPath="$PROJECT_DIR$/uploads/300px-SK_Gaming.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/300px-SK_Gaming_thumb.jpg" afterPath="$PROJECT_DIR$/uploads/300px-SK_Gaming_thumb.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/300px-STXSouLLogo.png" afterPath="$PROJECT_DIR$/uploads/300px-STXSouLLogo.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/300px-STXSouLLogo_thumb.png" afterPath="$PROJECT_DIR$/uploads/300px-STXSouLLogo_thumb.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/300px-SamsungKHAN_logo.png" afterPath="$PROJECT_DIR$/uploads/300px-SamsungKHAN_logo.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/300px-SamsungKHAN_logo1.png" afterPath="$PROJECT_DIR$/uploads/300px-SamsungKHAN_logo1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/300px-SamsungKHAN_logo1_thumb.png" afterPath="$PROJECT_DIR$/uploads/300px-SamsungKHAN_logo1_thumb.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/300px-SamsungKHAN_logo2.png" afterPath="$PROJECT_DIR$/uploads/300px-SamsungKHAN_logo2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/300px-SamsungKHAN_logo2_thumb.png" afterPath="$PROJECT_DIR$/uploads/300px-SamsungKHAN_logo2_thumb.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/300px-SamsungKHAN_logo3.png" afterPath="$PROJECT_DIR$/uploads/300px-SamsungKHAN_logo3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/300px-SamsungKHAN_logo3_thumb.png" afterPath="$PROJECT_DIR$/uploads/300px-SamsungKHAN_logo3_thumb.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/300px-SamsungKHAN_logo_thumb.png" afterPath="$PROJECT_DIR$/uploads/300px-SamsungKHAN_logo_thumb.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/300px-Startalelogo.png" afterPath="$PROJECT_DIR$/uploads/300px-Startalelogo.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/300px-Startalelogo_thumb.png" afterPath="$PROJECT_DIR$/uploads/300px-Startalelogo_thumb.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/300px-TeamAcer.png" afterPath="$PROJECT_DIR$/uploads/300px-TeamAcer.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/300px-TeamAcer1.png" afterPath="$PROJECT_DIR$/uploads/300px-TeamAcer1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/300px-TeamAcer1_thumb.png" afterPath="$PROJECT_DIR$/uploads/300px-TeamAcer1_thumb.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/300px-TeamAcer_thumb.png" afterPath="$PROJECT_DIR$/uploads/300px-TeamAcer_thumb.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/300px-Team_empire.png" afterPath="$PROJECT_DIR$/uploads/300px-Team_empire.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/300px-Team_empire_thumb.png" afterPath="$PROJECT_DIR$/uploads/300px-Team_empire_thumb.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/Alien_Invasion_Banner.png" afterPath="$PROJECT_DIR$/uploads/Alien_Invasion_Banner.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/Alliance_Logo.png" afterPath="$PROJECT_DIR$/uploads/Alliance_Logo.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/Alliance_Logo_thumb.png" afterPath="$PROJECT_DIR$/uploads/Alliance_Logo_thumb.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/Alternatelogo2.png" afterPath="$PROJECT_DIR$/uploads/Alternatelogo2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/Alternatelogo2_thumb.png" afterPath="$PROJECT_DIR$/uploads/Alternatelogo2_thumb.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/Axiom.png" afterPath="$PROJECT_DIR$/uploads/Axiom.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/Axiom_thumb.png" afterPath="$PROJECT_DIR$/uploads/Axiom_thumb.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/Col_wiki.png" afterPath="$PROJECT_DIR$/uploads/Col_wiki.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/Col_wiki_thumb.png" afterPath="$PROJECT_DIR$/uploads/Col_wiki_thumb.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/FXOpen.png" afterPath="$PROJECT_DIR$/uploads/FXOpen.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/FXOpen_thumb.png" afterPath="$PROJECT_DIR$/uploads/FXOpen_thumb.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/IMlogo.png" afterPath="$PROJECT_DIR$/uploads/IMlogo.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/IMlogo_thumb.png" afterPath="$PROJECT_DIR$/uploads/IMlogo_thumb.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/Nvidia-Almost-Fixes-the-PCIe-3-0-Bug-on-Kepler-GeForce-600-Cards-2.jpg" afterPath="$PROJECT_DIR$/uploads/Nvidia-Almost-Fixes-the-PCIe-3-0-Bug-on-Kepler-GeForce-600-Cards-2.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/Nvidia-Almost-Fixes-the-PCIe-3-0-Bug-on-Kepler-GeForce-600-Cards-2_thumb.jpg" afterPath="$PROJECT_DIR$/uploads/Nvidia-Almost-Fixes-the-PCIe-3-0-Bug-on-Kepler-GeForce-600-Cards-2_thumb.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/Primelogo.jpg" afterPath="$PROJECT_DIR$/uploads/Primelogo.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/Primelogo_thumb.jpg" afterPath="$PROJECT_DIR$/uploads/Primelogo_thumb.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/WoongjinStarsLogo.png" afterPath="$PROJECT_DIR$/uploads/WoongjinStarsLogo.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/WoongjinStarsLogo_thumb.png" afterPath="$PROJECT_DIR$/uploads/WoongjinStarsLogo_thumb.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/huk_size_ok.jpg" afterPath="$PROJECT_DIR$/uploads/huk_size_ok.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/huk_size_ok1.jpg" afterPath="$PROJECT_DIR$/uploads/huk_size_ok1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/idra.jpg" afterPath="$PROJECT_DIR$/uploads/idra.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/idra_thumb.jpg" afterPath="$PROJECT_DIR$/uploads/idra_thumb.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/karonte_esports_logo.jpg" afterPath="$PROJECT_DIR$/uploads/karonte_esports_logo.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/karonte_esports_logo_thumb.jpg" afterPath="$PROJECT_DIR$/uploads/karonte_esports_logo_thumb.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/team_8.gif" afterPath="$PROJECT_DIR$/uploads/team_8.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/team_8_thumb.gif" afterPath="$PROJECT_DIR$/uploads/team_8_thumb.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/libraries/Email.php" afterPath="$PROJECT_DIR$/system/libraries/Email.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/helpers/auth_helper.php" afterPath="$PROJECT_DIR$/system/helpers/auth_helper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/contact.php" afterPath="$PROJECT_DIR$/application/controllers/contact.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/contact_view_failure.php" afterPath="$PROJECT_DIR$/application/views/contact_view_failure.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/contact_view_success.php" afterPath="$PROJECT_DIR$/application/views/contact_view_success.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/helpers/custom/create_entity_report_helper.php" afterPath="$PROJECT_DIR$/system/helpers/custom/create_entity_report_helper.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/create_entity_success.php" afterPath="$PROJECT_DIR$/application/views/create_entity_success.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/create_player.php" afterPath="$PROJECT_DIR$/application/views/create_player.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/create_player_ro.php" afterPath="$PROJECT_DIR$/application/views/create_player_ro.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/create_team.php" afterPath="$PROJECT_DIR$/application/views/create_team.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/create_title.php" afterPath="$PROJECT_DIR$/application/views/create_title.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/create_title_ro.php" afterPath="$PROJECT_DIR$/application/views/create_title_ro.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/create_video.php" afterPath="$PROJECT_DIR$/application/views/create_video.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/create_video_ro.php" afterPath="$PROJECT_DIR$/application/views/create_video_ro.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/crud_model_player.php" afterPath="$PROJECT_DIR$/application/models/crud_model_player.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/delete_report_player.php" afterPath="$PROJECT_DIR$/application/views/delete_report_player.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/delete_report_team.php" afterPath="$PROJECT_DIR$/application/views/delete_report_team.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/delete_report_title.php" afterPath="$PROJECT_DIR$/application/views/delete_report_title.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/delete_report_video.php" afterPath="$PROJECT_DIR$/application/views/delete_report_video.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/detalii_echipa.php" afterPath="$PROJECT_DIR$/application/views/detalii_echipa.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/echipe.php" afterPath="$PROJECT_DIR$/application/views/echipe.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/entity_details_admin.php" afterPath="$PROJECT_DIR$/application/views/entity_details_admin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/entity_details_admin_ro.php" afterPath="$PROJECT_DIR$/application/views/entity_details_admin_ro.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/entity_exists_failure.php" afterPath="$PROJECT_DIR$/application/views/entity_exists_failure.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/footer.php" afterPath="$PROJECT_DIR$/application/views/footer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/header.php" afterPath="$PROJECT_DIR$/application/views/header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/header_admin_area.php" afterPath="$PROJECT_DIR$/application/views/header_admin_area.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/home.php" afterPath="$PROJECT_DIR$/application/controllers/home.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/home.php" afterPath="$PROJECT_DIR$/application/views/home.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/jucatori.php" afterPath="$PROJECT_DIR$/application/views/jucatori.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/jucatori_ro.php" afterPath="$PROJECT_DIR$/application/views/jucatori_ro.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/m_search_entities.php" afterPath="$PROJECT_DIR$/application/models/m_search_entities.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/migration.php" afterPath="$PROJECT_DIR$/application/config/migration.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/login.php" afterPath="$PROJECT_DIR$/application/controllers/login.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/login_view.php" afterPath="$PROJECT_DIR$/application/views/login_view.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/m_all_entities.php" afterPath="$PROJECT_DIR$/application/models/m_all_entities.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/main.php" afterPath="$PROJECT_DIR$/application/controllers/main.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/no_database_results.php" afterPath="$PROJECT_DIR$/application/views/no_database_results.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/no_database_results_ro.php" afterPath="$PROJECT_DIR$/application/views/no_database_results_ro.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/no_database_results_team.php" afterPath="$PROJECT_DIR$/application/views/no_database_results_team.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/helpers/custom/pagination_config_helper.php" afterPath="$PROJECT_DIR$/system/helpers/custom/pagination_config_helper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/player.php" afterPath="$PROJECT_DIR$/application/controllers/player.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/player_details_admin.php" afterPath="$PROJECT_DIR$/application/views/player_details_admin.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/player_full_details.php" afterPath="$PROJECT_DIR$/application/views/player_full_details.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/player_full_details_ro.php" afterPath="$PROJECT_DIR$/application/views/player_full_details_ro.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/player_ro.php" afterPath="$PROJECT_DIR$/application/controllers/player_ro.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/prepare_update_player.php" afterPath="$PROJECT_DIR$/application/views/prepare_update_player.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/prepare_update_requested_player.php" afterPath="$PROJECT_DIR$/application/views/prepare_update_requested_player.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/prepare_update_requested_resource.php" afterPath="$PROJECT_DIR$/application/views/prepare_update_requested_resource.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/prepare_update_team.php" afterPath="$PROJECT_DIR$/application/views/prepare_update_team.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/prepare_update_title.php" afterPath="$PROJECT_DIR$/application/views/prepare_update_title.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/prepare_update_video.php" afterPath="$PROJECT_DIR$/application/views/prepare_update_video.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/protoss_jucatori.php" afterPath="$PROJECT_DIR$/application/views/protoss_jucatori.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/requested_player.php" afterPath="$PROJECT_DIR$/application/controllers/requested_player.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/routes.php" afterPath="$PROJECT_DIR$/application/config/routes.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/search.php" afterPath="$PROJECT_DIR$/application/controllers/search.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/search_results.php" afterPath="$PROJECT_DIR$/application/views/search_results.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/search_results_backend.php" afterPath="$PROJECT_DIR$/application/views/search_results_backend.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/search_results_backend_ro.php" afterPath="$PROJECT_DIR$/application/views/search_results_backend_ro.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/search_results_ro.php" afterPath="$PROJECT_DIR$/application/views/search_results_ro.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/search_results_team.php" afterPath="$PROJECT_DIR$/application/views/search_results_team.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/search_ro.php" afterPath="$PROJECT_DIR$/application/controllers/search_ro.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles.css" afterPath="$PROJECT_DIR$/css/styles.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/team.php" afterPath="$PROJECT_DIR$/application/controllers/team.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/terran_jucatori.php" afterPath="$PROJECT_DIR$/application/views/terran_jucatori.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/title.php" afterPath="$PROJECT_DIR$/application/controllers/title.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/title_ro.php" afterPath="$PROJECT_DIR$/application/controllers/title_ro.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/tooltips.js" afterPath="$PROJECT_DIR$/js/tooltips.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/upload.php" afterPath="$PROJECT_DIR$/application/controllers/upload.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/helpers/custom/upload_config_helper.php" afterPath="$PROJECT_DIR$/system/helpers/custom/upload_config_helper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/upload_form.php" afterPath="$PROJECT_DIR$/application/views/upload_form.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/upload_success.php" afterPath="$PROJECT_DIR$/application/views/upload_success.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/video.php" afterPath="$PROJECT_DIR$/application/controllers/video.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/video_ro.php" afterPath="$PROJECT_DIR$/application/controllers/video_ro.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/welcome_screen_user.php" afterPath="$PROJECT_DIR$/application/views/welcome_screen_user.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/zerg_jucatori.php" afterPath="$PROJECT_DIR$/application/views/zerg_jucatori.php" />
     </list>
     <ignored path="biografii_sc2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -173,7 +332,7 @@
       <file leaf-file-name="no_database_results.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/no_database_results.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="83" selection-start="3108" selection-end="3108" vertical-scroll-proportion="-25.625" vertical-offset="0" max-vertical-offset="2055">
+            <state line="20" column="83" selection-start="1413" selection-end="1413" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="1740">
               <folding />
             </state>
           </provider>
@@ -182,25 +341,34 @@
       <file leaf-file-name="search_results.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/search_results.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="83" selection-start="3071" selection-end="3071" vertical-scroll-proportion="-24.375" vertical-offset="0" max-vertical-offset="2280">
+            <state line="18" column="83" selection-start="1376" selection-end="1376" vertical-scroll-proportion="37.375" vertical-offset="1167" max-vertical-offset="1965">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="no_database_results_ro.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/no_database_results_ro.php">
+      <file leaf-file-name="contact.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/controllers/contact.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="79" selection-start="2805" selection-end="2805" vertical-scroll-proportion="-16.875" vertical-offset="210" max-vertical-offset="2055">
+            <state line="52" column="22" selection-start="1977" selection-end="1977" vertical-scroll-proportion="0.7894737" vertical-offset="150" max-vertical-offset="1005">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="no_database_results_team.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="player.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/player.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="279" column="20" selection-start="10865" selection-end="10873" vertical-scroll-proportion="-5.22" vertical-offset="3924" max-vertical-offset="5460">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="no_database_results_team.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/no_database_results_team.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="18" selection-start="1712" selection-end="1712" vertical-scroll-proportion="0.15671642" vertical-offset="285" max-vertical-offset="1185">
+            <state line="14" column="35" selection-start="888" selection-end="888" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="885">
               <folding />
             </state>
           </provider>
@@ -234,7 +402,6 @@
         <option value="$PROJECT_DIR$/application/views/detalii_echipa.php" />
         <option value="$PROJECT_DIR$/application/views/echipe.php" />
         <option value="$PROJECT_DIR$/css/styles.css" />
-        <option value="$PROJECT_DIR$/application/controllers/contact.php" />
         <option value="$PROJECT_DIR$/application/views/jucatori_ro.php" />
         <option value="$PROJECT_DIR$/application/views/contact_view.php" />
         <option value="$PROJECT_DIR$/application/views/contact_view_failure.php" />
@@ -248,14 +415,15 @@
         <option value="$PROJECT_DIR$/application/views/search_results.php" />
         <option value="$PROJECT_DIR$/application/views/no_database_results_ro.php" />
         <option value="$PROJECT_DIR$/application/views/no_database_results_team.php" />
+        <option value="$PROJECT_DIR$/application/controllers/contact.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
-    <option name="width" value="1440" />
-    <option name="height" value="804" />
+    <option name="width" value="1680" />
+    <option name="height" value="955" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -312,111 +480,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="system" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="biografii_sc2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="biografii_sc2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="system" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="helpers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="biografii_sc2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="biografii_sc2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="system" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="helpers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="custom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="biografii_sc2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="biografii_sc2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="biografii_sc2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="biografii_sc2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="biografii_sc2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="biografii_sc2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="biografii_sc2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="biografii_sc2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="helpers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -515,15 +579,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="804" extended-state="6" />
-    <editor active="false" />
+    <frame x="0" y="22" width="1680" height="955" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24930556" sideWeight="0.6705539" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25213677" sideWeight="0.6705539" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32944608" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -541,8 +605,8 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32944608" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -568,6 +632,27 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/application/views/no_database_results.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="83" selection-start="3108" selection-end="3108" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2055">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/search_results.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="83" selection-start="3071" selection-end="3071" vertical-scroll-proportion="0.0" vertical-offset="585" max-vertical-offset="2280">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/no_database_results_team.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="18" selection-start="1712" selection-end="1712" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="1185">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/contact.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="48" column="0" selection-start="1685" selection-end="1685" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1035">
@@ -610,19 +695,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/zerg_jucatori_ro.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="71" selection-start="2795" selection-end="2795" vertical-scroll-proportion="0.6763285" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/zerg_jucatori.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="39" column="75" selection-start="3090" selection-end="3090" vertical-scroll-proportion="0.7487923" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/protoss_jucatori_ro.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="38" selection-start="1749" selection-end="1749" vertical-scroll-proportion="0.28985506" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/terran_jucatori.php">
@@ -638,11 +713,6 @@
     <entry file="file://$PROJECT_DIR$/application/views/echipe.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="41" column="75" selection-start="3100" selection-end="3100" vertical-scroll-proportion="0.7246377" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/player.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/header.php">
@@ -662,13 +732,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.26865673" vertical-offset="180" max-vertical-offset="2145">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="496" column="16" selection-start="7529" selection-end="7529" vertical-scroll-proportion="0.427157" vertical-offset="7138" max-vertical-offset="7845">
@@ -679,13 +742,6 @@
     <entry file="file://$PROJECT_DIR$/application/views/contact_view_failure.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="98" selection-start="1686" selection-end="1686" vertical-scroll-proportion="0.53731346" vertical-offset="0" max-vertical-offset="1590">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/jucatori_ro.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="84" selection-start="1617" selection-end="1617" vertical-scroll-proportion="0.4477612" vertical-offset="0" max-vertical-offset="1950">
           <folding />
         </state>
       </provider>
@@ -704,30 +760,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/contact.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="5" selection-start="5" selection-end="5" vertical-scroll-proportion="-0.33582088" vertical-offset="225" max-vertical-offset="1020">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/system/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="707">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="707" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/search.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="8" selection-start="447" selection-end="447" vertical-scroll-proportion="0.42537314" vertical-offset="0" max-vertical-offset="4890">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/search_ro.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="39" selection-start="2946" selection-end="2965" vertical-scroll-proportion="0.76119405" vertical-offset="675" max-vertical-offset="3600">
           <folding />
         </state>
       </provider>
@@ -748,9 +788,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/config/database.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="38" selection-start="2627" selection-end="2627" vertical-scroll-proportion="0.5080527" vertical-offset="403" max-vertical-offset="1110">
-          <folding />
-        </state>
+        <state line="50" column="38" selection-start="2627" selection-end="2627" vertical-scroll-proportion="0.5080527" vertical-offset="403" max-vertical-offset="1110" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/config/config.php">
@@ -769,28 +807,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/no_database_results.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="83" selection-start="3108" selection-end="3108" vertical-scroll-proportion="-25.625" vertical-offset="0" max-vertical-offset="2055">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/search_results.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="83" selection-start="3071" selection-end="3071" vertical-scroll-proportion="-24.375" vertical-offset="0" max-vertical-offset="2280">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/no_database_results_ro.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="79" selection-start="2805" selection-end="2805" vertical-scroll-proportion="-16.875" vertical-offset="210" max-vertical-offset="2055">
+        <state line="20" column="83" selection-start="1413" selection-end="1413" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="1740">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/no_database_results_team.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="18" selection-start="1712" selection-end="1712" vertical-scroll-proportion="0.15671642" vertical-offset="285" max-vertical-offset="1185">
+        <state line="14" column="35" selection-start="888" selection-end="888" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="885">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/search_results.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="83" selection-start="1376" selection-end="1376" vertical-scroll-proportion="37.375" vertical-offset="1167" max-vertical-offset="1965">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/player.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="279" column="20" selection-start="10865" selection-end="10873" vertical-scroll-proportion="-5.22" vertical-offset="3924" max-vertical-offset="5460">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/contact.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="22" selection-start="1977" selection-end="1977" vertical-scroll-proportion="0.7894737" vertical-offset="150" max-vertical-offset="1005">
           <folding />
         </state>
       </provider>

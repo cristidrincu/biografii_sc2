@@ -8,148 +8,34 @@
                 </ul>
   </div>
 </div>
-    <div class="span3"><!--container for crud operations for players-->
-        <!--section for international players - CRUD ops-->
-        <div class='CRUDMainMenu'>
-            <h4 class='indicatorOperatiiCRUDJucatori'>JUCATORI STRAINI</h4>
-            <div class="accordion" id="accordion2">
-                <div class="accordion-group">
-                    <div class="accordion-heading">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-                            CRUD operations for PLAYER entity
-                        </a>
-                    </div>
-                    <div id="collapseOne" class="accordion-body collapse in">
-                        <div class="accordion-inner">
-                            <?php echo anchor("index.php/player/prepare_player", "CREATE Player", array("class"=>"btn")); ?>
-                            <?php echo anchor("index.php/player/read_player", "READ Player", array("class"=>"btn")); ?>
-                        </div>
-                    </div>
-                </div><!--ends player entity options-->
-
-                <div class="accordion-group">
-                    <div class='accordion-heading'>
-                        <a class='accordion-toggle' data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
-                            CRUD operations for TITLE entity
-                        </a>
-                    </div>
-                    <div id="collapseThree" class="accordion-body collapse">
-                        <div class="accordion-inner">
-                            <?php echo anchor("index.php/title/prepare_title", "CREATE Title", array("class"=>"btn")); ?>
-                            <?php echo anchor("index.php/title/read_title", "READ Title", array("class"=>"btn")); ?>
-                        </div>
-                    </div>
-                </div><!--ends title entity options-->
-                <div class="accordion-group">
-                    <div class="accordion-heading">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">
-                            CRUD operations for VIDEO entity
-                        </a>
-                    </div>
-                    <div id="collapseFour" class="accordion-body collapse">
-                        <div class="accordion-inner">
-                            <?php echo anchor("index.php/video/prepare_video", "CREATE Video", array("class"=>"btn")); ?>
-                            <?php echo anchor("index.php/video/read_video", "READ Video", array("class"=>"btn")); ?>
-                        </div>
-                    </div>
-                </div><!--ends player_videos entity options-->
-            </div>
-        </div><!--ends CRUD main menu-->
-        <!--section for romanian players - CRUD ops-->
-        <div class='CRUDMainMenu'>
-            <h4 class='indicatorOperatiiCRUDJucatori'>JUCATORI ROMANI</h4>
-            <div class="accordion" id="accordion3">
-                <div class="accordion-group">
-                    <div class="accordion-heading">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#collapseOneRo">
-                            CRUD operations for PLAYER ROMAN entity
-                        </a>
-                    </div>
-                    <div id="collapseOneRo" class="accordion-body collapse in">
-                        <div class="accordion-inner">
-                            <?php echo anchor("index.php/player_ro/prepare_player_ro", "CREATE Player", array("class"=>"btn")); ?>
-                            <?php echo anchor("index.php/player_ro/read_player_ro", "READ Player", array("class"=>"btn")); ?>
-                        </div>
-                    </div>
-                </div><!--ends player roman entity options-->
-                <div class="accordion-group">
-                    <div class='accordion-heading'>
-                        <a class='accordion-toggle' data-toggle="collapse" data-parent="#accordion3" href="#collapseThreeRo">
-                            CRUD operations for TITLE entity
-                        </a>
-                    </div>
-                    <div id="collapseThreeRo" class="accordion-body collapse">
-                        <div class="accordion-inner">
-                            <?php echo anchor("index.php/title_ro/prepare_title_ro", "CREATE Title", array("class"=>"btn")); ?>
-                            <?php echo anchor("index.php/title_ro/read_title_ro", "READ Title", array("class"=>"btn")); ?>
-                        </div>
-                    </div>
-                </div><!--ends title entity options-->
-                <div class="accordion-group">
-                    <div class="accordion-heading">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#collapseFourRo">
-                            CRUD operations for VIDEO entity
-                        </a>
-                    </div>
-                    <div id="collapseFourRo" class="accordion-body collapse">
-                        <div class="accordion-inner">
-                            <?php echo anchor("index.php/video_ro/prepare_video_ro", "CREATE Video", array("class"=>"btn")); ?>
-                            <?php echo anchor("index.php/video_ro/read_video_ro", "READ Video", array("class"=>"btn")); ?>
-                        </div>
-                    </div>
-                </div><!--ends player_videos entity options-->
-            </div>
-        </div><!--ends CRUD main menu-->
-
-        <!--operations for TEAM entity-->
-        <div class='CRUDMainMenu'>
-            <h4 class='indicatorOperatiiCRUDJucatori'>ECHIPE</h4>
-            <div class="accordion" id="accordion4">
-                <div class="accordion-group">
-                    <div class="accordion-heading">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#collapseTeam">
-                            CRUD operations for TEAM entity
-                        </a>
-                    </div>
-                    <div id="collapseTeam" class="accordion-body collapse in">
-                        <div class="accordion-inner">
-                            <?php echo anchor("index.php/team/prepare_team", "CREATE Team", array("class"=>"btn")); ?>
-                            <?php echo anchor("index.php/team/read_team", "READ Team", array("class"=>"btn")); ?>
-                        </div>
-                    </div>
-                </div>
-            </div><!--ends team entity options-->
-
-        </div><!--ends CRUD main menu for team operations-->
-    </div><!--ends container for CRUD menus-->
-    <div class='span9 reportsOperationsArea'>
-        <div class='span4 alert alert-error'>
+    <div class='span12 reportsOperationsArea'>
+        <div class='span11 alert alert-error'>
             <h4 style='padding-bottom:15px;'>INDICATII PENTRU INTRODUCEREA UNEI NOI ECHIPE</h4>
             <ul class='instructiuniCreateEntityList'>
                 <li>1. <strong>Data infiintarii</strong> - spre diferenta de data nasterii pentru un jucator, data infiintarii unei echipe poate fi introdusa mai simplu  <strong>ex: 19 Iulie 2011</strong></li>
                 <li>2. <strong>Sponsori</strong> - sponsorii se introduc unii dupa altii, cu virgula dupa fiecare - <strong>ex: Twitch, Red Bull, Intel</strong></li>
             </ul>
         </div>
-        <div class='span7 offset1'>
-            <h3 style='text-align:center;padding-bottom:15px;'>CREEAZA O NOUA <?php echo $page_title; ?></h3>
+        <div class='span12'>
         <?php
           $form_attributes = array('class'=>'form-horizontal');
-          $input_field_name=array('name'=>'team_name','id'=>'teamName','class'=>'input-large');
-          $input_field_country=array('name'=>'team_country','id'=>'teamCountry','class'=>'input-large');
-          $input_field_players=array('name'=>'team_number_of_players', 'id'=>'teamNumbPlayers', 'class'=>'input-large');
-          $text_area_description=array('name'=>'team_description', 'id'=>'teamDescription', 'class'=>'input-large');
-          $input_field_team_founed=array('name'=>'team_founded', 'id'=>'teamFounded', 'class'=>'input-large');
-          $input_field_team_manager=array('name'=>'team_manager', 'id'=>'teamManager', 'class'=>'input-large');
-          $text_area_team_sponsors=array('name'=>'team_sponsors', 'id'=>'teamSponsors', 'class'=>'input-large');
+          $input_field_name=array('name'=>'team_name','id'=>'teamName','class'=>'input-large', 'required' => 'required');
+          $input_field_country=array('name'=>'team_country','id'=>'teamCountry','class'=>'input-large', 'required' => 'required');
+          $input_field_players=array('name'=>'team_number_of_players', 'id'=>'teamNumbPlayers', 'class'=>'input-large', 'required' => 'required');
+          $text_area_description=array('name'=>'team_description', 'id'=>'teamDescription', 'class'=>'input-large', 'required' => 'required');
+          $input_field_team_founed=array('name'=>'team_founded', 'id'=>'teamFounded', 'class'=>'input-large', 'required' => 'required');
+          $input_field_team_manager=array('name'=>'team_manager', 'id'=>'teamManager', 'class'=>'input-large', 'required' => 'required');
+          $text_area_team_sponsors=array('name'=>'team_sponsors', 'id'=>'teamSponsors', 'class'=>'input-large', 'required' => 'required');
           $upload_team_logo=array('name'=>'teamLogoUpload', 'id'=>'teamUpload', 'class'=>'input-large', 'type'=>'file', 'size'=>'20', 'enctype'=>'multipart/form-data');
           
 
-          $submit_btn_attributes=array('name'=>'submitBtn','class' => 'btn', 'type'=>'submit','content'=>'Creeaza echipa');
+          $submit_btn_attributes=array('name'=>'submitBtn','class' => 'btn btn-success', 'type'=>'submit','content'=>'Creeaza echipa');
         ?>
 
         <?php 
             echo form_open_multipart('index.php/team/create_team', $form_attributes);
         ?>
+        <div class="formBreaker span3">
             <div class="control-group">
                 <label class="control-label" for="teamName">Nume</label>
                 <div class="controls">
@@ -169,27 +55,18 @@
                 </div>
             </div>
             <div class="control-group">
-                <label class="control-label" for="teamDescription">Descriere</label>
-                <div class="controls">
-                    <?php echo form_textarea($text_area_description); ?>
-                </div>
-            </div>
-            <div class="control-group">
                 <label class="control-label" for="teamFoundDate">Data infiintarii</label>
                 <div class="controls">
                     <?php echo form_input($input_field_team_founed); ?>
                 </div>
             </div>
+
+        </div>
+        <div class="formBreaker span3">
             <div class="control-group">
                 <label class="control-label" for="teamManager">Manager echipa</label>
                 <div class="controls">
                     <?php echo form_input($input_field_team_manager); ?>
-                </div>
-            </div>
-            <div class="control-group">
-                <label class="control-label" for="teamSponsors">Sponsori</label>
-                <div class="controls">
-                    <?php echo form_textarea($text_area_team_sponsors); ?>
                 </div>
             </div>
             <div class="control-group">
@@ -199,11 +76,29 @@
                 </div>
             </div>
             <div class="control-group">
+                <label class="control-label" for="teamSponsors">Sponsori</label>
+                <div class="controls">
+                    <?php echo form_textarea($text_area_team_sponsors); ?>
+                </div>
+            </div>
+        </div>
+        <div class="formBreaker span4">
+            <div class="control-group">
+                <label class="control-label" for="teamDescription">Descriere</label>
+                <div class="controls">
+                    <?php echo form_textarea($text_area_description); ?>
+                </div>
+            </div>
+        </div>
+
+        <div class="formBreakerSubmit span12">
+            <div class="control-group">
                 <div class="controls">
                     <?php echo form_button($submit_btn_attributes);  ?>
                 </div>
             </div>
-            <?php echo form_close(); ?>
+        </div>
+        <?php echo form_close(); ?>
         </div><!--ends form container create new team-->
         
         

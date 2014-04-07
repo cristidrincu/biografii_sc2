@@ -13,13 +13,19 @@ class Title extends CI_Controller{
 
 	//class constructor
 	function __construct(){
+
 		parent::__construct();
-		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0"); 
-		$this->output->set_header("Pragma: no-cache");
+
+        $this->output->set_header('Last-Modified:'.gmdate('D, d M Y H:i:s').'GMT');
+        $this->output->set_header('Cache-Control: no-store, no-cache, must-revalidate');
+        $this->output->set_header('Cache-Control: post-check=0, pre-check=0',false);
+        $this->output->set_header('Pragma: no-cache');
+
 		$this->load->library('pagination');
 		$this->load->model('login_model');
 		$this->load->model('crud_model_player');
 		$this->load->model('crud_model_title');
+        $this->load->model('crud_model_user');
 
 		$this->parameters_crud['player_nickname']=$this->input->post('player_nickname');
 		$this->parameters_crud['title_name']=$this->input->post('title_name');
@@ -40,7 +46,7 @@ class Title extends CI_Controller{
 		$data['title_details']=$this->crud_model_title->extractTitleDetailsID($title_id);
 
 		$data['page_title']=$this->setPageTitle('UPDATE TITLE SCREEN');
-		$data['username']=$this->setSessionData();
+		$data['username']=$this->setSessionDataUsername();
 
 		$data['entity_type']=3; //3 is a flag for title
 		$this->loadUpdateEntityDetails($data);
@@ -49,7 +55,7 @@ class Title extends CI_Controller{
 	public function update_title($title_ID){
 		$this->title_id = $this->crud_model_title->extractTitleID($title_ID);
 		$this->crud_model_title->updateTitle($this->title_id, $this->parameters_crud);
-		redirect('index.php/title/read_title');
+		redirect('title/read_title');
 	}
 
 
@@ -58,7 +64,7 @@ class Title extends CI_Controller{
 		$this->setPageTitle("TITLU");
 
 		$data['page_title']=$this->getPageTitle();
-		$data['username']=$this->setSessionData();
+		$data['username']=$this->setSessionDataUsername();
 
 		$data['players']=$this->crud_model_player->extractPlayerName();
 
@@ -72,7 +78,7 @@ class Title extends CI_Controller{
 		//echo $this->input->post('player_nickname');
 
 		if($this->crud_model_title->insertTitle($this->title_player_id, $this->parameters_crud)){
-			$data_info_inserted['username']=$this->setSessionData();
+			$data_info_inserted['username']=$this->setSessionDataUsername();
 			$data_info_inserted['player_nickname']=$this->input->post('player_nickname');
 			$data_info_inserted['title_name']=$this->input->post('title_name');
 			$data_info_inserted['title_date']=$this->input->post('title_date');
@@ -90,7 +96,7 @@ class Title extends CI_Controller{
 	//this function will present the user with a screen offering details about the title that the user is about to delete
 	public function prepare_delete_title($title_id){
 		$data['page_title']=$this->setPageTitle('Raport preliminar stergere titlu');
-		$data['username']=$this->setSessionData();
+		$data['username']=$this->setSessionDataUsername();
 
 		$data['title_details']=$this->crud_model_title->extractTitleDetailsID($title_id);
 		$this->loadDeletePageReport($data);
@@ -98,7 +104,7 @@ class Title extends CI_Controller{
 
 	public function delete_title($title_id){
 		$this->crud_model_title->deleteTitle($title_id);
-		redirect('index.php/title/read_title', 'refresh');
+		redirect('title/read_title', 'refresh');
 	}
 
 	public function read_title(){
@@ -136,10 +142,15 @@ class Title extends CI_Controller{
 		$config['num_tag_close'] = '</li>';
 
 		$data['page_title']=$this->getPageTitle();
-		$data['username']=$this->setSessionData();
+
+		$data['username'] = $this->setSessionDataUsername();
+        $data['user_role'] = $this->setSessionDataUserRole();
+
 		//apply model methods for getting the teams in the database
 		$data['title_details']=$this->crud_model_title->extractTitleDetails($config['per_page'],$this->uri->segment(3));//limit and offset parameters
 		$data['entity_type']=3; //3 is a flag for TITLE entity
+        $data['total_number_of_titles'] = $this->crud_model_title->countRowsTitle();
+        $data['user_id'] = $this->crud_model_user->extractUserID($this->setSessionDataUserName());
 
 		$this->pagination->initialize($config);
 		$data['links']=$this->pagination->create_links();
@@ -197,8 +208,13 @@ class Title extends CI_Controller{
 		$this->load->view('footer_admin_area');
 	}
 
-	public function setSessionData(){
+	public function setSessionDataUsername(){
 		$session_data = $this->session->userdata('logged_in');
 	    return $session_data['username'];
 	}
+
+    public function setSessionDataUserRole(){  //helper function for retrieving username based on who is logged in
+        $session_data = $this->session->userdata('logged_in');
+        return $session_data['userrole'];
+    }
 }

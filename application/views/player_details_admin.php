@@ -1,10 +1,10 @@
 <div class='row-fluid mainContentContainer'>
     <div class="navbar">
         <div class="navbar-inner">
-            <a class="brand" href="<?php echo base_url(); ?>index.php/home/index">ADMINISTRATION AREA - <?php echo $page_title; ?></a>
+            <a class="brand" href="<?php echo base_url(); ?>home/index">ADMINISTRATION AREA - <?php echo $page_title; ?></a>
                 <ul class="nav pull-right">
                   <li class='username'>Bine ai venit, <?php echo $username; ?> </li>  
-                  <li><?php echo anchor("index.php/home/logout","Logout", "");?></li>
+                  <li><?php echo anchor("home/logout","Logout", "");?></li>
                 </ul>
   </div>
 </div>
@@ -18,8 +18,8 @@
                 </div>
                     <div id="collapseOne" class="accordion-body collapse in">
                         <div class="accordion-inner">
-                            <?php echo anchor("index.php/home/prepare_player", "CREATE Player", array("class"=>"btn")); ?>
-                            <?php echo anchor("index.php/home/read_player", "READ Player", array("class"=>"btn")); ?>
+                            <?php echo anchor("home/prepare_player", "CREATE Player", array("class"=>"btn")); ?>
+                            <?php echo anchor("home/read_player", "READ Player", array("class"=>"btn")); ?>
                             <button class='btn'>UPDATE Player</button>
                             <button class='btn'>DELETE Player</button>
                         </div>
@@ -33,7 +33,7 @@
                 </div>
                 <div id="collapseTwo" class="accordion-body collapse">
                     <div class="accordion-inner">
-                        <?php echo anchor("index.php/home/prepare_team", "CREATE Team", array("class"=>"btn")); ?>
+                        <?php echo anchor("home/prepare_team", "CREATE Team", array("class"=>"btn")); ?>
                         <button class='btn'>READ Team</button>
                         <button class='btn'>UPDATE Team</button>
                         <button class='btn'>DELETE Team</button>
@@ -48,7 +48,7 @@
                 </div>
                 <div id="collapseThree" class="accordion-body collapse">
                     <div class="accordion-inner">
-                        <?php echo anchor("index.php/home/prepare_title", "CREATE Title", array("class"=>"btn")); ?>
+                        <?php echo anchor("home/prepare_title", "CREATE Title", array("class"=>"btn")); ?>
                         <button class='btn'>READ Title</button>
                         <button class='btn'>UPDATE Title</button>
                         <button class='btn'>DELETE Title</button>
@@ -63,7 +63,7 @@
                 </div>
                 <div id="collapseFour" class="accordion-body collapse">
                     <div class="accordion-inner">
-                        <?php echo anchor("index.php/home/prepare_video", "CREATE Video", array("class"=>"btn")); ?>
+                        <?php echo anchor("home/prepare_video", "CREATE Video", array("class"=>"btn")); ?>
                         <button class='btn'>READ Video</button>
                         <button class='btn'>UPDATE Video</button>
                         <button class='btn'>DELETE Video</button>

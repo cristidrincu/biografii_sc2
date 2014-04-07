@@ -117,16 +117,16 @@ class Crud_model_player extends CI_Model{
 		}
 	}
 
-    public function extractPlayerTeamIDRO($player_id){
-        $query = $this->db->get_where('PLAYER_ROMAN P', array('P.player_ID'=>$player_id));
-        foreach($query->result() as $row){
-            return $row->player_team_id;
-        }
+    public function extractPlayerImage($player_id){
+        $this->db->select('player_image')->from('PLAYER P')->where('P.player_ID', $player_id);
+        $query = $this->db->get();
+        $result = $query->result();
+        return $result;
     }
 
 
 //CREATE METHODS FOR PLAYER, TEAM, TITLE AND VIDEO ENTITIES
-	public function insertPlayerDB($player_team_id, $parameters, $image_path){
+	public function insertPlayerDB($player_team_id, $parameters, $imagePath){
 
 		$data=array(
 			'player_team_id'=>$player_team_id,
@@ -138,9 +138,9 @@ class Crud_model_player extends CI_Model{
 			'team'=>$parameters['player_team'],
 			'winnings'=>$parameters['player_winnings'],
 			'description'=>$parameters['player_description'],
-			'player_image'=>$image_path,
-            'player_keywords'=>$parameters['player_keywords']
-		);
+			'player_image'=>$imagePath,
+            'player_keywords'=>$parameters['player_keywords'],
+            'publisher_id' => $parameters['user_id']);
 		
 		if($this->db->insert('PLAYER', $data)){
 			return true;
@@ -149,42 +149,8 @@ class Crud_model_player extends CI_Model{
 		}
 	}
 
-    public function insertPlayerDBRO($player_team_id, $parameters, $image_path){
-
-        $data=array(
-            'player_team_id'=>$player_team_id,
-            'name'=>$parameters['player_name'],
-            'nickname'=>$parameters['player_nickname'],
-            'DOB'=>$parameters['player_dob'],
-            'country'=>$parameters['player_country'],
-            'race'=>$parameters['player_race'],
-            'team'=>$parameters['player_team'],
-            'winnings'=>$parameters['player_winnings'],
-            'description'=>$parameters['player_description'],
-            'player_image'=>$image_path,
-            'player_keywords'=>$parameters['player_keywords']
-        );
-
-        if($this->db->insert('PLAYER_ROMAN', $data)){
-            return true;
-        }else{
-            return false;
-        }
-    }
-
     public function prevent_duplicate_player_entries($player_nickname){
         $this->db->select('player_ID')->from('PLAYER P')->where(array('P.nickname'=>$player_nickname));
-        $query= $this->db->get();
-        $result = $query->result();
-        if($result){
-            return true;
-        }else{
-            return false;
-        }
-    }
-
-    public function prevent_duplicate_player_entries_RO($player_nickname){
-        $this->db->select('player_ID')->from('PLAYER_ROMAN P')->where(array('P.nickname'=>$player_nickname));
         $query= $this->db->get();
         $result = $query->result();
         if($result){
@@ -231,7 +197,11 @@ class Crud_model_player extends CI_Model{
     }
 
 	public function deletePlayer($player_id){
-		$this->db->delete('PLAYER', array('player_ID'=>$player_id));
+		if($this->db->delete('PLAYER', array('player_ID'=>$player_id))){
+            return true;
+        }else{
+            return false;
+        }
 	}
 
     public function deletePlayerRO($player_id){

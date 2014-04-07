@@ -8,7 +8,7 @@
                        <!--<a href="index.php" target="_self"><img src="imgs/logo_smaller.png" alt="Starcraft2 Vidcasts"/></a>-->
                        <div id="logoTitles">
                            <a href='<?php echo base_url(); ?>' target='_self'><h4 class="miniTitleStarcraft2">Arhiva Starcraft2</h4></a>
-                           <a href='http://www.starcraft2-vidcasts.ro' target='self'><h5 class="miniSubtitleVGN">Un proiect VGN &amp; Starcraft2-Vidcasts România</h5></a>
+                           <a href='http://www.starcraft2-vidcasts.ro' target='self'><h5 class="miniSubtitleVGN">Un proiect Starcraft2-Vidcasts România</h5></a>
                        </div><!--ends logoTitles-->
                        <br class="clearFloats"/>
                     </div><!--ends containerLogo-->
@@ -16,32 +16,11 @@
                 <div class="span8">
                     <div id="mainMenuContainer">
                         <ul class="mainMenu">
-                            <li><a class="activeLink" href="<?php echo base_url();?>index.php/main/index" target="_self">Acasă</a></li>
-                            <!--<li>
-                                <div class="droppDownMainContainer">
-                                    <a id="dropDownTriggerProiect" href="#" target="_self">Despre acest proiect</a>
-                                    
-                                         <div class="menuContainer">
-                                             
-                                             <ul class="dropDownList">
-                                                 <h1 class="dropDownTitle">Afla cine contribuie la acest proiect si motivatiile lor!</h1>
-                                                 <i class="icon-question-sign icon-white"></i>
-                                                 <li><a href="#" target="_self">Cine?</a></li>
-                                                 <i class="icon-wrench icon-white"></i>
-                                                 <li><a href="#" target="_self">Cum?</a></li>
-                                                 <i class="icon-heart icon-white"></i>
-                                                 <li><a href="#" target="_self">De ce?</a></li>
-                                             </ul>
-                                         </div>
-                                    
-                                </div>
-                            </li><!--ends menuContainer-->
-                            <li><a href="<?php echo base_url();?>index.php/main/players" target="_self">Jucători internaţionali</a></li>
-                            <li><a href="<?php echo base_url();?>index.php/jucatori_romani/players" target="_self">Jucători români</a></li>
-                            <li><a href="<?php echo base_url();?>index.php/main/teams" target="_self">Echipe</a></li>
-                            <li><a href="<?php echo base_url();?>index.php/contribute/ajuta" target="_self">Contribuie</a></li>
-                            <li><a href="<?php echo base_url();?>index.php/contact" target="_self">Contact</a></li>
-                            <!--<li><a href="#" target="_self">Contact</a></li>-->
+                            <li><a class="activeLink" href="<?php echo base_url();?>main/index" target="_self">Acasă</a></li>
+                            <li><a href="<?php echo base_url();?>main/players" target="_self">Jucători</a></li>
+                            <li><a href="<?php echo base_url();?>main/teams" target="_self">Echipe</a></li>
+<!--                            <li><a href="--><?php //echo base_url();?><!--contribute/ajuta" target="_self">Contribuie</a></li>-->
+                            <li><a href="<?php echo base_url();?>contact" target="_self">Contact</a></li>
                         </ul>
                     </div><!--ends mainMenuContainer-->
                     <!--ELEMENTS FOR DROPDOWNS-->
@@ -71,8 +50,21 @@
                         <div class="containerTextDeveloper">
                            <h3>Lavu Bogdan</h3>
                            <p>Doamnelor și domnilor, numele meu e Lavu Bogdan. Sunt din Deva, m-am născut in 1989 și sunt pasionat de lumea virtuală.
-Am început să vizitez sălile de jocuri de la vârsta de 12 ani, unde-mi investeam banii de dulciuri,colinde și furați.Long-night-urile erau dominate de Brood War,rar și de jocuri precum Diablo2,Heroes 3.
-Sunt foarte încântat ca sunt inclus în proiectul VGN iar Starcraft 2 face parte din viața mea. De asemenea,sunt fidel GSL-ului unde fiecare meci e un spectacol, o lecție, o încântare. Îmi doresc să alcătuim o echipă puternică și o comunitate bazată pe respect.</p>
+Am început să vizitez sălile de jocuri de la vârsta de 12 ani, unde-mi investeam banii de dulciuri, colinde și furați. Long-night-urile erau dominate de Brood War,rar și de jocuri precum Diablo2, Heroes 3.
+Sunt foarte încântat ca sunt inclus în proiectul VGN, iar Starcraft 2 face parte din viața mea. De asemenea, sunt fidel GSL-ului unde fiecare meci e un spectacol, o lecție, o încântare. Îmi doresc să alcătuim o echipă puternică și o comunitate bazată pe respect.</p>
+                        </div>
+                        <br class="clearFloats"/>
+                    </div>
+                    <div class="containerDeveloper">
+                        <div class="containerPicDeveloper">
+                            <img src="<?php echo base_url(); ?>imgs/hundrei_pic.jpg" alt="Lavu Bogdan, membru al echipei Starcraft2-Vidcasts Romania"/>
+                        </div>
+                        <div class="containerTextDeveloper">
+                            <h3>Andrei Chiriches</h3>
+                            <p>Salutare, salutare!
+                                Ma numesc Andrei “hundrei” Chiriches, sunt nascut in`90 in Constanta si din 2008 locuiesc in frumoasa Germanie.
+                                Nu sunt sau nu am fost cine stie ce gammer insa singurul game pe care l-am jucat cu o deosebita placere a fost Starcraft si asta se intampla pe vremea cand aveam eu 10-11 ani.
+                                Despre mine nu pot decat sa va mai spun ca sunt imobilizat intr-un scaun cu rotile (deoarece am avut un accident stupid in 2008 si mi-am rupt coloana), sunt un tip optimist, glumet spre ironic si doritor sa schimb ceva pe lumea asta oricat de mic ar fi acest lucru.Traiesc dupa motto-ul ‘life is short, play hard’ si imi plac brunetele ).</p>
                         </div>
                         <br class="clearFloats"/>
                     </div>
