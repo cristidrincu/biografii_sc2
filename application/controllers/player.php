@@ -221,7 +221,7 @@ class Player extends CI_Controller{
             $this->parameters_crud['player_team']=$this->getPlayerTeam();
             $this->setPlayerTeamID($this->crud_model_team->extractTeamID($this->input->post('player_team')));
 		}else{
-            $this->setPlayerTeam($this->input->post('update_player'));
+            $this->setPlayerTeam($this->input->post('update_player_team'));
             $this->parameters_crud['player_team']=$this->getPlayerTeam();
             $this->setPlayerTeamID($this->crud_model_team->extractTeamID($this->input->post('update_player_team')));
 		}
