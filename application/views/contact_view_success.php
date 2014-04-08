@@ -43,10 +43,10 @@
                             </ul>
                         </div>
                         <div class="containerTextDescriereRasa">
-                            <p>În cadrul acestei secţiuni vei găsi cei mai buni jucători de Starcraft2 din România, jucând cu rasa <strong>TERRAN</strong>, pentru ligile Masters şi Grand Masters.</p>
+                            <p>Am introdus în cadrul secţiunii Terrane jucători cu renume mondial, gen Kas, MVP, Marine King Prime şi alţii. Vei putea citi biografiile celor mai puternici terrani Coreeni, însă şi a celor care vin încet din urmă, aşa cum este spaniolul Lucifron!</p>
                         </div>
                         <br class="clearFloats"/>
-                        <a href='<?php echo base_url(); ?>main/terran_players_ro' class='btn btn-primary'>Afiseaza</a>
+                        <a href='<?php echo base_url();  ?>main/terran_players' class='btn btn-primary'>Afişează</a>
                     </div>
 
                     <!--<hr class="divider races"/>-->
@@ -60,10 +60,10 @@
                             </ul>
                         </div>
                         <div class="containerTextDescriereRasa">
-                            <p>În cadrul acestei secţiuni vei găsi cei mai buni jucători de Starcraft2 din România, jucând cu rasa <strong>ZERG</strong>, pentru ligile Masters şi Grand Masters.</p>
+                            <p>Nume precum Nestea, Zenio, Life şi mulţi alţii îşi au biografiile în cadrul acestei secţiuni. Află totul despre ei, de la începutul carierei de PRO GAMER şi până în acest moment, cât şi motivul pentru care au ales să joace acesta rasă.</p>
                         </div>
                         <br class="clearFloats"/>
-                        <a href='<?php echo base_url(); ?>main/zerg_players_ro' class='btn btn-primary'>Afiseaza</a>
+                        <a href='<?php echo base_url(); ?>main/zerg_players' class='btn btn-primary'>Afişează</a>
                     </div>
 
                     <!--hr class="divider"/>-->
@@ -77,16 +77,13 @@
                             </ul>
                         </div>
                         <div class="containerTextDescriereRasa">
-                            <p>În cadrul acestei secţiuni vei găsi cei mai buni jucători de Starcraft2 din România, jucând cu rasa <strong>PROTOSS</strong>, pentru ligile Masters şi Grand Masters.</p>
+                            <p>Huk, Parting, Socke - nume sonore în cadrul adunării protosiene, cu rezultate remarcabile, te aşteaptă să le citeşti biografiile şi să le afli rezultatele obţinute în cadrul concursurilor internaţionale la care au participat. O secţiune în care DigitalWaves a muncit la greu. Prietenii ştiu de ce!</p>
                         </div>
                         <br class="clearFloats"/>
-                        <a href='<?php echo base_url(); ?>main/protoss_players_ro' class='btn btn-primary'>Afiseaza</a>
+                        <a href='<?php echo base_url(); ?>main/protoss_players' class='btn btn-primary'>Afişează</a>
                     </div>
-
-                    <!--<hr class="divider"/>-->
                 </div><!--ends terranContainerImage-->
             </div>
-
         </div>
         <div class="span9">
              <h1 class="sucessMessageEmail">Mesaj trimis cu succes!</h1>

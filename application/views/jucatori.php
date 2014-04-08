@@ -55,7 +55,7 @@
                                        </ul>                                       
                                    </div>
                                    <div class="containerTextDescriereRasa"> 
-                                    <p>Nume precum Nestea, Zenio, Life şi mulţi alţii îşi au biografiile în cadrul acestei secţiuni. Află totul despre ei, de la începutul carierie de PRO GAMER şi până în acest moment, cât şi motivul pentru care au ales să joace acesta rasă.</p>
+                                    <p>Nume precum Nestea, Zenio, Life şi mulţi alţii îşi au biografiile în cadrul acestei secţiuni. Află totul despre ei, de la începutul carierei de PRO GAMER şi până în acest moment, cât şi motivul pentru care au ales să joace acesta rasă.</p>
                                    </div>
                                    <br class="clearFloats"/>
                                    <a href='<?php echo base_url(); ?>main/zerg_players' class='btn btn-primary'>Afişează</a>

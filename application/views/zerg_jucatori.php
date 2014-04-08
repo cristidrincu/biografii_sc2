@@ -30,58 +30,55 @@
                     <div class="sidebarContainer">
                         <div class="terranContainerImage">
 
-                              <div class="containerScurtaDescriereTerran">
-                                   <div class="containerLogoRasa">
-                                       <ul>
-                                           <li><img src="<?php echo base_url(); ?>imgs/logo_terran_thumb.png" alt="Terran"/></li>
-                                           <li><h3>Terran</h3></li>
-                                       </ul>
-                                   </div>
-                                   <div class="containerTextDescriereRasa">
-                                    <p>Am introdus in cadrul sectiunii Terrane jucatori cu renume mondial, gen Kas, MVP, Marine King Prime si altii. Vei putea citi biografiile celor mai puternici terrani Koreeni, insa si a celor care vin incet din urma, asa cum este spaniolul Lucifron!</p>
-                                   </div>
-                                   <br class="clearFloats"/>
-                                   <a href='<?php echo base_url(); ?>index.php/main/terran_players' class='btn btn-primary'>Afiseaza</a>
-                               </div>
+                            <div class="containerScurtaDescriereTerran">
+                                <div class="containerLogoRasa">
+                                    <ul>
+                                        <li><img src="<?php echo base_url(); ?>imgs/logo_terran_thumb.png" alt="Terran"/></li>
+                                        <li><h3>Terran</h3></li>
+                                    </ul>
+                                </div>
+                                <div class="containerTextDescriereRasa">
+                                    <p>Am introdus în cadrul secţiunii Terrane jucători cu renume mondial, gen Kas, MVP, Marine King Prime şi alţii. Vei putea citi biografiile celor mai puternici terrani Coreeni, însă şi a celor care vin încet din urmă, aşa cum este spaniolul Lucifron!</p>
+                                </div>
+                                <br class="clearFloats"/>
+                                <a href='<?php echo base_url();  ?>main/terran_players' class='btn btn-primary'>Afişează</a>
+                            </div>
 
-                               <!--<hr class="divider races"/>-->
-                    </div><!--ends terranContainerImage-->
-                    <div class="terranContainerImage">
-                               <div class="containerScurtaDescriereTerran">
-                                   <div class="containerLogoRasa">
-                                       <ul>
-                                           <li><img src="<?php echo base_url(); ?>imgs/zerg_logo_png_thumb.png" alt="Zerg"/></li>
-                                           <li><h3>Zerg</h3></li>
-                                       </ul>
-                                   </div>
-                                   <div class="containerTextDescriereRasa">
-                                    <p>Nume precum Nestea, Zenio, Life si multi altii isi au biografiile in cadrul acestei sectiuni. Afla totul despre ei, de la inceputul carierie de PRO GAMER si pana in acest moment, cat si motivul pentru care au ales sa joace acesta rasa.</p>
-                                   </div>
-                                   <br class="clearFloats"/>
-                                   <a href='<?php echo base_url(); ?>index.php/main/zerg_players' class='btn btn-primary'>Afiseaza</a>
-                               </div>
+                            <!--<hr class="divider races"/>-->
+                        </div><!--ends terranContainerImage-->
+                        <div class="terranContainerImage">
+                            <div class="containerScurtaDescriereTerran">
+                                <div class="containerLogoRasa">
+                                    <ul>
+                                        <li><img src="<?php echo base_url(); ?>imgs/zerg_logo_png_thumb.png" alt="Zerg"/></li>
+                                        <li><h3>Zerg</h3></li>
+                                    </ul>
+                                </div>
+                                <div class="containerTextDescriereRasa">
+                                    <p>Nume precum Nestea, Zenio, Life şi mulţi alţii îşi au biografiile în cadrul acestei secţiuni. Află totul despre ei, de la începutul carierei de PRO GAMER şi până în acest moment, cât şi motivul pentru care au ales să joace acesta rasă.</p>
+                                </div>
+                                <br class="clearFloats"/>
+                                <a href='<?php echo base_url(); ?>main/zerg_players' class='btn btn-primary'>Afişează</a>
+                            </div>
 
-                               <!--hr class="divider"/>-->
-                    </div><!--ends terranContainerImage-->
-                    <div class="terranContainerImage">
-                               <div class="containerScurtaDescriereTerran">
-                                   <div class="containerLogoRasa">
-                                       <ul>
-                                           <li><img src="<?php echo base_url(); ?>imgs/protoss_logo_thumb.png" alt="Protoss"/></li>
-                                           <li><h3>Protoss</h3></li>
-                                       </ul>
-                                   </div>
-                                   <div class="containerTextDescriereRasa">
-                                    <p>Huk, Parting, Socke - nume sonore in cadrul adunarii protosiene, cu rezultate remarcabile, te asteapta sa le citesti biografiile si sa le afli rezultatele obtinute in cadrul concursurilor internationale la care au participat. O sectiune in care DigitalWaves a muncit la greu. Prietenii stiu de ce!</p>
-                                   </div>
-                                   <br class="clearFloats"/>
-                                   <a href='<?php echo base_url(); ?>index.php/main/protoss_players' class='btn btn-primary'>Afiseaza</a>
-                               </div>
-
-                               <!--<hr class="divider"/>-->
-                    </div><!--ends terranContainerImage-->
+                            <!--hr class="divider"/>-->
+                        </div><!--ends terranContainerImage-->
+                        <div class="terranContainerImage">
+                            <div class="containerScurtaDescriereTerran">
+                                <div class="containerLogoRasa">
+                                    <ul>
+                                        <li><img src="<?php echo base_url(); ?>imgs/protoss_logo_thumb.png" alt="Protoss"/></li>
+                                        <li><h3>Protoss</h3></li>
+                                    </ul>
+                                </div>
+                                <div class="containerTextDescriereRasa">
+                                    <p>Huk, Parting, Socke - nume sonore în cadrul adunării protosiene, cu rezultate remarcabile, te aşteaptă să le citeşti biografiile şi să le afli rezultatele obţinute în cadrul concursurilor internaţionale la care au participat. O secţiune în care DigitalWaves a muncit la greu. Prietenii ştiu de ce!</p>
+                                </div>
+                                <br class="clearFloats"/>
+                                <a href='<?php echo base_url(); ?>main/protoss_players' class='btn btn-primary'>Afişează</a>
+                            </div>
+                        </div><!--ends terranContainerImage-->
                     </div>
-
                 </div>
                 <div class="span9">
                     <div class="sectionDescription containerEntities">
