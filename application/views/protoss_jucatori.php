@@ -137,9 +137,6 @@
                             <div class="span3 playerContainerSmall">
                                 <h4><?php echo $protoss->nickname; ?></h4>
                                 <ul>
-                                    <li><p>Nickname: <?php echo $protoss->name; ?></p></li>
-                                    <li><p>Data nașterii: <?php echo $protoss->DOB; ?></p></li>
-                                    <li><p>Țara de origine: <?php echo $protoss->country; ?></p></li>
                                     <li><p>Rasa: <?php echo $protoss->race; ?></p></li>
                                     <li><p>Echipa: <?php echo $protoss->team; ?></p></li>
                                 </ul>
@@ -152,9 +149,6 @@
                                     <div class="span3 playerContainerSmall">
                                         <h4><?php echo $protoss->nickname; ?></h4>
                                         <ul>
-                                            <li><p>Nickname: <?php echo $protoss->name; ?></p></li>
-                                            <li><p>Data nașterii: <?php echo $protoss->DOB; ?></p></li>
-                                            <li><p>Țara de origine: <?php echo $protoss->country; ?></p></li>
                                             <li><p>Rasa: <?php echo $protoss->race; ?></p></li>
                                             <li><p>Echipa: <?php echo $protoss->team; ?></p></li>
                                         </ul>

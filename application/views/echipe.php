@@ -84,7 +84,7 @@
                         <h4><?php echo $team->team_name; ?></h4>
                         <ul>
                           <li><p>Număr jucători: <?php echo $team->number_of_players; ?></p></li>
-                          <li><p>Țara de origine: <?php echo $team->team_country; ?></p></li>
+                          <li><p>Țara: <?php echo $team->team_country; ?></p></li>
                         </ul>
                         <?php echo anchor("/main/getTeamDetails/".$team->ID,"Află mai multe despre echipa",array('class'=>'btn btn-success')); ?>
                     </div>

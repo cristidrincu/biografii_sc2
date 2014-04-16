@@ -30,10 +30,10 @@ class CI_Email {
 
 	var	$useragent		= "CodeIgniter";
 	var	$mailpath		= "/usr/sbin/sendmail";	// Sendmail path
-	var	$protocol		= "smtp";	// mail/sendmail/smtp
-	var	$smtp_host		= "s21.rohost.com";		// SMTP Server.  Example: mail.earthlink.net
-	var	$smtp_user		= "warbringer@starcraft2-vidcasts.ro";		// SMTP Username
-	var	$smtp_pass		= "crusader22012";		// SMTP Password
+	var	$protocol		= "mail";	// mail/sendmail/smtp
+	var	$smtp_host		= "";		// SMTP Server.  Example: mail.earthlink.net
+	var	$smtp_user		= "";		// SMTP Username
+	var	$smtp_pass		= "";		// SMTP Password
 	var	$smtp_port		= "25";		// SMTP Port
 	var	$smtp_timeout	= 5;		// SMTP Timeout in seconds
 	var	$smtp_crypto	= "";		// SMTP Encryption. Can be null, tls or ssl.
@@ -1954,7 +1954,7 @@ class CI_Email {
 			}
 		}
 
-		$msg .= "<pre>".$this->_header_str."\n".htmlspecialchars($this->_subject)."\n".htmlspecialchars($this->_finalbody).'</pre>';
+		$msg .= "<pre>".htmlspecialchars($this->_header_str)."\n".htmlspecialchars($this->_subject)."\n".htmlspecialchars($this->_finalbody).'</pre>';
 		return $msg;
 	}
 

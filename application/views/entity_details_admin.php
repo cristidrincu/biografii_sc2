@@ -132,14 +132,15 @@
             </div>
             <div class='span4 offset4'><?php echo $links; ?></div>
             <h4 class="total-number-database-entity">Numarul total de jucatori din baza de date: <?php echo $total_number_of_players; ?></h4>
+            <p style="margin-left: 8px; padding-bottom:10px; color: #46a546;">Jucatorii sunt ordonati dupa data creearii lor in baza de date sau dupa ultimul update facut asupra lor.</p>
     		<thead>
     			<th>Nickname</th>
-    			<th>Name</th>
-    			<th>DOB</th>
-    			<th>Country</th>
-    			<th>Race</th>
-    			<th>Team</th>
-    			<th>Winnings</th>
+    			<th>Nume</th>
+    			<th>Data nasterii</th>
+    			<th>Tara</th>
+    			<th>Rasa</th>
+    			<th>Echipa</th>
+    			<th>Castiguri</th>
                 <th>Update</th>
                 <th>Delete</th>
     		</thead>
@@ -176,9 +177,9 @@
             <div class='span4 offset4'><?php echo $links; ?></div>
                 <h4 class="total-number-database-entity">Numarul total de echipe din baza de date: <?php echo $total_number_of_teams; ?></h4>
                 <thead>
-                    <th>Name</th>
-                    <th>Country</th>
-                    <th>Jucatori</th>
+                    <th>Nume</th>
+                    <th>Tara</th>
+                    <th>Numar de jucatori</th>
                     <th>Fondata in</th>
                     <th>Update</th>
                     <th>Delete</th>
@@ -211,10 +212,11 @@
             </div>
             <div class='span4 offset4'><?php echo $links; ?></div>
                 <h4 class="total-number-database-entity">Numarul total de titluri din baza de date: <?php echo $total_number_of_titles; ?></h4>
+                <p style="margin-left: 8px; padding-bottom:10px; color: #46a546;">Titlurile sunt ordonate dupa data creearii jucatorului de care apartin.</p>
                 <thead>
                     <th>Nickname</th>
-                    <th>Title name</th>
-                    <th>Title date</th>
+                    <th>Numele titlului</th>
+                    <th>Data obtinerii</th>
                     <th>Update</th>
                     <th>Delete</th>
                 </thead>
@@ -245,10 +247,11 @@
             </div>
             <div class='span4 offset4'><?php echo $links; ?></div>
                 <h4 class="total-number-database-entity">Numarul total de link-uri video din baza de date: <?php echo $total_number_of_videos; ?></h4>
+                <p style="margin-left: 8px; padding-bottom:10px; color: #46a546;">Link-urile video sunt ordonate dupa data creearii jucatorului de care apartin.</p>
                 <thead>
-                    <th>Name</th>
-                    <th>Video Title</th>
-                    <th>Video Link</th>
+                    <th>Nume jucator</th>
+                    <th>Titlu video</th>
+                    <th>Link video</th>
                     <th>Update</th>
                     <th>Delete</th>
                 </thead>

@@ -136,9 +136,6 @@
                             <div class="span3 playerContainerSmall">
                                 <h4><?php echo $zerg->nickname; ?></h4>
                                 <ul>
-                                    <li><p>Nickname: <?php echo $zerg->name; ?></p></li>
-                                    <li><p>Data nașterii: <?php echo $zerg->DOB; ?></p></li>
-                                    <li><p>Țara de origine: <?php echo $zerg->country; ?></p></li>
                                     <li><p>Rasa: <?php echo $zerg->race; ?></p></li>
                                     <li><p>Echipa: <?php echo $zerg->team; ?> </p></li>
                                 </ul>
@@ -151,9 +148,6 @@
                                     <div class="span3 playerContainerSmall">
                                         <h4><?php echo $zerg->nickname; ?></h4>
                                         <ul>
-                                            <li><p>Nickname: <?php echo $zerg->name; ?></p></li>
-                                            <li><p>Data nașterii: <?php echo $zerg->DOB; ?></p></li>
-                                            <li><p>Țara de origine: <?php echo $zerg->country; ?></p></li>
                                             <li><p>Rasa: <?php echo $zerg->race; ?></p></li>
                                             <li><p>Echipa: <?php echo $zerg->team; ?> </p></li>
                                         </ul>

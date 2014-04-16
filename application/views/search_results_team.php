@@ -52,7 +52,7 @@
                                <div class="span3 playerContainerSmall">
                                 <h4><?php echo $result->team_name; ?></h4>
                                 <ul>
-                                  <li><p>Țara de origine: <?php echo $result->team_country; ?></p></li>
+                                  <li><p>Țara: <?php echo $result->team_country; ?></p></li>
                                   <li><p>Numar jucatori: <?php echo $result->number_of_players; ?></p></li>
                                 </ul>
                                 <?php echo anchor("main/getTeamDetails/$result->ID","Află mai multe despre echipa",array('class'=>'btn btn-success')); ?>

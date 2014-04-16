@@ -2,13 +2,157 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a50a12fc-2b3d-4b3d-b458-5a4538fcd46d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/contact_view.php" afterPath="$PROJECT_DIR$/application/views/contact_view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/contact_view_failure.php" afterPath="$PROJECT_DIR$/application/views/contact_view_failure.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/contact_view_success.php" afterPath="$PROJECT_DIR$/application/views/contact_view_success.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/libraries/Slug.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/fonts/texb.ttf" afterPath="$PROJECT_DIR$/system/fonts/texb.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/.htaccess" afterPath="$PROJECT_DIR$/system/.htaccess" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/libraries/Cache/Cache.php" afterPath="$PROJECT_DIR$/system/libraries/Cache/Cache.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/libraries/Cache/drivers/Cache_apc.php" afterPath="$PROJECT_DIR$/system/libraries/Cache/drivers/Cache_apc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/libraries/Cache/drivers/Cache_dummy.php" afterPath="$PROJECT_DIR$/system/libraries/Cache/drivers/Cache_dummy.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/libraries/Cache/drivers/Cache_file.php" afterPath="$PROJECT_DIR$/system/libraries/Cache/drivers/Cache_file.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/libraries/Cache/drivers/Cache_memcached.php" afterPath="$PROJECT_DIR$/system/libraries/Cache/drivers/Cache_memcached.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/libraries/Calendar.php" afterPath="$PROJECT_DIR$/system/libraries/Calendar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/libraries/Cart.php" afterPath="$PROJECT_DIR$/system/libraries/Cart.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/core/CodeIgniter.php" afterPath="$PROJECT_DIR$/system/core/CodeIgniter.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/core/Common.php" afterPath="$PROJECT_DIR$/system/core/Common.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/core/Controller.php" afterPath="$PROJECT_DIR$/system/core/Controller.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/DB_active_rec.php" afterPath="$PROJECT_DIR$/system/database/DB_active_rec.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/DB_cache.php" afterPath="$PROJECT_DIR$/system/database/DB_cache.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/DB_driver.php" afterPath="$PROJECT_DIR$/system/database/DB_driver.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/DB_forge.php" afterPath="$PROJECT_DIR$/system/database/DB_forge.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/DB_result.php" afterPath="$PROJECT_DIR$/system/database/DB_result.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/DB_utility.php" afterPath="$PROJECT_DIR$/system/database/DB_utility.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/libraries/Driver.php" afterPath="$PROJECT_DIR$/system/libraries/Driver.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/libraries/Email.php" afterPath="$PROJECT_DIR$/system/libraries/Email.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/libraries/Encrypt.php" afterPath="$PROJECT_DIR$/system/libraries/Encrypt.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/libraries/Form_validation.php" afterPath="$PROJECT_DIR$/system/libraries/Form_validation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/libraries/Ftp.php" afterPath="$PROJECT_DIR$/system/libraries/Ftp.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/libraries/Image_lib.php" afterPath="$PROJECT_DIR$/system/libraries/Image_lib.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/libraries/Javascript.php" afterPath="$PROJECT_DIR$/system/libraries/Javascript.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/libraries/javascript/Jquery.php" afterPath="$PROJECT_DIR$/system/libraries/javascript/Jquery.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/core/Loader.php" afterPath="$PROJECT_DIR$/system/core/Loader.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/libraries/Log.php" afterPath="$PROJECT_DIR$/system/libraries/Log.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/libraries/Migration.php" afterPath="$PROJECT_DIR$/system/libraries/Migration.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/libraries/Pagination.php" afterPath="$PROJECT_DIR$/system/libraries/Pagination.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/libraries/Parser.php" afterPath="$PROJECT_DIR$/system/libraries/Parser.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/libraries/Profiler.php" afterPath="$PROJECT_DIR$/system/libraries/Profiler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/core/Security.php" afterPath="$PROJECT_DIR$/system/core/Security.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/libraries/Session.php" afterPath="$PROJECT_DIR$/system/libraries/Session.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/libraries/Sha1.php" afterPath="$PROJECT_DIR$/system/libraries/Sha1.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/libraries/Table.php" afterPath="$PROJECT_DIR$/system/libraries/Table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/libraries/Trackback.php" afterPath="$PROJECT_DIR$/system/libraries/Trackback.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/libraries/Typography.php" afterPath="$PROJECT_DIR$/system/libraries/Typography.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/libraries/Unit_test.php" afterPath="$PROJECT_DIR$/system/libraries/Unit_test.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/libraries/Upload.php" afterPath="$PROJECT_DIR$/system/libraries/Upload.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/libraries/User_agent.php" afterPath="$PROJECT_DIR$/system/libraries/User_agent.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/core/Utf8.php" afterPath="$PROJECT_DIR$/system/core/Utf8.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/libraries/Xmlrpc.php" afterPath="$PROJECT_DIR$/system/libraries/Xmlrpc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/libraries/Xmlrpcs.php" afterPath="$PROJECT_DIR$/system/libraries/Xmlrpcs.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/libraries/Zip.php" afterPath="$PROJECT_DIR$/system/libraries/Zip.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/helpers/array_helper.php" afterPath="$PROJECT_DIR$/system/helpers/array_helper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/language/english/calendar_lang.php" afterPath="$PROJECT_DIR$/system/language/english/calendar_lang.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/helpers/captcha_helper.php" afterPath="$PROJECT_DIR$/system/helpers/captcha_helper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/helpers/cookie_helper.php" afterPath="$PROJECT_DIR$/system/helpers/cookie_helper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/crud_model_player.php" afterPath="$PROJECT_DIR$/application/models/crud_model_player.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/crud_model_title.php" afterPath="$PROJECT_DIR$/application/models/crud_model_title.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/crud_model_video.php" afterPath="$PROJECT_DIR$/application/models/crud_model_video.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/cubrid/cubrid_driver.php" afterPath="$PROJECT_DIR$/system/database/drivers/cubrid/cubrid_driver.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/cubrid/cubrid_forge.php" afterPath="$PROJECT_DIR$/system/database/drivers/cubrid/cubrid_forge.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/cubrid/cubrid_result.php" afterPath="$PROJECT_DIR$/system/database/drivers/cubrid/cubrid_result.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/cubrid/cubrid_utility.php" afterPath="$PROJECT_DIR$/system/database/drivers/cubrid/cubrid_utility.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/helpers/date_helper.php" afterPath="$PROJECT_DIR$/system/helpers/date_helper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/language/english/date_lang.php" afterPath="$PROJECT_DIR$/system/language/english/date_lang.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/language/english/db_lang.php" afterPath="$PROJECT_DIR$/system/language/english/db_lang.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/helpers/directory_helper.php" afterPath="$PROJECT_DIR$/system/helpers/directory_helper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/helpers/download_helper.php" afterPath="$PROJECT_DIR$/system/helpers/download_helper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/echipe.php" afterPath="$PROJECT_DIR$/application/views/echipe.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/helpers/email_helper.php" afterPath="$PROJECT_DIR$/system/helpers/email_helper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/language/english/email_lang.php" afterPath="$PROJECT_DIR$/system/language/english/email_lang.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/entity_details_admin.php" afterPath="$PROJECT_DIR$/application/views/entity_details_admin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/helpers/file_helper.php" afterPath="$PROJECT_DIR$/system/helpers/file_helper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/helpers/form_helper.php" afterPath="$PROJECT_DIR$/system/helpers/form_helper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/language/english/form_validation_lang.php" afterPath="$PROJECT_DIR$/system/language/english/form_validation_lang.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/language/english/ftp_lang.php" afterPath="$PROJECT_DIR$/system/language/english/ftp_lang.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/home.php" afterPath="$PROJECT_DIR$/application/controllers/home.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/helpers/html_helper.php" afterPath="$PROJECT_DIR$/system/helpers/html_helper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/language/english/imglib_lang.php" afterPath="$PROJECT_DIR$/system/language/english/imglib_lang.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/index.html" afterPath="$PROJECT_DIR$/system/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/core/index.html" afterPath="$PROJECT_DIR$/system/core/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/index.html" afterPath="$PROJECT_DIR$/system/database/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/index.html" afterPath="$PROJECT_DIR$/system/database/drivers/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/cubrid/index.html" afterPath="$PROJECT_DIR$/system/database/drivers/cubrid/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/mssql/index.html" afterPath="$PROJECT_DIR$/system/database/drivers/mssql/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/mysql/index.html" afterPath="$PROJECT_DIR$/system/database/drivers/mysql/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/mysqli/index.html" afterPath="$PROJECT_DIR$/system/database/drivers/mysqli/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/oci8/index.html" afterPath="$PROJECT_DIR$/system/database/drivers/oci8/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/odbc/index.html" afterPath="$PROJECT_DIR$/system/database/drivers/odbc/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/pdo/index.html" afterPath="$PROJECT_DIR$/system/database/drivers/pdo/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/postgre/index.html" afterPath="$PROJECT_DIR$/system/database/drivers/postgre/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/sqlite/index.html" afterPath="$PROJECT_DIR$/system/database/drivers/sqlite/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/sqlsrv/index.html" afterPath="$PROJECT_DIR$/system/database/drivers/sqlsrv/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/fonts/index.html" afterPath="$PROJECT_DIR$/system/fonts/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/helpers/index.html" afterPath="$PROJECT_DIR$/system/helpers/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/language/index.html" afterPath="$PROJECT_DIR$/system/language/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/language/english/index.html" afterPath="$PROJECT_DIR$/system/language/english/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/libraries/index.html" afterPath="$PROJECT_DIR$/system/libraries/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/helpers/inflector_helper.php" afterPath="$PROJECT_DIR$/system/helpers/inflector_helper.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/jucatori.php" afterPath="$PROJECT_DIR$/application/views/jucatori.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/helpers/language_helper.php" afterPath="$PROJECT_DIR$/system/helpers/language_helper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/language/english/migration_lang.php" afterPath="$PROJECT_DIR$/system/language/english/migration_lang.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/mssql/mssql_driver.php" afterPath="$PROJECT_DIR$/system/database/drivers/mssql/mssql_driver.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/mssql/mssql_forge.php" afterPath="$PROJECT_DIR$/system/database/drivers/mssql/mssql_forge.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/mssql/mssql_result.php" afterPath="$PROJECT_DIR$/system/database/drivers/mssql/mssql_result.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/mssql/mssql_utility.php" afterPath="$PROJECT_DIR$/system/database/drivers/mssql/mssql_utility.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/mysql/mysql_driver.php" afterPath="$PROJECT_DIR$/system/database/drivers/mysql/mysql_driver.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/mysql/mysql_forge.php" afterPath="$PROJECT_DIR$/system/database/drivers/mysql/mysql_forge.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/mysql/mysql_result.php" afterPath="$PROJECT_DIR$/system/database/drivers/mysql/mysql_result.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/mysql/mysql_utility.php" afterPath="$PROJECT_DIR$/system/database/drivers/mysql/mysql_utility.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/mysqli/mysqli_driver.php" afterPath="$PROJECT_DIR$/system/database/drivers/mysqli/mysqli_driver.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/mysqli/mysqli_forge.php" afterPath="$PROJECT_DIR$/system/database/drivers/mysqli/mysqli_forge.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/mysqli/mysqli_result.php" afterPath="$PROJECT_DIR$/system/database/drivers/mysqli/mysqli_result.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/mysqli/mysqli_utility.php" afterPath="$PROJECT_DIR$/system/database/drivers/mysqli/mysqli_utility.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/helpers/number_helper.php" afterPath="$PROJECT_DIR$/system/helpers/number_helper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/language/english/number_lang.php" afterPath="$PROJECT_DIR$/system/language/english/number_lang.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/oci8/oci8_driver.php" afterPath="$PROJECT_DIR$/system/database/drivers/oci8/oci8_driver.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/oci8/oci8_forge.php" afterPath="$PROJECT_DIR$/system/database/drivers/oci8/oci8_forge.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/oci8/oci8_result.php" afterPath="$PROJECT_DIR$/system/database/drivers/oci8/oci8_result.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/oci8/oci8_utility.php" afterPath="$PROJECT_DIR$/system/database/drivers/oci8/oci8_utility.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/odbc/odbc_driver.php" afterPath="$PROJECT_DIR$/system/database/drivers/odbc/odbc_driver.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/odbc/odbc_forge.php" afterPath="$PROJECT_DIR$/system/database/drivers/odbc/odbc_forge.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/odbc/odbc_result.php" afterPath="$PROJECT_DIR$/system/database/drivers/odbc/odbc_result.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/odbc/odbc_utility.php" afterPath="$PROJECT_DIR$/system/database/drivers/odbc/odbc_utility.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/helpers/path_helper.php" afterPath="$PROJECT_DIR$/system/helpers/path_helper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/pdo/pdo_driver.php" afterPath="$PROJECT_DIR$/system/database/drivers/pdo/pdo_driver.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/pdo/pdo_forge.php" afterPath="$PROJECT_DIR$/system/database/drivers/pdo/pdo_forge.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/pdo/pdo_result.php" afterPath="$PROJECT_DIR$/system/database/drivers/pdo/pdo_result.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/pdo/pdo_utility.php" afterPath="$PROJECT_DIR$/system/database/drivers/pdo/pdo_utility.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/player.php" afterPath="$PROJECT_DIR$/application/controllers/player.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/postgre/postgre_driver.php" afterPath="$PROJECT_DIR$/system/database/drivers/postgre/postgre_driver.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/postgre/postgre_forge.php" afterPath="$PROJECT_DIR$/system/database/drivers/postgre/postgre_forge.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/postgre/postgre_result.php" afterPath="$PROJECT_DIR$/system/database/drivers/postgre/postgre_result.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/postgre/postgre_utility.php" afterPath="$PROJECT_DIR$/system/database/drivers/postgre/postgre_utility.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/language/english/profiler_lang.php" afterPath="$PROJECT_DIR$/system/language/english/profiler_lang.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/protoss_jucatori.php" afterPath="$PROJECT_DIR$/application/views/protoss_jucatori.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/search_results.php" afterPath="$PROJECT_DIR$/application/views/search_results.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/search_results_team.php" afterPath="$PROJECT_DIR$/application/views/search_results_team.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/helpers/security_helper.php" afterPath="$PROJECT_DIR$/system/helpers/security_helper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/helpers/smiley_helper.php" afterPath="$PROJECT_DIR$/system/helpers/smiley_helper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/sqlite/sqlite_driver.php" afterPath="$PROJECT_DIR$/system/database/drivers/sqlite/sqlite_driver.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/sqlite/sqlite_forge.php" afterPath="$PROJECT_DIR$/system/database/drivers/sqlite/sqlite_forge.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/sqlite/sqlite_result.php" afterPath="$PROJECT_DIR$/system/database/drivers/sqlite/sqlite_result.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/sqlite/sqlite_utility.php" afterPath="$PROJECT_DIR$/system/database/drivers/sqlite/sqlite_utility.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/sqlsrv/sqlsrv_driver.php" afterPath="$PROJECT_DIR$/system/database/drivers/sqlsrv/sqlsrv_driver.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/sqlsrv/sqlsrv_forge.php" afterPath="$PROJECT_DIR$/system/database/drivers/sqlsrv/sqlsrv_forge.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/sqlsrv/sqlsrv_result.php" afterPath="$PROJECT_DIR$/system/database/drivers/sqlsrv/sqlsrv_result.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/sqlsrv/sqlsrv_utility.php" afterPath="$PROJECT_DIR$/system/database/drivers/sqlsrv/sqlsrv_utility.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/helpers/string_helper.php" afterPath="$PROJECT_DIR$/system/helpers/string_helper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/team.php" afterPath="$PROJECT_DIR$/application/controllers/team.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/terran_jucatori.php" afterPath="$PROJECT_DIR$/application/views/terran_jucatori.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/helpers/text_helper.php" afterPath="$PROJECT_DIR$/system/helpers/text_helper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/helpers/typography_helper.php" afterPath="$PROJECT_DIR$/system/helpers/typography_helper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/language/english/unit_test_lang.php" afterPath="$PROJECT_DIR$/system/language/english/unit_test_lang.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/language/english/upload_lang.php" afterPath="$PROJECT_DIR$/system/language/english/upload_lang.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/helpers/url_helper.php" afterPath="$PROJECT_DIR$/system/helpers/url_helper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/helpers/xml_helper.php" afterPath="$PROJECT_DIR$/system/helpers/xml_helper.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/zerg_jucatori.php" afterPath="$PROJECT_DIR$/application/views/zerg_jucatori.php" />
     </list>
     <ignored path="biografii_sc2.iws" />
@@ -73,46 +217,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="jucatori.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/views/jucatori.php">
+      <file leaf-file-name="entity_details_admin.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/entity_details_admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="22" selection-start="1892" selection-end="6108" vertical-scroll-proportion="0.3878628" vertical-offset="126" max-vertical-offset="1140">
-              <folding>
-                <element signature="tag#div#0;tag#div#1;tag#div#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="terran_jucatori.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/terran_jucatori.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="22" selection-start="5763" selection-end="5763" vertical-scroll-proportion="-2.1898735" vertical-offset="247" max-vertical-offset="1830">
-              <folding>
-                <element signature="tag#div#0;tag#div#1;tag#div#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="zerg_jucatori.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/zerg_jucatori.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="22" selection-start="5822" selection-end="5822" vertical-scroll-proportion="-2.949367" vertical-offset="187" max-vertical-offset="1890">
-              <folding>
-                <element signature="tag#div#0;tag#div#1;tag#div#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="protoss_jucatori.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/protoss_jucatori.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="22" selection-start="5754" selection-end="5754" vertical-scroll-proportion="-2.734177" vertical-offset="204" max-vertical-offset="1815">
-              <folding>
-                <element signature="tag#div#0;tag#div#1;tag#div#0" expanded="false" />
-              </folding>
+            <state line="135" column="19" selection-start="7749" selection-end="7749" vertical-scroll-proportion="0.4264524" vertical-offset="1680" max-vertical-offset="4500">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -140,7 +249,6 @@
         <option value="$PROJECT_DIR$/application/views/terran_jucatori_ro.php" />
         <option value="$PROJECT_DIR$/application/views/protoss_jucatori_ro.php" />
         <option value="$PROJECT_DIR$/application/views/detalii_echipa.php" />
-        <option value="$PROJECT_DIR$/application/views/echipe.php" />
         <option value="$PROJECT_DIR$/css/styles.css" />
         <option value="$PROJECT_DIR$/application/views/jucatori_ro.php" />
         <option value="$PROJECT_DIR$/application/controllers/search.php" />
@@ -152,15 +260,25 @@
         <option value="$PROJECT_DIR$/application/views/no_database_results_team.php" />
         <option value="$PROJECT_DIR$/application/controllers/contact.php" />
         <option value="$PROJECT_DIR$/application/views/prepare_update_player.php" />
-        <option value="$PROJECT_DIR$/application/controllers/player.php" />
         <option value="$PROJECT_DIR$/application/views/contact_view.php" />
-        <option value="$PROJECT_DIR$/application/views/jucatori.php" />
         <option value="$PROJECT_DIR$/application/views/search_results.php" />
-        <option value="$PROJECT_DIR$/application/views/terran_jucatori.php" />
-        <option value="$PROJECT_DIR$/application/views/zerg_jucatori.php" />
-        <option value="$PROJECT_DIR$/application/views/protoss_jucatori.php" />
         <option value="$PROJECT_DIR$/application/views/contact_view_failure.php" />
         <option value="$PROJECT_DIR$/application/views/contact_view_success.php" />
+        <option value="$PROJECT_DIR$/system/helpers/custom/upload_config_helper.php" />
+        <option value="$PROJECT_DIR$/system/libraries/Upload.php" />
+        <option value="$PROJECT_DIR$/application/controllers/player.php" />
+        <option value="$PROJECT_DIR$/application/views/jucatori.php" />
+        <option value="$PROJECT_DIR$/application/views/protoss_jucatori.php" />
+        <option value="$PROJECT_DIR$/application/views/terran_jucatori.php" />
+        <option value="$PROJECT_DIR$/application/views/zerg_jucatori.php" />
+        <option value="$PROJECT_DIR$/application/views/echipe.php" />
+        <option value="$PROJECT_DIR$/application/views/search_results_team.php" />
+        <option value="$PROJECT_DIR$/application/models/crud_model_player.php" />
+        <option value="$PROJECT_DIR$/application/models/crud_model_title.php" />
+        <option value="$PROJECT_DIR$/application/models/crud_model_video.php" />
+        <option value="$PROJECT_DIR$/application/controllers/team.php" />
+        <option value="$PROJECT_DIR$/application/controllers/home.php" />
+        <option value="$PROJECT_DIR$/application/views/entity_details_admin.php" />
       </list>
     </option>
   </component>
@@ -168,7 +286,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
     <option name="width" value="1680" />
-    <option name="height" value="955" />
+    <option name="height" value="953" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -260,6 +378,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="biografii_sc2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="biografii_sc2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -284,6 +420,7 @@
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../philologicabanatica" />
   </component>
   <component name="RunManager" selected="PHP Script.zerg_jucatori_ro.php">
     <configuration default="false" name="zerg_jucatori_ro.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/application/views/zerg_jucatori_ro.php">
@@ -342,7 +479,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1680" height="955" extended-state="6" />
+    <frame x="0" y="22" width="1680" height="953" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -350,7 +487,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25824177" sideWeight="0.6705539" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2789988" sideWeight="0.6705539" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32944608" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -395,159 +532,39 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/views/no_database_results.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="83" selection-start="1413" selection-end="1413" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1740">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/search_results.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="83" selection-start="1376" selection-end="1376" vertical-scroll-proportion="0.0" vertical-offset="1167" max-vertical-offset="1965">
-          <folding>
-            <element signature="tag#div#0;tag#div#1;tag#div#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/contact.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="28" selection-start="1356" selection-end="1356" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="1005">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/player.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="279" column="20" selection-start="10865" selection-end="10873" vertical-scroll-proportion="0.0" vertical-offset="4185" max-vertical-offset="5460">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/no_database_results_team.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="35" selection-start="888" selection-end="888" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="885">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/no_database_results.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="83" selection-start="1413" selection-end="1413" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1740">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/search_results.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="83" selection-start="1376" selection-end="1376" vertical-scroll-proportion="0.0" vertical-offset="1167" max-vertical-offset="1965">
-          <folding>
-            <element signature="tag#div#0;tag#div#1;tag#div#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/contact.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="22" selection-start="1977" selection-end="1977" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1005">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/player.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="279" column="20" selection-start="10865" selection-end="10873" vertical-scroll-proportion="0.0" vertical-offset="3924" max-vertical-offset="5460">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/no_database_results_team.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="35" selection-start="888" selection-end="888" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="885">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/no_database_results.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="83" selection-start="3108" selection-end="3108" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2055">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/search_results.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="83" selection-start="3071" selection-end="3071" vertical-scroll-proportion="0.0" vertical-offset="585" max-vertical-offset="2280">
-          <folding>
-            <element signature="tag#div#0;tag#div#1;tag#div#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/no_database_results_team.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="18" selection-start="1712" selection-end="1712" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="1185">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/contact.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="0" selection-start="1685" selection-end="1685" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1035">
-          <folding />
-        </state>
+        <state line="48" column="0" selection-start="1685" selection-end="1685" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1035" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/contact_view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="75" selection-start="5956" selection-end="5971" vertical-scroll-proportion="0.0" vertical-offset="1470" max-vertical-offset="2295">
-          <folding />
-        </state>
+        <state line="98" column="75" selection-start="5956" selection-end="5971" vertical-scroll-proportion="0.0" vertical-offset="1470" max-vertical-offset="2295" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/contact_view_success.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="31" selection-start="5275" selection-end="6095" vertical-scroll-proportion="0.0" vertical-offset="1470" max-vertical-offset="1590">
-          <folding>
-            <element signature="tag#div#0;tag#div#1;tag#div#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="98" column="31" selection-start="5275" selection-end="6095" vertical-scroll-proportion="0.0" vertical-offset="1470" max-vertical-offset="1590" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/contact_view_failure.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="49" selection-start="5344" selection-end="5344" vertical-scroll-proportion="0.0" vertical-offset="1365" max-vertical-offset="1590">
-          <folding>
-            <element signature="tag#div#0;tag#div#1;tag#div#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="91" column="49" selection-start="5344" selection-end="5344" vertical-scroll-proportion="0.0" vertical-offset="1365" max-vertical-offset="1590" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="496" column="16" selection-start="7529" selection-end="7529" vertical-scroll-proportion="0.0" vertical-offset="7440" max-vertical-offset="7845">
-          <folding />
-        </state>
+        <state line="496" column="16" selection-start="7529" selection-end="7529" vertical-scroll-proportion="0.0" vertical-offset="7440" max-vertical-offset="7845" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/jucatori.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="64" selection-start="6142" selection-end="6142" vertical-scroll-proportion="0.0" vertical-offset="1215" max-vertical-offset="2295">
-          <folding>
-            <element signature="tag#div#0;tag#div#1;tag#div#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="81" column="64" selection-start="6142" selection-end="6142" vertical-scroll-proportion="0.0" vertical-offset="1215" max-vertical-offset="2295" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/detalii_echipa.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="38" column="77" selection-start="2956" selection-end="2956" vertical-scroll-proportion="0.7004831" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/echipe.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="75" selection-start="3100" selection-end="3100" vertical-scroll-proportion="0.7246377" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/header.php">
@@ -560,16 +577,9 @@
         <state line="160" column="71" selection-start="10041" selection-end="10041" vertical-scroll-proportion="0.62801933" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="120" selection-start="2089" selection-end="2094" vertical-scroll-proportion="0.33226836" vertical-offset="617" max-vertical-offset="6000" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="496" column="16" selection-start="7529" selection-end="7529" vertical-scroll-proportion="0.427157" vertical-offset="7138" max-vertical-offset="7845">
-          <folding />
-        </state>
+        <state line="496" column="16" selection-start="7529" selection-end="7529" vertical-scroll-proportion="0.427157" vertical-offset="7138" max-vertical-offset="7845" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/system/.htaccess">
@@ -577,135 +587,243 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="707" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/system/helpers/custom/prevent_back_browser_helper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="1" selection-start="333" selection-end="333" vertical-scroll-proportion="0.17569546" vertical-offset="0" max-vertical-offset="683" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="1" selection-start="1006" selection-end="1006" vertical-scroll-proportion="0.57101023" vertical-offset="0" max-vertical-offset="915" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/config/database.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="50" column="38" selection-start="2627" selection-end="2627" vertical-scroll-proportion="0.5080527" vertical-offset="403" max-vertical-offset="1110" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="46" selection-start="525" selection-end="525" vertical-scroll-proportion="0.35139093" vertical-offset="0" max-vertical-offset="5520" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/no_database_results.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="83" selection-start="1413" selection-end="1413" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="1740">
-          <folding />
-        </state>
+        <state line="20" column="83" selection-start="1413" selection-end="1413" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="1740" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/contact.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="28" selection-start="1356" selection-end="1356" vertical-scroll-proportion="0.43125" vertical-offset="150" max-vertical-offset="1005">
-          <folding />
-        </state>
+        <state line="33" column="28" selection-start="1356" selection-end="1356" vertical-scroll-proportion="0.43125" vertical-offset="150" max-vertical-offset="1005" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/prepare_update_player.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="64" selection-start="4898" selection-end="4916" vertical-scroll-proportion="0.76875" vertical-offset="630" max-vertical-offset="2250">
-          <folding />
-        </state>
+        <state line="83" column="64" selection-start="4898" selection-end="4916" vertical-scroll-proportion="0.76875" vertical-offset="630" max-vertical-offset="2250" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/no_database_results_team.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="35" selection-start="888" selection-end="888" vertical-scroll-proportion="0.16974169" vertical-offset="72" max-vertical-offset="885">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/player.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="192" column="31" selection-start="7210" selection-end="7210" vertical-scroll-proportion="0.31385008" vertical-offset="2633" max-vertical-offset="5460">
-          <folding />
-        </state>
+        <state line="14" column="35" selection-start="888" selection-end="888" vertical-scroll-proportion="0.16974169" vertical-offset="72" max-vertical-offset="885" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/search.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="0" selection-start="2076" selection-end="2076" vertical-scroll-proportion="0.4125" vertical-offset="570" max-vertical-offset="4515">
+        <state line="60" column="0" selection-start="2076" selection-end="2076" vertical-scroll-proportion="0.4125" vertical-offset="570" max-vertical-offset="4515" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/contact_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="171" selection-start="3684" selection-end="3684" vertical-scroll-proportion="0.69375" vertical-offset="360" max-vertical-offset="2205" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/contact_view_failure.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="85" column="14" selection-start="5270" selection-end="5270" vertical-scroll-proportion="0.5904059" vertical-offset="0" max-vertical-offset="813" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/contact_view_success.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="37" selection-start="796" selection-end="796" vertical-scroll-proportion="0.2625" vertical-offset="0" max-vertical-offset="800" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/search_results.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="22" selection-start="5736" selection-end="5736" vertical-scroll-proportion="0.43" vertical-offset="76" max-vertical-offset="1125" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="1" selection-start="1006" selection-end="1006" vertical-scroll-proportion="0.4808878" vertical-offset="0" max-vertical-offset="900" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/autoload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.407911" vertical-offset="330" max-vertical-offset="1815" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/login_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="833" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="13" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="833">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="285" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/helpers/array_helper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1860" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/crud_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="206" column="35" selection-start="6334" selection-end="6343" vertical-scroll-proportion="0.43506494" vertical-offset="2755" max-vertical-offset="3525" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="46" selection-start="525" selection-end="525" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="5520" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/mimes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="44" selection-start="3318" selection-end="3321" vertical-scroll-proportion="0.0" vertical-offset="1095" max-vertical-offset="1680">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="833" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/core/CodeIgniter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="31" selection-start="849" selection-end="850" vertical-scroll-proportion="0.33333334" vertical-offset="264" max-vertical-offset="6105" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/libraries/Upload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1095" column="0" selection-start="26583" selection-end="26583" vertical-scroll-proportion="0.099616855" vertical-offset="16347" max-vertical-offset="17130" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/search_results_team.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="45" selection-start="3722" selection-end="3722" vertical-scroll-proportion="0.7179819" vertical-offset="255" max-vertical-offset="1065">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/echipe.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="86" column="37" selection-start="7735" selection-end="7735" vertical-scroll-proportion="0.96119016" vertical-offset="547" max-vertical-offset="1515">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/jucatori.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="84" column="51" selection-start="6267" selection-end="6267" vertical-scroll-proportion="0.4535176" vertical-offset="899" max-vertical-offset="1890">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/zerg_jucatori.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="137" column="36" selection-start="11620" selection-end="11620" vertical-scroll-proportion="0.32160804" vertical-offset="1799" max-vertical-offset="2595">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/terran_jucatori.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="22" selection-start="5763" selection-end="5763" vertical-scroll-proportion="-2.1898735" vertical-offset="247" max-vertical-offset="1830">
-          <folding>
-            <element signature="tag#div#0;tag#div#1;tag#div#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/zerg_jucatori.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="22" selection-start="5822" selection-end="5822" vertical-scroll-proportion="-2.949367" vertical-offset="187" max-vertical-offset="1890">
-          <folding>
-            <element signature="tag#div#0;tag#div#1;tag#div#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/contact_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="171" selection-start="3684" selection-end="3684" vertical-scroll-proportion="0.69375" vertical-offset="360" max-vertical-offset="2205">
+        <state line="137" column="36" selection-start="11617" selection-end="11617" vertical-scroll-proportion="0.48115578" vertical-offset="1672" max-vertical-offset="2535">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/contact_view_failure.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="14" selection-start="5270" selection-end="5270" vertical-scroll-proportion="0.5904059" vertical-offset="0" max-vertical-offset="813">
-          <folding>
-            <element signature="tag#div#0;tag#div#1;tag#div#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/contact_view_success.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="37" selection-start="796" selection-end="796" vertical-scroll-proportion="0.2625" vertical-offset="0" max-vertical-offset="800">
-          <folding>
-            <element signature="tag#div#0;tag#div#1;tag#div#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/protoss_jucatori.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="22" selection-start="5754" selection-end="5754" vertical-scroll-proportion="-2.734177" vertical-offset="204" max-vertical-offset="1815">
-          <folding>
-            <element signature="tag#div#0;tag#div#1;tag#div#0" expanded="false" />
-          </folding>
+        <state line="138" column="36" selection-start="11671" selection-end="11671" vertical-scroll-proportion="0.43467337" vertical-offset="1724" max-vertical-offset="2520">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/search_results.php">
+    <entry file="file://$PROJECT_DIR$/application/controllers/main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="22" selection-start="5736" selection-end="5736" vertical-scroll-proportion="0.43" vertical-offset="76" max-vertical-offset="1125">
-          <folding>
-            <element signature="tag#div#0;tag#div#1;tag#div#0" expanded="false" />
-          </folding>
+        <state line="95" column="51" selection-start="3818" selection-end="3818" vertical-scroll-proportion="0.5477387" vertical-offset="989" max-vertical-offset="4005">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/jucatori.php">
+    <entry file="file://$PROJECT_DIR$/application/controllers/player.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="22" selection-start="1892" selection-end="6108" vertical-scroll-proportion="0.3878628" vertical-offset="126" max-vertical-offset="1140">
-          <folding>
-            <element signature="tag#div#0;tag#div#1;tag#div#0" expanded="false" />
-          </folding>
+        <state line="306" column="37" selection-start="12034" selection-end="12034" vertical-scroll-proportion="0.3908046" vertical-offset="4284" max-vertical-offset="5505">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/crud_model_team.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="11" selection-start="2026" selection-end="2027" vertical-scroll-proportion="0.33246753" vertical-offset="629" max-vertical-offset="1605">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/team.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="51" selection-start="800" selection-end="805" vertical-scroll-proportion="0.49019608" vertical-offset="0" max-vertical-offset="5040">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/crud_model_video.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="180" selection-start="457" selection-end="457" vertical-scroll-proportion="0.27272728" vertical-offset="0" max-vertical-offset="1590">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/crud_model_title.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="157" selection-start="566" selection-end="566" vertical-scroll-proportion="0.37012988" vertical-offset="0" max-vertical-offset="1830">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/title.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="149" column="75" selection-start="5100" selection-end="5119" vertical-scroll-proportion="2.854406" vertical-offset="0" max-vertical-offset="3375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/video.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="158" column="75" selection-start="5138" selection-end="5157" vertical-scroll-proportion="0.7356322" vertical-offset="1794" max-vertical-offset="3615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/crud_model_player.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="99" column="151" selection-start="3755" selection-end="3755" vertical-scroll-proportion="0.3909091" vertical-offset="1184" max-vertical-offset="2865">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.22249691" vertical-offset="180" max-vertical-offset="1050">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="47" selection-start="2028" selection-end="2028" vertical-scroll-proportion="0.6231156" vertical-offset="194" max-vertical-offset="1020">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/entity_details_admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="135" column="19" selection-start="7749" selection-end="7749" vertical-scroll-proportion="0.4264524" vertical-offset="1680" max-vertical-offset="4500">
+          <folding />
         </state>
       </provider>
     </entry>

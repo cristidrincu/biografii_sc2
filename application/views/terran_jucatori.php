@@ -136,9 +136,6 @@
                                <div class="span3 playerContainerSmall">
                                 <h4><?php echo $terran->nickname; ?></h4>
                                 <ul>
-                                  <li><p>Nickname: <?php echo $terran->name; ?></p></li>
-                                  <li><p>Data nașterii: <?php echo $terran->DOB; ?></p></li>
-                                  <li><p>Țara de origine: <?php echo $terran->country; ?></p></li>
                                   <li><p>Rasa: <?php echo $terran->race; ?></p></li>
                                   <li><p>Echipa: <?php echo $terran->team;?></p></li>
                                 </ul>
@@ -151,9 +148,6 @@
                                     <div class="span3 playerContainerSmall">
                                         <h4><?php echo $terran->nickname; ?></h4>
                                         <ul>
-                                            <li><p>Nickname: <?php echo $terran->name; ?></p></li>
-                                            <li><p>Data nașterii: <?php echo $terran->DOB; ?></p></li>
-                                            <li><p>Țara de origine: <?php echo $terran->country; ?></p></li>
                                             <li><p>Rasa: <?php echo $terran->race; ?></p></li>
                                             <li><p>Echipa: <?php echo $terran->team;?></p></li>
                                         </ul>

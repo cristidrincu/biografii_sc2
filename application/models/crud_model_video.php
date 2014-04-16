@@ -11,24 +11,12 @@ class Crud_model_video extends CI_Model{
 		return $total_rows;
 	}
 
-    public function countRowsVideoRO(){
-        $total_rows=$this->db->count_all('PLAYER_VIDEOS_ROMAN');
-        return $total_rows;
-    }
-
 	public function extractVideoDetails($results_per_page, $offset){
-		$this->db->distinct('video_id, nickname, video_title, video_link')->from('PLAYER_VIDEOS V')->join('PLAYER P', 'V.player_video_id=P.player_ID')->order_by('nickname', 'ASC')->limit($results_per_page,$offset);
+		$this->db->distinct('video_id, nickname, video_title, video_link')->from('PLAYER_VIDEOS V')->join('PLAYER P', 'V.player_video_id=P.player_ID')->order_by('created_at', 'DESC')->limit($results_per_page,$offset);
 		$query=$this->db->get();
 		$result=$query->result();
 		return $result;
 	}
-
-    public function extractVideoDetailsRO($results_per_page, $offset){
-        $this->db->distinct('video_id, nickname, video_title, video_link')->from('PLAYER_VIDEOS_ROMAN V')->join('PLAYER_ROMAN P', 'V.player_video_id=P.player_ID')->order_by('nickname', 'ASC')->limit($results_per_page,$offset);
-        $query=$this->db->get();
-        $result=$query->result();
-        return $result;
-    }
 
 	public function extractVideoDetailsID($video_ID){
 		$this->db->select('video_id, video_title, video_link')->from('PLAYER_VIDEOS PV')->where(array('PV.video_id'=>$video_ID));
@@ -36,13 +24,6 @@ class Crud_model_video extends CI_Model{
 		$result=$query->result();
 		return $result;
 	}
-
-    public function extractVideoDetailsIDRO($video_ID){
-        $this->db->select('video_id, video_title, video_link')->from('PLAYER_VIDEOS_ROMAN PV')->where(array('PV.video_id'=>$video_ID));
-        $query=$this->db->get();
-        $result=$query->result();
-        return $result;
-    }
 
 	public function extractVideoID($video_id){
 		

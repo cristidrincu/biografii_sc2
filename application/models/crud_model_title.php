@@ -17,18 +17,11 @@ class Crud_model_title extends CI_Model{
     }
 
 	public function extractTitleDetails($results_per_page, $offset){
-		$this->db->select('ID, nickname, title_name, title_date')->from('TITLE T')->join('PLAYER P', 'T.player_id=P.player_ID')->order_by('nickname', 'ASC')->limit($results_per_page,$offset);// to retrieve just the 1st 10 results
+		$this->db->select('ID, nickname, title_name, title_date')->from('TITLE T')->join('PLAYER P', 'T.player_id=P.player_ID')->order_by('created_at', 'DESC')->limit($results_per_page,$offset);// to retrieve just the 1st 10 results
 		$query=$this->db->get();
 		$result=$query->result();
 		return $result;		
 	}
-
-    public function extractTitleDetailsRO($results_per_page, $offset){
-        $this->db->select('ID, nickname, title_name, title_date')->from('TITLE_JUCATOR_ROMAN T')->join('PLAYER_ROMAN P', 'T.player_id=P.player_ID')->order_by('nickname', 'ASC')->limit($results_per_page,$offset);// to retrieve just the 1st 10 results
-        $query=$this->db->get();
-        $result=$query->result();
-        return $result;
-    }
 
 	public function extractTitleDetailsID($title_id){
 		$this->db->select('ID, title_name, title_date')->from('TITLE')->where('ID', $title_id);

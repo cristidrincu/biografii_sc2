@@ -104,9 +104,6 @@
                             <div class="span3 playerContainerSmall">
                                 <h4><?php echo $player->nickname;?></h4>
                                 <ul>
-                                    <li><p>Nickname: <?php echo $player->name; ?></p></li>
-                                    <li><p>Data nașterii: <?php echo $player->DOB; ?></p></li>
-                                    <li><p>Țara de origine: <?php echo $player->country; ?></p></li>
                                     <li><p>Rasa: <?php echo $player->race; ?></p></li>
                                     <li><p>Echipa: <?php echo $player->team; ?></p></li>
                                 </ul>

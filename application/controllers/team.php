@@ -7,6 +7,9 @@ class Team extends CI_Controller{
 	public $page_title=null;
 	public $image_path=null;
 	public $image_path_thumb=null;
+    public $upload_info_inserted = null;
+    public $error_upload = null;
+    public $currentTeamLogoFromDB = null;
 
 	//array member used to store parameters for CRUD operations on the Team Entity
 	public $parameters_crud=array();
@@ -190,41 +193,61 @@ class Team extends CI_Controller{
 		$this->loadEntityDetails($data);
 	}
 
+    public function upload_images(){
+        //prepare upload config
+        $config['upload_path'] = './uploads/';
+        $config['allowed_types'] = 'gif|jpg|png';
+        $config['max_size']	= '5000';
+        $config['max_width'] = '1920';
+        $config['max_height'] = '2500';
+        $config['remove_spaces'] = TRUE;
+
+        //the "teamLogoUpload" parameter is the name of the upload input field. Usage of $this->input->post('player_image') DOES NOT WORK
+        //ALSO CHECK FOR FOLDER PERMISSIONS IN ./uploads/players - if the folder is not writable, you will get an error
+        $selected_image = "teamLogoUpload";
+
+        $this->load->library('upload', $config);
+
+        if ( ! $this->upload->do_upload($selected_image))
+        {
+            $this->error_upload = array('error' => $this->upload->display_errors());
+            return false;
+        }else{
+            return true;
+        }
+
+    }
+
 	public function update_team($team_id){
 
 		$this->team_id=$this->crud_model_team->extractTeamIDName($team_id);
+        $this->image_path = "./uploads/";
 
-		//prepare upload config
-		$config['upload_path'] = './uploads/';
-		$config['allowed_types'] = 'gif|jpg|png';
-		$config['max_size']	= '5000';
-		$config['max_width'] = '1920';
-		$config['max_height'] = '1500';
-		$config['remove_spaces'] = TRUE;
+        //helper function containing all configuration parameters for upload of images concerning the player entity
+        if($this->upload_images()){
+            $this->upload_info_inserted = array('upload_data' => $this->upload->data());
+        }
 
-		$this->load->library('upload', $config);
+        //if current team logo is empty, take the new file that is being uploaded - this case is for the teams where a bug prevented the upload of a team logo
+        if(empty($_POST['team_logo_current'])){
+            $this->currentTeamLogoFromDB = $_FILES['teamLogoUpload']['name'];
+        }
 
 		//if the upload field is empty, populate it with the current image in the database for the team that is being updated
-		if(empty($_FILES['teamLogoUpload']['name'])){
-			$this->setImagePathThumb($this->input->post('team_logo_current'));
+		if(!empty($_FILES['teamLogoUpload']['name'])){
+            if(!empty($_POST['team_logo_current'])){
+                if($_FILES['teamLogoUpload']['name'] == $_POST['team_logo_current']){
+                    $this->currentTeamLogoFromDB = $_FILES['teamLogoUpload']['name'];
+                }else{
+                    unlink($this->image_path . $_POST['team_logo_current']); //delete the current file from the server
+                    $this->currentTeamLogoFromDB = $_FILES['teamLogoUpload']['name'];
+                }
+            }
 		}else{
-			$this->upload->do_upload('teamLogoUpload');
-			$data_info_inserted['upload_data']=$this->upload->data();
+            $this->currentTeamLogoFromDB = $_POST['team_logo_current'];
+        }
 
-			//get the full path of the image being uploaded - will be used in creating a thumbnail
-			$this->image_path=$data_info_inserted['upload_data']['full_path'];
-			//the create_thumbs function will automatically append a _thumb.jpg|png|gif to the image in question
-			$this->create_thumbs($this->image_path);
-			//get the raw name of the image, without the .jpg,.png extension - append the _thumb to the file name - this filename will be inserted in the database
-			$this->setImagePathThumb($data_info_inserted['upload_data']['raw_name'].'_thumb'.$data_info_inserted['upload_data']['file_ext']);
-		}
-
-		$this->upload->initialize($config);
-
-		//assign the getImagePathThumb return value to a variable
-		$team_logo=$this->getImagePathThumb();
-
-		$this->crud_model_team->updateTeam($this->team_id, $this->parameters_crud, $team_logo);
+		$this->crud_model_team->updateTeam($this->team_id, $this->parameters_crud, $this->currentTeamLogoFromDB);
 		
 		redirect('team/read_team');
 	}

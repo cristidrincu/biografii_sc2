@@ -228,14 +228,17 @@ class Player extends CI_Controller{
 
         if( !empty($_FILES['player_image']['name']) ){
             if( !empty( $_POST['player_image_current']) ){
-                unlink($this->image_path . $_POST['player_image_current']); //delete the current file from the server
+                if($_FILES['player_image']['name'] == $_POST['player_image_current']){
+                    $this->currentPlayerImageFromDB = $_FILES['player_image']['name'];
+                    unlink($this->image_path . $_POST['player_image_current']); //delete the current file from the server
+                }else{
+                    unlink($this->image_path . $_POST['player_image_current']); //delete the current file from the server
+                    $this->currentPlayerImageFromDB = $_FILES['player_image']['name'];
+                }
             }
-
-            $this->currentPlayerImageFromDB = $_FILES['player_image']['name'];
         }else{
             $this->currentPlayerImageFromDB = $_POST['player_image_current'];
         }
-
 
         $this->crud_model_player->updatePlayer($this->player_id, $this->getPlayerTeamID(), $this->parameters_crud, $this->currentPlayerImageFromDB);
         redirect('player/read_player');

@@ -97,18 +97,11 @@ class Crud_model_player extends CI_Model{
 
 	//this method will display the team name stored in the TEAM table
 	public function extractPlayerTeamName($results_per_page, $offset){
-		$this->db->select()->from('TEAM T')->join('PLAYER P', 'T.ID=P.player_team_id')->limit($results_per_page, $offset);
+		$this->db->select()->from('TEAM T')->join('PLAYER P', 'T.ID=P.player_team_id')->limit($results_per_page, $offset)->order_by('created_at', 'DESC');
 		$query=$this->db->get();
 		$result=$query->result();
 		return $result;
 	}
-
-    public function extractPlayerTeamNameRO($results_per_page, $offset){
-        $this->db->select()->from('TEAM T')->join('PLAYER_ROMAN P', 'T.ID=P.player_team_id')->limit($results_per_page, $offset);
-        $query=$this->db->get();
-        $result=$query->result();
-        return $result;
-    }
 
 	public function extractPlayerTeamID($player_id){
 		$query = $this->db->get_where('PLAYER P', array('P.player_ID'=>$player_id));
@@ -177,24 +170,6 @@ class Crud_model_player extends CI_Model{
 		$this->db->where('player_ID', $player_id);
 		$this->db->update('PLAYER', $update_data);
 	}
-
-    public function updatePlayerRO($player_id, $player_team_id, $parameters, $image_path){
-        $update_data=array(
-            'player_team_id'=>$player_team_id,
-            'name'=>$parameters['player_name'],
-            'nickname'=>$parameters['player_nickname'],
-            'DOB'=>$parameters['player_dob'],
-            'country'=>$parameters['player_country'],
-            'race'=>$parameters['player_race'],
-            'team'=>$parameters['player_team'],
-            'winnings'=>$parameters['player_winnings'],
-            'description'=>$parameters['player_description'],
-            'player_image'=>$image_path,
-            'player_keywords'=>$parameters['player_keywords']
-        );
-        $this->db->where('player_ID', $player_id);
-        $this->db->update('PLAYER_ROMAN', $update_data);
-    }
 
 	public function deletePlayer($player_id){
 		if($this->db->delete('PLAYER', array('player_ID'=>$player_id))){
