@@ -99,7 +99,7 @@
                         <br class="clearFloats"/>
                     </div><!--ends sectionDescription--> 
                     <div class="latestPlayersAddedContainer">
-                        <h3 class="titluLatestPlayersAdded">Ultimii jucători adăugaţi</h3>
+                        <h3 class="titluLatestPlayersAdded">Va invitam sa accesati sectiunile din stanga pentru a vedea toti jucatorii unei anumite rase</h3>
                         <?php foreach($data_latest_players as $player): ?>
                             <div class="span3 playerContainerSmall">
                                 <h4><?php echo $player->nickname;?></h4>

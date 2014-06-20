@@ -24,9 +24,15 @@ class M_all_entities extends CI_Model{
 
 	//get the latest 6 player entries based on the timestamp field in the database
 	public function getLatestPlayers(){
-		$this->db->select('player_ID, name, nickname, DOB, country, race, team');
-		$this->db->order_by('nickname','asc');
-		$query = $this->db->get_where('PLAYER', 'created_at BETWEEN SUBDATE(CURDATE(), INTERVAL 1 MONTH) AND NOW()', 12);//limit to 12 players only
+//		$this->db->select('player_ID, name, nickname, DOB, country, race, team');
+//		$this->db->order_by('nickname','asc');
+		$query = $this->db->query(
+        '(SELECT player_ID, name, nickname, DOB, country, race, team FROM PLAYER WHERE race="Terran" LIMIT 0, 8)
+		UNION
+		(SELECT player_ID, name, nickname, DOB, country, race, team FROM PLAYER WHERE race="Zerg" LIMIT 0, 8)
+		UNION
+		(SELECT player_ID, name, nickname, DOB, country, race, team FROM PLAYER WHERE race="Protoss" LIMIT 0, 4)'
+        );
 		return $query->result();
 	}
 

@@ -56,7 +56,5 @@ class Contact extends CI_Controller {
         }else{
             redirect('contact/error_page');
         }
-
-
     }
 }

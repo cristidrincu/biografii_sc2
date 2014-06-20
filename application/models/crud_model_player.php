@@ -14,26 +14,12 @@ class Crud_model_player extends CI_Model{
 		return $total_rows;
 	}
 
-    //db method for romanian players
-    public function countRowsPlayerRO(){
-        $total_rows=$this->db->count_all('PLAYER_ROMAN');
-        return $total_rows;
-    }
-
 	public function extractPlayerName(){
 		$this->db->select('nickname')->from('PLAYER')->order_by('nickname', 'ASC');
 		$query = $this->db->get();
 		$result = $query->result();
 		return $result;
 	}
-
-    //db method for romanian players
-    public function extractPlayerNameRO(){
-        $this->db->select('nickname')->from('PLAYER_ROMAN')->order_by('nickname', 'ASC');
-        $query = $this->db->get();
-        $result = $query->result();
-        return $result;
-    }
 
 	public function extractPlayerID($player_id){
 		$query=$this->db->get_where('PLAYER P', array('P.player_ID'=>$player_id));
@@ -42,28 +28,12 @@ class Crud_model_player extends CI_Model{
 		}
 	}
 
-    //db method for romanian players
-    public function extractPlayerIDRO($player_id){
-        $query=$this->db->get_where('PLAYER_ROMAN P', array('P.player_ID'=>$player_id));
-        foreach($query->result() as $row){
-            return $row->player_ID;
-        }
-    }
-
 	public function extractPlayerIDNickname($player_nickname){
 		$query=$this->db->get_where('PLAYER P', array('P.nickname'=>$player_nickname));
 		foreach($query->result() as $row){
 			return $row->player_ID;
 		}
 	}
-
-    //db method for romanian players
-    public function extractPlayerIDNicknameRO($player_nickname){
-        $query=$this->db->get_where('PLAYER_ROMAN P', array('P.nickname'=>$player_nickname));
-        foreach($query->result() as $row){
-            return $row->player_ID;
-        }
-    }
 
 	//general method for displaying all players in the database
 	public function extractPlayerDetails(){
@@ -73,13 +43,6 @@ class Crud_model_player extends CI_Model{
 		return $result;
 	}
 
-    public function extractPlayerDetailsRO(){
-        $this->db->select('player_ID, nickname, name, DOB, country, race, team_name, winnings')->from('PLAYER_ROMAN P')->JOIN('TEAM T', 'P.player_team_id=T.ID')->order_by('nickname', 'ASC');
-        $query=$this->db->get();
-        $result=$query->result();
-        return $result;
-    }
-
 	//method for obtaining information from a player based on his ID
 	public function extractPlayerDetailsID($player_id){
 		$this->db->select('player_ID, nickname, name, DOB, country, race, team_name, winnings, description, player_image, player_keywords')->from('PLAYER P')->join('TEAM T', 'P.player_team_id=T.ID')->where('P.player_ID',$player_id);
@@ -87,13 +50,6 @@ class Crud_model_player extends CI_Model{
 		$result=$query->result();
 		return $result;
 	}
-
-    public function extractPlayerDetailsIDRO($player_id){
-        $this->db->select('player_ID, nickname, name, DOB, country, race, team_name, winnings, description, player_image, player_keywords')->from('PLAYER_ROMAN P')->join('TEAM T', 'P.player_team_id=T.ID')->where('P.player_ID',$player_id);
-        $query=$this->db->get();
-        $result=$query->result();
-        return $result;
-    }
 
 	//this method will display the team name stored in the TEAM table
 	public function extractPlayerTeamName($results_per_page, $offset){

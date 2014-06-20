@@ -15,3 +15,4 @@
         <script src="<?php echo base_url(); ?>js/bootstrap.min.js"></script>
         <script src="<?php echo base_url(); ?>js/dropDownMenusSimple.js"></script>
         <script src="<?php echo base_url(); ?>js/tooltips.js"></script>
+        <script src="<?php echo base_url(); ?>js/activeMenuAdmin.js"></script>

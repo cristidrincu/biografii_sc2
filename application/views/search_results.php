@@ -90,7 +90,7 @@
                         ?>
                             <div class="input-append">
                                 <?php 
-                                    echo form_open('search/displayResults', $form_attributes);
+                                    echo form_open('search/loadResultsPage', $form_attributes);
                                     echo form_input($input_field_attributes);
                                     echo form_button($submit_btn_attributes);
                                     echo form_close();
